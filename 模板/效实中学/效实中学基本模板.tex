@@ -1,0 +1,77 @@
+\documentclass[]{article}
+
+%导入宏包
+%常用
+\usepackage{ctex}%中文语言支持
+%\usepackage{graphics}%图片插入
+\usepackage{amsmath,amssymb}%ams宏包
+\usepackage{amsthm}%ams宏包
+%\usepackage{pst-blur}%pst绘图系列宏包
+%\usepackage{pstricks-add}%pst绘图系列宏包
+%\usepackage{pstricks}%pst绘图系列宏包
+%\usepackage{pstricks-pdf}%pst绘图系列宏包
+\usepackage{pgf,tikz,pgfplots}%pgf，tikz绘图系列宏包
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{background}%背景宏包，定义为校徽
+\usepackage{xeCJK}%xeCJK的命令设置
+    \xeCJKsetup{CJKmath=true}
+%\usepackage{wallpaper}%不常用的背景宏包
+
+\usepackage[subfigure,caption2]{ccaption}%构造连续标题,无标题,双语标题或匿名标题
+\usepackage{color}%彩色文本、底色、文本框等等色彩支持(这个宏包只能放在这里,否则通不过编译)
+
+%\usepackage{epic}
+
+
+
+%https://www.jianshu.com/p/a2721d47028d参考网站
+%绘图宏包
+%\usepackage{picinpar}%图表和文字混排宏包
+%\usepackage[verbose]{wrapfig} %图表和文字混排宏包
+%\usepackage{pspicture}%绘制任意角度和粗细的线段以及不限大小的圆,在PDF下不能用
+%\usepackage{eso-pic}%向文档的所有页或部分页加n副图形, 可实现水印效果
+%\usepackage{eepic}%扩展的绘图支持
+%\usepackage{curves}%绘制复杂曲线
+%\usepackage{texdraw}%增强的绘图工具
+%\usepackage{treedoc}%树形图绘制
+%\usepackage{pictex}可以画任意的图形
+
+%页面设置宏包
+\usepackage{geometry}%可以自定义页面设置
+%\usepackage{titlesec,titletoc}%配合命令在后面,章节标题设置
+%\usepackage{multicol,multienum}%多栏结构在文中用begin{multicols}{2}end{multicols}
+%\usepackage[perpage,stable]{footmisc} %让脚注在每一页重新编号和在章节、标题上加脚注
+%usepackage[perpage,symbol*]{footmisc} %把脚注(footnote)的编号去掉
+%\usepackage{indentfirst}%indent every new paragraph
+%\usepackage{fancyhdr}% Modify the page headings of book
+%\usepackage{fancyvrb}
+%\usepackage{pageno}%章首页的页眉处理, 可以改为自己想要的形式
+%usepackage{pifont} %有很漂亮的带圈的各种[数字符号](http://wenwen.soso.com/z/Search.e?sp=S%E6%95%B0%E5%AD%97%E7%AC%A6%E5%8F%B7&ch=w.search.intlink)使用,也可用textcircled{}命令,参考如下命令:
+%Large{textcircled{small{12}}},textcircled{九},textcircled{}不需要任何宏包即可使用,推荐
+%\usepackage{atbeginend}%非Miktex宏包,可以注掉,能解决比如itemize,enumerate等列表中item之间的控制
+%AfterBegin{itemize}{addtolength{itemsep}{-0.5baselineskip}}
+%AfterBegin{enumerate}{addtolength{itemsep}{-0.5baselineskip}}
+%AfterBegin{description}{addtolength{itemsep}{-0.5baselineskip}}
+%\usepackage{appendix}%附录宏包
+
+%背景定义
+\backgroundsetup{scale=1, angle=0, opacity = 0.1,contents = {\includegraphics[width=\paperwidth, height=\paperwidth, keepaspectratio]{xiaohui.jpg}}}
+\backgroundsetup{scale=1, angle=0, opacity = 0.1,contents = {\includegraphics[width=\paperwidth,=height=\paperwidth, 
+keepaspectratio]{xiaohui.jpg}}}
+
+%opening导言区
+\title{样例文章}
+\author{assjock}
+\date{xx年xx月xx日}
+
+
+\begin{document}
+\maketitle
+\begin{center}
+样例文章 
+\end{center}
+    
+
+
+\end{document}

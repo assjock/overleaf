@@ -1,0 +1,40 @@
+\documentclass[question]{article}
+
+
+%导入宏包
+\usepackage{ctex}
+\usepackage{graphics}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{pst-blur}
+\usepackage{pstricks-add}
+\usepackage{pstricks}
+\usepackage{pstricks-pdf}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+%\usepackage{background}
+\usepackage{xeCJK}
+    \xeCJKsetup{CJKmath=true}
+%\usepackage{wallpaper}
+
+%opening
+\title{}
+\author{}
+\date{}
+
+%\backgroundsetup{scale=1, angle=0, opacity = 0.1,contents = {\includegraphics[width=\paperwidth, height=\paperwidth, keepaspectratio]{xiaohui.jpg}}}
+%\backgroundsetup{scale=1, angle=0, opacity = 0.1,contents = {\includegraphics[width=\paperwidth,=height=\paperwidth, keepaspectratio]{xiaohui.jpg}}}
+
+\begin{document}
+\maketitle
+\section{模拟题}{
+设$a_1,a_2,…,a_n \in R.$求证:$\sum\limits_{i=1}^n{a_i^2}\geq \sum\limits_{i=1}^{n-1}a_{i}a_{i+1}+\frac{3}{2(n+1)^3}(\sum\limits_{i=1}^n{a_i})^2$\\
+\iffalse
+配方，得到$a_1^2+\sum\limits_{i=1}^{n-1}(a_i-a_{i+1})^+a_n^2 \geq \frac{3}{2(n+1)^3}(\sum\limits_{i=1}^n{a_i})^2 $\\
+ \qquad 由Cauchy不等式得\\$(n^2+(n-1)^2+(n-2)^2…1^2+0^2)(a_1^2+(a_1-a_2)^2+(a_2-a_3)^2+…+a_n^2) \\ \geq (na_1^2-(n-1)a_1^2+(n-1)a_2^2-(n-2)a_2^2+(n-2)a_3^2-(n-3)a_3^2+…+a_n^2)^2$\\
+然后yy即可.
+\fi
+}
+\end{document}

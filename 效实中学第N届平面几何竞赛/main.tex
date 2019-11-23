@@ -1,0 +1,344 @@
+\documentclass[question]{article}
+
+
+
+%导入宏包
+\usepackage{ctex}
+\usepackage{graphics}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{pst-blur}
+\usepackage{pstricks-add}
+\usepackage{pstricks}
+\usepackage{pstricks-pdf}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+\usepackage{background}
+\usepackage{xeCJK}
+    \xeCJKsetup{CJKmath=true}
+%\usepackage{wallpaper}
+
+\usetikzlibrary{arrows}
+\newcommand{\dou}{,}
+\newcommand{\p}{.}
+\pgfplotsset{compat=1.15}
+
+%opening导言区
+\title{效实中学第N届平面几何竞赛}
+\author{}
+\date{}
+\backgroundsetup{scale=1, angle=0, opacity = 0.1,contents = {\includegraphics[width=\paperwidth, height=\paperwidth, keepaspectratio]{xiaohui.jpg}}}
+\backgroundsetup{scale=1, angle=0, opacity = 0.1,contents = {\includegraphics[width=\paperwidth,=height=\paperwidth, 
+keepaspectratio]{xiaohui.jpg}}}
+
+
+
+%内容
+\begin{document}
+\maketitle
+
+\section{第一题}{
+给定的$ \triangle ABC $中,一点$ P $于$ \triangle ABC $内运动,定义$ f(P)=BC\times PA^2+AB \times PC^2+AC \times PB^2 $,求$ f(P) $的最小值及此时$ P $的位置.}
+
+\section{第二题}{
+已知$PA$,$PB$分别切圆$\Gamma$于点$ A $,$B$.$ C $为圆$ \Gamma $上一点,且与$ P $在直线$ AB $异侧,
+$ PC $交圆$ \Gamma $于一点$ D $,$ S $为$ \triangle ABC$的外心,直线$DS$交圆于另一点$E$.$PC$的中垂线分别
+交$AE$,$BE$于$X$,$Y$.求证:$ C $,$ E $,$ X $,$ Y $四点共圆.
+\\
+\par\setlength\parindent{23em}(新星征解第34期)
+\\
+%插入图片
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-4.5808790403650566,-0.18747287373188956) rectangle (12.67108113836004,6.9761491272921665);
+\draw [line width=2.pt] (2.04,3.22) circle (1.744018348527331cm);
+\draw [line width=2.pt] (2.420807501286449,4.921935852775883)-- (6.81206548665148,3.9393935447425927);
+\draw [line width=2.pt] (6.81206548665148,3.9393935447425927)-- (2.9056183962396007,1.7059640717302709);
+\draw [line width=2.pt] (2.9056183962396007,1.7059640717302709)-- (2.420807501286449,4.921935852775883);
+\draw [line width=2.pt] (0.3073895338961574,3.419150628287798)-- (6.81206548665148,3.9393935447425927);
+\draw [line width=2.pt] (4.42603274332574,3.579696772371297) circle (2.4129927518077796cm);
+\draw [line width=2.pt] (2.725006669277102,2.9685828963027823) circle (2.459244577994162cm);
+\draw [line width=2.pt] (3.4280878819908125,5.325182290073966)-- (0.5899393670442193,4.188980990913588);
+\draw [line width=2.pt] (0.5899393670442193,4.188980990913588)-- (2.9056183962396007,1.7059640717302709);
+\draw [line width=2.pt] (3.4280878819908125,5.325182290073966)-- (3.7937150107592594,0.7536909406444159);
+\draw [line width=2.pt] (0.5899393670442193,4.188980990913588)-- (2.420807501286449,4.921935852775883);
+\draw [line width=2.pt] (0.5899393670442193,4.188980990913588)-- (2.9056183962396007,1.7059640717302709);
+\draw [line width=2.pt] (0.5899393670442193,4.188980990913588)-- (4.42603274332574,3.579696772371297);
+\draw [line width=2.pt] (0.5899393670442193,4.188980990913588)-- (3.7937150107592594,0.7536909406444159);
+\begin{scriptsize}
+\draw [fill=ududff] (2.04,3.22) circle (2.5pt);
+\draw[color=ududff] (2.325058716017806,3.3105907472717635) node {$O$};
+\draw [fill=ududff] (6.81206548665148,3.9393935447425927) circle (2.5pt);
+\draw[color=ududff] (7.143754090807341,4.0063382078028775) node {$P$};
+\draw [fill=uuuuuu] (2.420807501286449,4.921935852775883) circle (2.0pt);
+\draw[color=uuuuuu] (2.2864060793216328,5.243222582080413) node {$A$};
+\draw [fill=uuuuuu] (2.9056183962396007,1.7059640717302709) circle (2.0pt);
+\draw[color=uuuuuu] (2.7888903563718785,1.3521904879990003) node {$B$};
+\draw [fill=xdxdff] (0.3073895338961574,3.419150628287798) circle (2.5pt);
+\draw[color=xdxdff] (-0.03275212244873116,3.452317081824398) node {$C$};
+\draw [fill=uuuuuu] (3.7189315331199655,3.6920051981657047) circle (2.0pt);
+\draw[color=uuuuuu] (3.9484694572570604,4.173832966819627) node {$D$};
+\draw [fill=uuuuuu] (4.42603274332574,3.579696772371297) circle (2.0pt);
+\draw[color=uuuuuu] (4.657101130020227,3.4265486573602826) node {$S$};
+\draw [fill=uuuuuu] (0.5899393670442193,4.188980990913588) circle (2.0pt);
+\draw[color=uuuuuu] (0.44396373013739926,4.521706697085183) node {$E$};
+\draw [fill=uuuuuu] (2.420807501286449,4.921935852775883) circle (2.0pt);
+\draw [fill=uuuuuu] (3.4280878819908125,5.325182290073966) circle (2.0pt);
+\draw[color=uuuuuu] (3.600595726991506,5.616864736810085) node {$X$};
+\draw [fill=uuuuuu] (3.7937150107592594,0.7536909406444159) circle (2.0pt);
+\draw[color=uuuuuu] (4.012890518417349,0.540485117379368) node {$Y$};
+\end{scriptsize}
+\end{tikzpicture}
+}
+
+\newpage
+\section{第三题}{
+
+\par\setlength\parindent{2em}
+$ \text{如图,}\triangle ABC \text{的内心为} I \dou \text{外心为} O \dou I \text{到} BC \text{的垂足为} D \dou \triangle BIC \text{的垂心为} H \p \text{延长}  OI \text{与} BC $交于$ F $ \p 连接$ AF $交$ \triangle ABC $的外接圆于点$ S $. 在$ \triangle ABC $的外接圆上找一点$ T $ \dou 使得$ \angle ATI =90^{\circ} $ \p 求证:$ T \dou H \dou D\dou S $四点共圆\p
+
+%插入图片
+\par\setlength\parindent{0em}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-5.183407980837872,-1.1544387093927702) rectangle (8.682663615773206,6.52302395988217);
+\draw [line width=2.pt] (2.978380604489477,5.859318074921488)-- (-1.6496225933444923,1.1057488988517237);
+\draw [line width=2.pt] (-1.6496225933444923,1.1057488988517237)-- (3.98290843037592,0.8187409485984548);
+\draw [line width=2.pt] (3.98290843037592,0.8187409485984548)-- (2.978380604489477,5.859318074921488);
+\draw [line width=2.pt] (1.2652561003515144,2.8975286172526884) circle (3.4215482399399226cm);
+\draw [line width=2.pt] (2.1461504179078026,5.499604531349382)-- (1.9130094739860937,0.9242135068858343);
+\draw [line width=2.pt] (1.2652561003515144,2.8975286172526884)-- (5.630893011094811,0.7347672120013139);
+\draw [line width=2.pt] (3.98290843037592,0.8187409485984548)-- (5.630893011094811,0.7347672120013139);
+\draw [line width=2.pt] (5.630893011094811,0.7347672120013139)-- (2.978380604489477,5.859318074921488);
+\draw [line width=2.pt] (1.9951357701581394,2.5359420692622328)-- (4.114601977475765,4.791788480827645);
+\draw [line width=2.pt] (2.978380604489477,5.859318074921488)-- (4.114601977475765,4.791788480827645);
+\draw [line width=2.pt,dash pattern=on 2pt off 2pt] (2.427729541159856,3.1916211416545286) circle (2.325096585038725cm);
+\begin{scriptsize}
+\draw [fill=ududff] (2.978380604489477,5.859318074921488) circle (2.5pt);
+\draw[color=ududff] (3.1006633591666897,6.181227931043487) node {$A$};
+\draw [fill=ududff] (-1.6496225933444923,1.1057488988517237) circle (2.5pt);
+\draw[color=ududff] (-1.5213247856019902,1.4197080686969032) node {$B$};
+\draw [fill=ududff] (3.98290843037592,0.8187409485984548) circle (2.5pt);
+\draw[color=ududff] (4.112268311606627,1.1406446335410596) node {$C$};
+\draw [fill=uuuuuu] (1.2652561003515144,2.8975286172526884) circle (2.0pt);
+\draw[color=uuuuuu] (1.39139981883714,3.181296003118167) node {$O$};
+\draw [fill=uuuuuu] (1.9951357701581394,2.5359420692622328) circle (2.0pt);
+\draw[color=uuuuuu] (2.123941336121233,2.815025244476122) node {$I$};
+\draw [fill=uuuuuu] (5.630893011094811,0.7347672120013139) circle (2.0pt);
+\draw[color=uuuuuu] (5.751765993147215,1.0185543806603778) node {$F$};
+\draw [fill=uuuuuu] (4.672605555971433,2.586141325407585) circle (2.0pt);
+\draw[color=uuuuuu] (4.792485434798999,2.867349638567843) node {$S$};
+\draw [fill=uuuuuu] (2.1461504179078026,5.499604531349382) circle (2.0pt);
+\draw[color=uuuuuu] (2.263473053699155,5.780074243006961) node {$H$};
+\draw [fill=uuuuuu] (1.9130094739860937,0.9242135068858343) circle (2.0pt);
+\draw[color=uuuuuu] (2.0367340126350313,1.2104104923300205) node {$D$};
+\draw [fill=uuuuuu] (4.114601977475765,4.791788480827645) circle (2.0pt);
+\draw[color=uuuuuu] (4.234358564487309,5.0824156551173525) node {$T$};
+\end{scriptsize}
+\end{tikzpicture}
+}
+
+
+\newpage
+\section{第四题}{
+
+\par\setlength\parindent{2em}
+如图,$ I $$ O $分别为$ \triangle ABC $的内外心,倍长$ IO $至点$ D $,$ E $$ F $分别在$ AB $,$ AC $上,
+$ EF $与内切圆相切,$ \odot BIF $、$ \odot CIE $交于点$ P $ \p 求证；$ PD=2AO $ \p
+
+%插入图片
+\par
+\definecolor{wqwqwq}{rgb}{0.3764705882352941,0.3764705882352941,0.3764705882352941}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.5cm,y=1.5cm]
+\clip(-4.351400904694518,0.5372058998393745) rectangle (5.06036739782564,5.748379034999293);
+\draw [line width=2.pt] (-0.6134799876522308,3.094089914754288)-- (-1.5599326088903456,1.249252873978358);
+\draw [line width=2.pt] (-1.5599326088903456,1.249252873978358)-- (1.3460228874240072,1.1775008864150407);
+\draw [line width=2.pt] (1.3460228874240072,1.1775008864150407)-- (-0.6134799876522308,3.094089914754288);
+\draw [line width=2.pt] (-0.6134799876522308,3.094089914754288)-- (-0.09584485861602061,1.6633319659412171);
+\draw [line width=2.pt] (-0.4232619013826515,1.9245140511130614) circle (0.7031128221945324cm);
+\draw [line width=2.pt] (-0.32001465023172954,2.620004989849245)-- (-0.09456150943916741,2.5865359455329053);
+\draw [line width=2.pt] (-0.32001465023172954,2.620004989849245)-- (-0.8187174292725135,2.6940385799501483);
+\draw [line width=2.pt] (1.1701622627011612,3.229742011797288) circle (2.0597622668740443cm);
+\draw [line width=2.pt] (-1.861525719412824,3.0512386431083836) circle (1.8270498396217207cm);
+\draw [line width=2.pt] (-0.5654225858782045,4.338960578816361)-- (0.23157218415061037,1.4021498807693726);
+\begin{scriptsize}
+\draw [fill=ududff] (-0.6134799876522308,3.094089914754288) circle (2.5pt);
+\draw[color=ududff] (-0.5282505204883999,3.3193392208301256) node {$A$};
+\draw [fill=ududff] (-1.5599326088903456,1.249252873978358) circle (2.5pt);
+\draw[color=ududff] (-1.7458143371145525,1.6391011538860396) node {$B$};
+\draw [fill=ududff] (1.3460228874240072,1.1775008864150407) circle (2.5pt);
+\draw[color=ududff] (1.4320272242797054,1.4077640287270714) node {$C$};
+\draw [fill=uuuuuu] (-0.4232619013826515,1.9245140511130614) circle (2.0pt);
+\draw[color=uuuuuu] (-0.41866977699204616,1.5782229630547322) node {$I$};
+\draw [fill=uuuuuu] (-0.09584485861602061,1.6633319659412171) circle (2.0pt);
+\draw[color=uuuuuu] (-0.1264544610017696,1.4564665813921174) node {$O$};
+\draw [fill=uuuuuu] (0.23157218415061037,1.4021498807693726) circle (2.0pt);
+\draw[color=uuuuuu] (0.37274670381495295,1.5782229630547322) node {$D$};
+\draw [fill=wqwqwq] (-0.09456150943916741,2.5865359455329053) circle (1.5pt);
+\draw[color=wqwqwq] (0.09270702599093786,2.7592598651820968) node {$F$};
+\draw [fill=uuuuuu] (-0.8187174292725135,2.6940385799501483) circle (2.0pt);
+\draw[color=uuuuuu] (-1.1248567906352147,2.7470842270158355) node {$E$};
+\draw [fill=uuuuuu] (-0.5654225858782045,4.338960578816361) circle (2.0pt);
+\draw[color=uuuuuu] (-0.23603520449812326,4.390795379461137) node {$P$};
+\end{scriptsize}
+\end{tikzpicture}
+}
+
+\newpage
+
+\section{第五题}{
+
+\par\setlength\parindent{2em}
+如图,$ I $为$ \triangle ABC $内心,$ E $$ F $分别在$ AB $,$ AC $上,$ EF $与内切圆相切,
+$ \odot AEF $、$ \odot ABC $交于另一点$ D $,$ O $是$ \triangle ICE $外心. 求证:$ DO \perp DI $
+\\ \\ \\ \\
+%插入图片
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{uququq}{rgb}{0.25098039215686274,0.25098039215686274,0.25098039215686274}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-3.620978912399629,-0.9597927238696764) rectangle (12.215258119804925,7.808524804957668);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (2.6791704234548925,4.761643809855679) -- (3.656775510165204,3.087271868228984) -- (6.00735335273227,1.2107312411500628) -- cycle;
+\draw [line width=2.pt] (4.356525704213115,7.150525964742861)-- (0.37482232901185764,1.4798011945125022);
+\draw [line width=2.pt] (0.37482232901185764,1.4798011945125022)-- (6.00735335273227,1.2107312411500628);
+\draw [line width=2.pt] (6.00735335273227,1.2107312411500628)-- (4.356525704213115,7.150525964742861);
+\draw [line width=2.pt] (3.301569883347016,3.6580236403069453) circle (3.648356379271293cm);
+\draw [line width=2.pt] (3.656775510165204,3.087271868228984) circle (1.7622422689535107cm);
+\draw [line width=2.pt] (2.6791704234548925,4.761643809855679)-- (4.95799312486425,4.986403613871583);
+\draw [line width=2.pt] (3.7262937951279693,5.809724570854965) circle (1.4815332048526049cm);
+\draw [line width=2.pt,color=zzttqq] (2.6791704234548925,4.761643809855679)-- (3.656775510165204,3.087271868228984);
+\draw [line width=2.pt,color=zzttqq] (3.656775510165204,3.087271868228984)-- (6.00735335273227,1.2107312411500628);
+\draw [line width=2.pt,color=zzttqq] (6.00735335273227,1.2107312411500628)-- (2.6791704234548925,4.761643809855679);
+\draw [line width=2.pt] (3.652802052131715,7.2894338668966565)-- (8.939825188356167,7.294433142165111);
+\draw [line width=2.pt] (3.652802052131715,7.2894338668966565)-- (3.656775510165204,3.087271868228984);
+\begin{scriptsize}
+\draw [fill=ududff] (4.356525704213115,7.150525964742861) circle (2.5pt);
+\draw[color=ududff] (5.2702589556168995,7.081246131421755) node {$A$};
+\draw [fill=ududff] (0.37482232901185764,1.4798011945125022) circle (2.5pt);
+\draw[color=ududff] (-0.22018286149929792,1.467883975116399) node {$B$};
+\draw [fill=ududff] (6.00735335273227,1.2107312411500628) circle (2.5pt);
+\draw[color=ududff] (6.478975624310391,1.0991229575488939) node {$C$};
+\draw [fill=uququq] (2.6791704234548925,4.761643809855679) circle (2.0pt);
+\draw[color=uququq] (1.9309230743111527,4.9711136420076985) node {$E$};
+\draw [fill=uuuuuu] (4.95799312486425,4.986403613871583) circle (2.0pt);
+\draw[color=uuuuuu] (5.454639464400652,5.073547257998672) node {$F$};
+\draw [fill=uuuuuu] (3.656775510165204,3.087271868228984) circle (2.0pt);
+\draw[color=uuuuuu] (3.3649936981847866,2.6561139206116935) node {$I$};
+\draw [fill=uuuuuu] (3.652802052131715,7.2894338668966565) circle (2.0pt);
+\draw[color=uuuuuu] (3.5493742069685394,7.7368212737639865) node {$D$};
+\draw [fill=uuuuuu] (8.939825188356167,7.294433142165111) circle (2.0pt);
+\draw[color=uuuuuu] (9.347116872057658,7.060759408223561) node {$O$};
+\end{scriptsize}
+\end{tikzpicture}
+}
+
+\newpage
+
+\section{第六题}{
+
+在$ \triangle ABC $中,$ \odot O $为其外接圆,$ I $为内心,$ O $为外心,$ \odot M \text{于}\angle BAC \text{内且}\odot M \text{切}AB$,$ AC\text{于点}E $,$ F $,切$ \odot O $于点$ H $,$ EF $交$ BC $于点$ X $，同理作出$ Y \dou Z $.证明:$ X \dou Y \dou Z $三点共线且直线$ XYZ\perp OI $ \p
+
+
+
+%插入图片
+\par\setlength\parindent{6em}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-4.960853800018591,-1.1505276598627254) rectangle (6.725033018598005,5.319795184080219);
+\draw [line width=2.pt] (-0.8639905039705996,4.427858156527336)-- (-1.6052808793274769,0.8449924695776213);
+\draw [line width=2.pt] (-1.6052808793274769,0.8449924695776213)-- (3.912332278575095,1.4735813103513307);
+\draw [line width=2.pt] (3.912332278575095,1.4735813103513307)-- (-0.8639905039705996,4.427858156527336);
+\draw [line width=2.pt] (1.0388314133992558,2.1660478468244473) circle (2.9557599913222603cm);
+\draw [line width=2.pt] (-0.8639905039705996,4.427858156527336)-- (0.03377063332540518,2.3419107397069667);
+\draw [line width=2.pt] (-1.4255141117837686,1.7138560141449464)-- (1.4930553784345786,2.969965465268987);
+\draw [line width=2.pt] (0.47314445105252295,1.3210259608593857) circle (1.9388707509774625cm);
+\draw [line width=2.pt] (-4.106359700737412,0.5600594392904141)-- (-1.4255141117837686,1.7138560141449464);
+\draw [line width=2.pt] (-4.106359700737412,0.5600594392904141)-- (-1.6052808793274769,0.8449924695776213);
+\begin{scriptsize}
+\draw [fill=ududff] (-0.8639905039705996,4.427858156527336) circle (2.5pt);
+\draw[color=ududff] (-1.0151662713524443,4.828473940089224) node {$A$};
+\draw [fill=ududff] (-1.6052808793274769,0.8449924695776213) circle (2.5pt);
+\draw[color=ududff] (-1.7105748013089301,0.47461183949210267) node {$B$};
+\draw [fill=ududff] (3.912332278575095,1.4735813103513307) circle (2.5pt);
+\draw[color=ududff] (4.306220740488489,1.427019173997723) node {$C$};
+\draw [fill=uuuuuu] (1.0388314133992558,2.1660478468244473) circle (2.0pt);
+\draw[color=uuuuuu] (1.3129405463279642,2.3643089317651587) node {$O$};
+\draw [fill=uuuuuu] (0.03377063332540518,2.3419107397069667) circle (2.0pt);
+\draw[color=uuuuuu] (0.34541563508415807,2.923659271077983) node {$I$};
+\draw [fill=uuuuuu] (-1.4255141117837686,1.7138560141449464) circle (2.0pt);
+\draw[color=uuuuuu] (-1.6047517641416387,2.2282507411214985) node {$E$};
+\draw [fill=uuuuuu] (1.4930553784345786,2.969965465268987) circle (2.0pt);
+\draw[color=uuuuuu] (1.9781139228080808,3.3771865732235167) node {$F$};
+\draw [fill=uuuuuu] (0.47314445105252295,1.3210259608593857) circle (2.0pt);
+\draw[color=uuuuuu] (0.919883551135168,1.4723719042122763) node {$M$};
+\draw [fill=uuuuuu] (-4.106359700737412,0.5600594392904141) circle (2.0pt);
+\draw[color=uuuuuu] (-4.2956804235384745,1.0339621788049271) node {$X$};
+\end{scriptsize}
+\end{tikzpicture}
+}
+
+
+\newpage
+\section{第七题}{
+
+
+如图,在$ \triangle ABC $中，$ E$为$ \angle BAC $平分线与$ BC $交点,$ O $为外心,$ H $为垂心,$ I $为内心,$ V $为$ OH $中点,过$ E $作$ \triangle ABC $内切圆切线,交内切圆于点$ F $,$ M $为$ BC $中点.证明:$ IF\parallel VM $.
+
+%插入图片
+\par\setlength\parindent{14em}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.3cm,y=1.3cm]
+\clip(-3.1007373332094947,0.5505113298138267) rectangle (4.619977697101536,4.825370363414226);
+\draw [line width=2.pt] (-0.5802249084177552,4.55764357263279)-- (-1.6052808793274769,0.8449924695776213);
+\draw [line width=2.pt] (-1.6052808793274769,0.8449924695776213)-- (3.912332278575095,1.4735813103513307);
+\draw [line width=2.pt] (3.912332278575095,1.4735813103513307)-- (-0.5802249084177552,4.55764357263279);
+\draw [line width=2.pt] (0.20861640138017057,2.3959769254841317) circle (1.3356980682814363cm);
+\draw [line width=2.pt] (-0.5802249084177552,4.55764357263279)-- (0.6796148363010958,1.1052970447758128);
+\draw [line width=2.pt] (0.6796148363010958,1.1052970447758128)-- (0.9477222690643449,1.2834069969108375);
+\draw [line width=2.pt] (0.20861640138017057,2.3959769254841317)-- (0.9477222690643449,1.2834069969108375);
+\draw [line width=2.pt] (0.3408654379503788,2.382577637360765)-- (1.1535256996238092,1.159286889964476);
+\begin{scriptsize}
+\draw [fill=ududff] (-0.5802249084177552,4.55764357263279) circle (2.5pt);
+\draw[color=ududff] (-0.6836441413139327,4.790412404027307) node {$A$};
+\draw [fill=ududff] (-1.6052808793274769,0.8449924695776213) circle (2.5pt);
+\draw[color=ududff] (-1.6724549925439351,0.6653731963708462) node {$B$};
+\draw [fill=ududff] (3.912332278575095,1.4735813103513307) circle (2.5pt);
+\draw[color=ududff] (4.1705182192697166,1.4344483028830677) node {$C$};
+\draw [fill=uuuuuu] (1.0450956149291053,2.111062077840211) circle (2.0pt);
+\draw[color=uuuuuu] (1.1441577352021328,2.313391281754178) node {$O$};
+\draw [fill=uuuuuu] (0.20861640138017057,2.3959769254841317) circle (2.0pt);
+\draw[color=uuuuuu] (0.32514268670859525,2.722898806000945) node {$I$};
+\draw [fill=uuuuuu] (-0.3633647390283476,2.654093196881319) circle (2.0pt);
+\draw[color=uuuuuu] (-0.2941125938596892,2.9626105275112478) node {$H$};
+\draw [fill=uuuuuu] (0.35980663267869595,1.068863198793514) circle (2.0pt);
+\draw[color=uuuuuu] (0.4250225706712218,0.9150729062774116) node {$D$};
+\draw [fill=uuuuuu] (0.6796148363010958,1.1052970447758128) circle (2.0pt);
+\draw[color=uuuuuu] (0.7746021645404146,0.9949768134475125) node {$E$};
+\draw [fill=uuuuuu] (1.1535256996238092,1.159286889964476) circle (2.0pt);
+\draw[color=uuuuuu] (1.3039655495423352,1.0149527902400377) node {$M$};
+\draw [fill=uuuuuu] (0.3408654379503788,2.382577637360765) circle (2.0pt);
+\draw[color=uuuuuu] (0.534890443030111,2.573078980057006) node {$V$};
+\draw [fill=uuuuuu] (0.9477222690643449,1.2834069969108375) circle (2.0pt);
+\draw[color=uuuuuu] (0.7246622225591014,1.3944963492980171) node {$F$};
+\end{scriptsize}
+\end{tikzpicture}}
+
+
+\newpage
+
+\section{第八题}{
+\par\setlength\parindent{2em}
+在锐角$ \triangle EFG $中,点$ P $具有性质p,如果$ PA \times BC =PB \times AC =PC \times AB $\p 点$ P $具有性质q,如果$ PA＋PB+PC $的值最小\p 点$ D $具有性质p,点$ K $具有性质q，$ L $,$ M $,$ N $为点K在$ EF $,$ EG $,$ GF $上的射影,点$ O $是$ \triangle LMN $中具有性质q的一点,$ S $为$ DK $中点,$ W为$  $\triangle LMN $的垂心.证明:$ SW \parallel KO $.}
+
+
+\end{document}
