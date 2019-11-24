@@ -25,13 +25,12 @@
 \date{}
 \setlength\parindent{0}
 
-
 \begin{document}
 \maketitle
-\section{高577}{
-给定$m\geq 3$且$m \in \mathbf{N}$,设$a_1,a_2,…,a_m >0, n\geq m ,n \in \mathbf{N}$.证明:\\
-$\displaystyle \sum\limits_{i=1}^m{(\frac{a_i}{a_i+a_{i+1}})^n}\geq \frac{n}{2^n}$.
-%\begin{proof}{}
-%\end{proof}
+\section{模拟题}{
+设$n \in \mathbf{N^*},f(n)$为所有满足下列条件的整数数列$\{ a_0,a_1,…,a_n\}$的个数:\\
+(1)$a_0=0,a_n=2n$,且$1\leq a_{k+1}=a_{k}\leq 3\quad(k=0,1,…,n-1)$;\\
+(2)不存在$i,j \quad(0\leq i<j\leq <n)$,使得$a_j-a_i=n$.\\
+求$3f(16)-2f(15)+f(10)$的值.
 }
 \end{document}

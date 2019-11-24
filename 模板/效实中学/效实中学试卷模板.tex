@@ -20,7 +20,7 @@
 \usepackage{xeCJK}%xeCJK的命令设置
     \xeCJKsetup{CJKmath=true}
 %\usepackage{wallpaper}%不常用的背景宏包
-
+\usepackage{enumitem}
 \usepackage[subfigure,caption2]{ccaption}%构造连续标题,无标题,双语标题或匿名标题
 \usepackage{color}%彩色文本、底色、文本框等等色彩支持(这个宏包只能放在这里,否则通不过编译)
 
@@ -84,7 +84,7 @@ keepaspectratio]{xiaohui.jpg}}}
 \unframedsolutions
 
 %题号
-\renewcommand{\thequestion}{\zhnum{question}}
+%\renewcommand{\thequestion}{\zhnum{question}} %中文题号
 \renewcommand{\questionlabel}{\thequestion .}
 \renewcommand{\thepartno}{\arabic{partno}}
 \renewcommand{\partlabel}{\thepartno .}
@@ -97,13 +97,28 @@ keepaspectratio]{xiaohui.jpg}}}
 %\arabic \alph \Alph \roman \Roman \greeknum
 
 
+\AddEnumerateCounter{\chinese}{\chinese}{}
+
 %opening导言区
-\title{样例文章}
-\author{assjock}
-\date{xx年xx月xx日}
+\title{样例试卷}
+\author{120分钟}
+\date{}
 
 
 \begin{document}
+\maketitle
+{\heiti 注意事项}：
+\begin{enumerate}
+1.答卷前，考生务必将自己的姓名和准考证号填写在答题卡上。\\
+2.回答选择题时，选出每小题答案后，用铅笔把答题卡对应题目的答案标号涂黑。如需改动，用橡皮擦干净后，再选涂其它答案标号。回答非选择题时，将答案写在答题卡上。写在本试卷上无效。\\
+3.考试结束后，将本试卷和答题卡一并交回。
+	请认真核对监考员在答题卡上所粘贴的条形码上的姓名、准考证号与您本人是否相符。
+\end{enumerate}
+\\
+
+\begin{enumerate}[label={\chinese*、},labelsep=0pt]
+\item 选择题
+
 \begin{questions}
 \question[50]you like\\
 \begin{oneparchoices}
@@ -113,10 +128,18 @@ keepaspectratio]{xiaohui.jpg}}}
 \choice jh
 \end{oneparchoices}
 
+
+
+\item 解答题
+
+
+
 \question[50]assjock is god?
 \begin{soluton}
 Yes.
 \end{soluton}
 
+
 \end{questions}
+\end{enumerate}
 \end{document}
