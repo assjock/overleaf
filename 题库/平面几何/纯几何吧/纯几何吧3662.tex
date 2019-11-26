@@ -1,0 +1,78 @@
+\documentclass[]{article}
+
+
+%导入宏包
+\usepackage{ctex}
+\usepackage{graphics}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{pst-blur}
+\usepackage{pstricks-add}
+\usepackage{pstricks}
+\usepackage{pstricks-pdf}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+%\usepackage{background}
+\usepackage{xeCJK}
+    \xeCJKsetup{CJKmath=true}
+%\usepackage{wallpaper}
+
+%opening
+\title{}
+\author{}
+\date{}
+\setlength\parindent{0em}
+
+\begin{document}
+\maketitle
+\section{纯几何吧3662}{
+\par\setlength\parindent{2em}
+如图,$ I $为$ \triangle ABC $内心,$ E $$ F $分别在$ AB $,$ AC $上,$ EF $与内切圆相切,
+$ \odot AEF $、$ \odot ABC $交于另一点$ D $,$ O $是$ \triangle ICE $外心. 求证:$ DO \perp DI $
+\\ \\ \\ \\
+%插入图片
+\definecolor{zzttqq}{rgb}{0.6,0.2,0.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{uququq}{rgb}{0.25098039215686274,0.25098039215686274,0.25098039215686274}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-3.620978912399629,-0.9597927238696764) rectangle (12.215258119804925,7.808524804957668);
+\fill[line width=2.pt,color=zzttqq,fill=zzttqq,fill opacity=0.10000000149011612] (2.6791704234548925,4.761643809855679) -- (3.656775510165204,3.087271868228984) -- (6.00735335273227,1.2107312411500628) -- cycle;
+\draw [line width=2.pt] (4.356525704213115,7.150525964742861)-- (0.37482232901185764,1.4798011945125022);
+\draw [line width=2.pt] (0.37482232901185764,1.4798011945125022)-- (6.00735335273227,1.2107312411500628);
+\draw [line width=2.pt] (6.00735335273227,1.2107312411500628)-- (4.356525704213115,7.150525964742861);
+\draw [line width=2.pt] (3.301569883347016,3.6580236403069453) circle (3.648356379271293cm);
+\draw [line width=2.pt] (3.656775510165204,3.087271868228984) circle (1.7622422689535107cm);
+\draw [line width=2.pt] (2.6791704234548925,4.761643809855679)-- (4.95799312486425,4.986403613871583);
+\draw [line width=2.pt] (3.7262937951279693,5.809724570854965) circle (1.4815332048526049cm);
+\draw [line width=2.pt,color=zzttqq] (2.6791704234548925,4.761643809855679)-- (3.656775510165204,3.087271868228984);
+\draw [line width=2.pt,color=zzttqq] (3.656775510165204,3.087271868228984)-- (6.00735335273227,1.2107312411500628);
+\draw [line width=2.pt,color=zzttqq] (6.00735335273227,1.2107312411500628)-- (2.6791704234548925,4.761643809855679);
+\draw [line width=2.pt] (3.652802052131715,7.2894338668966565)-- (8.939825188356167,7.294433142165111);
+\draw [line width=2.pt] (3.652802052131715,7.2894338668966565)-- (3.656775510165204,3.087271868228984);
+\begin{scriptsize}
+\draw [fill=ududff] (4.356525704213115,7.150525964742861) circle (2.5pt);
+\draw[color=ududff] (5.2702589556168995,7.081246131421755) node {$A$};
+\draw [fill=ududff] (0.37482232901185764,1.4798011945125022) circle (2.5pt);
+\draw[color=ududff] (-0.22018286149929792,1.467883975116399) node {$B$};
+\draw [fill=ududff] (6.00735335273227,1.2107312411500628) circle (2.5pt);
+\draw[color=ududff] (6.478975624310391,1.0991229575488939) node {$C$};
+\draw [fill=uququq] (2.6791704234548925,4.761643809855679) circle (2.0pt);
+\draw[color=uququq] (1.9309230743111527,4.9711136420076985) node {$E$};
+\draw [fill=uuuuuu] (4.95799312486425,4.986403613871583) circle (2.0pt);
+\draw[color=uuuuuu] (5.454639464400652,5.073547257998672) node {$F$};
+\draw [fill=uuuuuu] (3.656775510165204,3.087271868228984) circle (2.0pt);
+\draw[color=uuuuuu] (3.3649936981847866,2.6561139206116935) node {$I$};
+\draw [fill=uuuuuu] (3.652802052131715,7.2894338668966565) circle (2.0pt);
+\draw[color=uuuuuu] (3.5493742069685394,7.7368212737639865) node {$D$};
+\draw [fill=uuuuuu] (8.939825188356167,7.294433142165111) circle (2.0pt);
+\draw[color=uuuuuu] (9.347116872057658,7.060759408223561) node {$O$};
+\end{scriptsize}
+\end{tikzpicture}
+
+%\begin{proof}{}
+%\end{proof}
+}
+\end{document}

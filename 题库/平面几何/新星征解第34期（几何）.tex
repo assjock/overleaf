@@ -1,0 +1,85 @@
+\documentclass[]{article}
+
+
+%导入宏包
+\usepackage{ctex}
+\usepackage{graphics}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{pst-blur}
+\usepackage{pstricks-add}
+\usepackage{pstricks}
+\usepackage{pstricks-pdf}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+%\usepackage{background}
+\usepackage{xeCJK}
+    \xeCJKsetup{CJKmath=true}
+%\usepackage{wallpaper}
+
+%opening
+\title{}
+\author{}
+\date{}
+\setlength\parindent{0em}
+
+
+\begin{document}
+\maketitle
+\section{新星征解第34期}{
+已知$PA$,$PB$分别切圆$\Gamma$于点$ A $,$B$.$ C $为圆$ \Gamma $上一点,且与$ P $在直线$ AB $异侧,
+$ PC $交圆$ \Gamma $于一点$ D $,$ S $为$ \triangle ABC$的外心,直线$DS$交圆于另一点$E$.$PC$的中垂线分别
+交$AE$,$BE$于$X$,$Y$.求证:$ C $,$ E $,$ X $,$ Y $四点共圆.
+\\
+
+\\
+%插入图片
+\definecolor{xdxdff}{rgb}{0.49019607843137253,0.49019607843137253,1.}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-4.5808790403650566,-0.18747287373188956) rectangle (12.67108113836004,6.9761491272921665);
+\draw [line width=2.pt] (2.04,3.22) circle (1.744018348527331cm);
+\draw [line width=2.pt] (2.420807501286449,4.921935852775883)-- (6.81206548665148,3.9393935447425927);
+\draw [line width=2.pt] (6.81206548665148,3.9393935447425927)-- (2.9056183962396007,1.7059640717302709);
+\draw [line width=2.pt] (2.9056183962396007,1.7059640717302709)-- (2.420807501286449,4.921935852775883);
+\draw [line width=2.pt] (0.3073895338961574,3.419150628287798)-- (6.81206548665148,3.9393935447425927);
+\draw [line width=2.pt] (4.42603274332574,3.579696772371297) circle (2.4129927518077796cm);
+\draw [line width=2.pt] (2.725006669277102,2.9685828963027823) circle (2.459244577994162cm);
+\draw [line width=2.pt] (3.4280878819908125,5.325182290073966)-- (0.5899393670442193,4.188980990913588);
+\draw [line width=2.pt] (0.5899393670442193,4.188980990913588)-- (2.9056183962396007,1.7059640717302709);
+\draw [line width=2.pt] (3.4280878819908125,5.325182290073966)-- (3.7937150107592594,0.7536909406444159);
+\draw [line width=2.pt] (0.5899393670442193,4.188980990913588)-- (2.420807501286449,4.921935852775883);
+\draw [line width=2.pt] (0.5899393670442193,4.188980990913588)-- (2.9056183962396007,1.7059640717302709);
+\draw [line width=2.pt] (0.5899393670442193,4.188980990913588)-- (4.42603274332574,3.579696772371297);
+\draw [line width=2.pt] (0.5899393670442193,4.188980990913588)-- (3.7937150107592594,0.7536909406444159);
+\begin{scriptsize}
+\draw [fill=ududff] (2.04,3.22) circle (2.5pt);
+\draw[color=ududff] (2.325058716017806,3.3105907472717635) node {$O$};
+\draw [fill=ududff] (6.81206548665148,3.9393935447425927) circle (2.5pt);
+\draw[color=ududff] (7.143754090807341,4.0063382078028775) node {$P$};
+\draw [fill=uuuuuu] (2.420807501286449,4.921935852775883) circle (2.0pt);
+\draw[color=uuuuuu] (2.2864060793216328,5.243222582080413) node {$A$};
+\draw [fill=uuuuuu] (2.9056183962396007,1.7059640717302709) circle (2.0pt);
+\draw[color=uuuuuu] (2.7888903563718785,1.3521904879990003) node {$B$};
+\draw [fill=xdxdff] (0.3073895338961574,3.419150628287798) circle (2.5pt);
+\draw[color=xdxdff] (-0.03275212244873116,3.452317081824398) node {$C$};
+\draw [fill=uuuuuu] (3.7189315331199655,3.6920051981657047) circle (2.0pt);
+\draw[color=uuuuuu] (3.9484694572570604,4.173832966819627) node {$D$};
+\draw [fill=uuuuuu] (4.42603274332574,3.579696772371297) circle (2.0pt);
+\draw[color=uuuuuu] (4.657101130020227,3.4265486573602826) node {$S$};
+\draw [fill=uuuuuu] (0.5899393670442193,4.188980990913588) circle (2.0pt);
+\draw[color=uuuuuu] (0.44396373013739926,4.521706697085183) node {$E$};
+\draw [fill=uuuuuu] (2.420807501286449,4.921935852775883) circle (2.0pt);
+\draw [fill=uuuuuu] (3.4280878819908125,5.325182290073966) circle (2.0pt);
+\draw[color=uuuuuu] (3.600595726991506,5.616864736810085) node {$X$};
+\draw [fill=uuuuuu] (3.7937150107592594,0.7536909406444159) circle (2.0pt);
+\draw[color=uuuuuu] (4.012890518417349,0.540485117379368) node {$Y$};
+\end{scriptsize}
+\end{tikzpicture}
+%\begin{proof}{}
+%\end{proof}
+}
+\end{document}

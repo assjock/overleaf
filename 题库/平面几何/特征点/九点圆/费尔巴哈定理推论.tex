@@ -1,0 +1,76 @@
+\documentclass[]{article}
+
+
+%导入宏包
+\usepackage{ctex}
+\usepackage{graphics}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{pst-blur}
+\usepackage{pstricks-add}
+\usepackage{pstricks}
+\usepackage{pstricks-pdf}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+%\usepackage{background}
+\usepackage{xeCJK}
+    \xeCJKsetup{CJKmath=true}
+%\usepackage{wallpaper}
+
+%opening
+\title{}
+\author{}
+\date{}
+\setlength\parindent{0em}
+
+
+\begin{document}
+\maketitle
+\section{费尔巴哈定理推论}{
+如图,在$ \triangle ABC $中，$ E$为$ \angle BAC $平分线与$ BC $交点,$ O $为外心,$ H $为垂心,$ I $为内心,$ V $为$ OH $中点,过$ E $作$ \triangle ABC $内切圆切线,交内切圆于点$ F $,$ M $为$ BC $中点.证明:$ IF\parallel VM $.
+
+%插入图片
+\par\setlength\parindent{14em}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.3cm,y=1.3cm]
+\clip(-3.1007373332094947,0.5505113298138267) rectangle (4.619977697101536,4.825370363414226);
+\draw [line width=2.pt] (-0.5802249084177552,4.55764357263279)-- (-1.6052808793274769,0.8449924695776213);
+\draw [line width=2.pt] (-1.6052808793274769,0.8449924695776213)-- (3.912332278575095,1.4735813103513307);
+\draw [line width=2.pt] (3.912332278575095,1.4735813103513307)-- (-0.5802249084177552,4.55764357263279);
+\draw [line width=2.pt] (0.20861640138017057,2.3959769254841317) circle (1.3356980682814363cm);
+\draw [line width=2.pt] (-0.5802249084177552,4.55764357263279)-- (0.6796148363010958,1.1052970447758128);
+\draw [line width=2.pt] (0.6796148363010958,1.1052970447758128)-- (0.9477222690643449,1.2834069969108375);
+\draw [line width=2.pt] (0.20861640138017057,2.3959769254841317)-- (0.9477222690643449,1.2834069969108375);
+\draw [line width=2.pt] (0.3408654379503788,2.382577637360765)-- (1.1535256996238092,1.159286889964476);
+\begin{scriptsize}
+\draw [fill=ududff] (-0.5802249084177552,4.55764357263279) circle (2.5pt);
+\draw[color=ududff] (-0.6836441413139327,4.790412404027307) node {$A$};
+\draw [fill=ududff] (-1.6052808793274769,0.8449924695776213) circle (2.5pt);
+\draw[color=ududff] (-1.6724549925439351,0.6653731963708462) node {$B$};
+\draw [fill=ududff] (3.912332278575095,1.4735813103513307) circle (2.5pt);
+\draw[color=ududff] (4.1705182192697166,1.4344483028830677) node {$C$};
+\draw [fill=uuuuuu] (1.0450956149291053,2.111062077840211) circle (2.0pt);
+\draw[color=uuuuuu] (1.1441577352021328,2.313391281754178) node {$O$};
+\draw [fill=uuuuuu] (0.20861640138017057,2.3959769254841317) circle (2.0pt);
+\draw[color=uuuuuu] (0.32514268670859525,2.722898806000945) node {$I$};
+\draw [fill=uuuuuu] (-0.3633647390283476,2.654093196881319) circle (2.0pt);
+\draw[color=uuuuuu] (-0.2941125938596892,2.9626105275112478) node {$H$};
+\draw [fill=uuuuuu] (0.35980663267869595,1.068863198793514) circle (2.0pt);
+\draw[color=uuuuuu] (0.4250225706712218,0.9150729062774116) node {$D$};
+\draw [fill=uuuuuu] (0.6796148363010958,1.1052970447758128) circle (2.0pt);
+\draw[color=uuuuuu] (0.7746021645404146,0.9949768134475125) node {$E$};
+\draw [fill=uuuuuu] (1.1535256996238092,1.159286889964476) circle (2.0pt);
+\draw[color=uuuuuu] (1.3039655495423352,1.0149527902400377) node {$M$};
+\draw [fill=uuuuuu] (0.3408654379503788,2.382577637360765) circle (2.0pt);
+\draw[color=uuuuuu] (0.534890443030111,2.573078980057006) node {$V$};
+\draw [fill=uuuuuu] (0.9477222690643449,1.2834069969108375) circle (2.0pt);
+\draw[color=uuuuuu] (0.7246622225591014,1.3944963492980171) node {$F$};
+\end{scriptsize}
+\end{tikzpicture}
+%\begin{proof}{}
+%\end{proof}
+}
+\end{document}

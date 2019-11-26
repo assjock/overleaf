@@ -1,0 +1,78 @@
+\documentclass[]{article}
+
+
+%导入宏包
+\usepackage{ctex}
+\usepackage{graphics}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{pst-blur}
+\usepackage{pstricks-add}
+\usepackage{pstricks}
+\usepackage{pstricks-pdf}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+%\usepackage{background}
+\usepackage{xeCJK}
+    \xeCJKsetup{CJKmath=true}
+%\usepackage{wallpaper}
+
+%opening
+\title{}
+\author{}
+\date{}
+\setlength\parindent{0em}
+
+\begin{document}
+\maketitle
+\section{纯几何吧3660}{
+\par\setlength\parindent{2em}
+$ \text{如图,}\triangle ABC \text{的内心为} I , \text{外心为} O , I \text{到} BC \text{的垂足为} D , \triangle BIC \text{的垂心为} H . \text{延长}  OI \text{与} BC $交于$ F $ . 连接$ AF $交$ \triangle ABC $的外接圆于点$ S $. 在$ \triangle ABC $的外接圆上找一点$ T $ , 使得$ \angle ATI =90^{\circ} $ . 求证:$ T , H , D, S $四点共圆.
+
+%插入图片
+\par\setlength\parindent{0em}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-5.183407980837872,-1.1544387093927702) rectangle (8.682663615773206,6.52302395988217);
+\draw [line width=2.pt] (2.978380604489477,5.859318074921488)-- (-1.6496225933444923,1.1057488988517237);
+\draw [line width=2.pt] (-1.6496225933444923,1.1057488988517237)-- (3.98290843037592,0.8187409485984548);
+\draw [line width=2.pt] (3.98290843037592,0.8187409485984548)-- (2.978380604489477,5.859318074921488);
+\draw [line width=2.pt] (1.2652561003515144,2.8975286172526884) circle (3.4215482399399226cm);
+\draw [line width=2.pt] (2.1461504179078026,5.499604531349382)-- (1.9130094739860937,0.9242135068858343);
+\draw [line width=2.pt] (1.2652561003515144,2.8975286172526884)-- (5.630893011094811,0.7347672120013139);
+\draw [line width=2.pt] (3.98290843037592,0.8187409485984548)-- (5.630893011094811,0.7347672120013139);
+\draw [line width=2.pt] (5.630893011094811,0.7347672120013139)-- (2.978380604489477,5.859318074921488);
+\draw [line width=2.pt] (1.9951357701581394,2.5359420692622328)-- (4.114601977475765,4.791788480827645);
+\draw [line width=2.pt] (2.978380604489477,5.859318074921488)-- (4.114601977475765,4.791788480827645);
+\draw [line width=2.pt,dash pattern=on 2pt off 2pt] (2.427729541159856,3.1916211416545286) circle (2.325096585038725cm);
+\begin{scriptsize}
+\draw [fill=ududff] (2.978380604489477,5.859318074921488) circle (2.5pt);
+\draw[color=ududff] (3.1006633591666897,6.181227931043487) node {$A$};
+\draw [fill=ududff] (-1.6496225933444923,1.1057488988517237) circle (2.5pt);
+\draw[color=ududff] (-1.5213247856019902,1.4197080686969032) node {$B$};
+\draw [fill=ududff] (3.98290843037592,0.8187409485984548) circle (2.5pt);
+\draw[color=ududff] (4.112268311606627,1.1406446335410596) node {$C$};
+\draw [fill=uuuuuu] (1.2652561003515144,2.8975286172526884) circle (2.0pt);
+\draw[color=uuuuuu] (1.39139981883714,3.181296003118167) node {$O$};
+\draw [fill=uuuuuu] (1.9951357701581394,2.5359420692622328) circle (2.0pt);
+\draw[color=uuuuuu] (2.123941336121233,2.815025244476122) node {$I$};
+\draw [fill=uuuuuu] (5.630893011094811,0.7347672120013139) circle (2.0pt);
+\draw[color=uuuuuu] (5.751765993147215,1.0185543806603778) node {$F$};
+\draw [fill=uuuuuu] (4.672605555971433,2.586141325407585) circle (2.0pt);
+\draw[color=uuuuuu] (4.792485434798999,2.867349638567843) node {$S$};
+\draw [fill=uuuuuu] (2.1461504179078026,5.499604531349382) circle (2.0pt);
+\draw[color=uuuuuu] (2.263473053699155,5.780074243006961) node {$H$};
+\draw [fill=uuuuuu] (1.9130094739860937,0.9242135068858343) circle (2.0pt);
+\draw[color=uuuuuu] (2.0367340126350313,1.2104104923300205) node {$D$};
+\draw [fill=uuuuuu] (4.114601977475765,4.791788480827645) circle (2.0pt);
+\draw[color=uuuuuu] (4.234358564487309,5.0824156551173525) node {$T$};
+\end{scriptsize}
+\end{tikzpicture}
+
+%\begin{proof}{}
+%\end{proof}
+}
+\end{document}
