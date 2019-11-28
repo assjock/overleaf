@@ -1,0 +1,73 @@
+\documentclass[]{article}
+
+
+%导入宏包
+\usepackage{ctex}
+\usepackage{graphics}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{pst-blur}
+\usepackage{pstricks-add}
+\usepackage{pstricks}
+\usepackage{pstricks-pdf}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+%\usepackage{background}
+\usepackage{xeCJK}
+    \xeCJKsetup{CJKmath=true}
+%\usepackage{wallpaper}
+
+%opening
+\title{}
+\author{}
+\date{}
+\setlength\parindent{0em}
+
+\begin{document}
+\maketitle
+\section{2018CMO T3}{
+如图,$\triangle ABC$内接于$\odot O$,$AB<AC$.点$D$在$\angle BAC$的平分线上,点$E$在边$BC$上,使得$OE//AD,DE\perp BC$.点$K$在$EB$的延长线上,使得$EA=EK$.过$A、K、D$三点的圆与$BC$的延长线的第二个交点为$P$,与$\odot O$的第二个交点为$Q$.证明:直线$PQ$与$\odot O$相切.
+
+
+%\begin{proof}{}
+%\end{proof}
+}
+\definecolor{uuuuuu}{rgb}{0.26666666666666666,0.26666666666666666,0.26666666666666666}
+\definecolor{ududff}{rgb}{0.30196078431372547,0.30196078431372547,1.}
+\begin{tikzpicture}[line cap=round,line join=round,>=triangle 45,x=1.0cm,y=1.0cm]
+\clip(-9.129610567806147,-4.581348487837063) rectangle (11.68459224707052,6.970130176564097);
+\draw [line width=2.pt] (0.6123462941858072,3.994060866268072)-- (-0.004573500790127739,0.4831233580017885);
+\draw [line width=2.pt] (-0.004573500790127739,0.4831233580017885)-- (5.291938912416176,0.40636230853503036);
+\draw [line width=2.pt] (5.291938912416176,0.40636230853503036)-- (0.6123462941858072,3.994060866268072);
+\draw [line width=2.pt] (2.6636711519748157,1.8239456184319742) circle (2.9861905265863102cm);
+\draw [line width=2.pt] (0.6123462941858072,3.994060866268072)-- (3.2039775778952135,0.43662261773098643);
+\draw [line width=2.pt] (-1.1969145567860837,0.5004036631611504)-- (-0.004573500790127739,0.4831233580017885);
+\draw [line width=2.pt] (0.6123462941858072,3.994060866268072)-- (3.1607039986721777,-2.549254348658463);
+\draw [line width=2.pt] (3.2039775778952135,0.43662261773098643)-- (3.1607039986721777,-2.549254348658463);
+\draw [line width=2.pt] (2.3235091791772597,0.8925909373765568) circle (3.542201877193141cm);
+\draw [line width=2.pt] (5.291938912416176,0.40636230853503036)-- (5.831089006842902,0.3985485390505851);
+\draw [line width=2.pt] (5.630759790264297,2.1611679095209486)-- (5.831089006842902,0.3985485390505851);
+\begin{scriptsize}
+\draw [fill=ududff] (0.6123462941858072,3.994060866268072) circle (2.5pt);
+\draw[color=ududff] (0.3485257722153114,4.479426734939138) node {$A$};
+\draw [fill=ududff] (-0.004573500790127739,0.4831233580017885) circle (2.5pt);
+\draw[color=ududff] (-0.13615165426305856,0.25196251510001916) node {$B$};
+\draw [fill=ududff] (5.291938912416176,0.40636230853503036) circle (2.5pt);
+\draw[color=ududff] (4.89910827637334,0.22503599140677635) node {$C$};
+\draw [fill=uuuuuu] (2.6636711519748157,1.8239456184319742) circle (2.0pt);
+\draw[color=uuuuuu] (2.879618999380132,2.136819173627015) node {$O$};
+\draw [fill=uuuuuu] (3.2039775778952135,0.43662261773098643) circle (2.0pt);
+\draw[color=uuuuuu] (3.3912229495517447,0.8443460363513606) node {$E$};
+\draw [fill=uuuuuu] (-1.1969145567860837,0.5004036631611504) circle (2.0pt);
+\draw[color=uuuuuu] (-1.6171104573914112,0.5750807994189326) node {$K$};
+\draw [fill=uuuuuu] (3.1607039986721777,-2.549254348658463) circle (2.0pt);
+\draw[color=uuuuuu] (3.3373699021652596,-2.1175715699053472) node {$D$};
+\draw [fill=uuuuuu] (5.831089006842902,0.3985485390505851) circle (2.0pt);
+\draw[color=uuuuuu] (6.1646548899557505,0.4135216572594759) node {$P$};
+\draw [fill=uuuuuu] (5.630759790264297,2.1611679095209486) circle (2.0pt);
+\draw[color=uuuuuu] (5.922316176716566,2.4599374579459283) node {$Q$};
+\end{scriptsize}
+\end{tikzpicture}
+\end{document}
