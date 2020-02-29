@@ -1,0 +1,1033 @@
+
+\documentclass{article}
+\usepackage{ctex}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{newlfont}
+\usepackage{hyperref}
+\usepackage{tikz}
+\newcommand{\co}{\mathrm{const}}
+\newcommand{\e}{\epsilon}
+\newcommand{\la}{\lambda}
+%\newcommand{\G}{\Gamma}
+\newcommand{\plus}{+}
+\newcommand{\minus}{-}
+\newcommand{\equal}{=}
+\DeclareSymbolFont{ugmL}{OMX}{mdugm}{m}{n}
+\DeclareMathAccent{\wideparen}{\mathord}{ugmL}{"F3}
+\newcommand\pxx{%
+\mathrel{\text{\tikz[baseline] \draw (0em,-0.3ex) -- (.4em,1.7ex) (.2em,-0.3ex) -- (.6em,1.7ex);}%
+}}
+\newcommand\notpxx{%
+\mathrel{\text{\tikz[baseline] \draw (0em,-0.3ex) -- (.4em,1.7ex) (.2em,-0.3ex) -- (.6em,1.7ex) (0em,1.7ex) -- (.6em,-0.3ex);}%
+}}
+\newcommand*\xiangs{%
+\mathrel{\text{%
+\tikz \draw[baseline] (-.25em,1.15ex) .. controls (-.55em,1.15ex) and (-.51em,.23ex) .. (-.275em,.23ex) .. controls (0,.23ex) and (0,1.15ex) .. (.275em,1.15ex) .. controls (.51em,1.15ex) and (.55em,.23ex) .. (.25em,.23ex);%
+}}}
+\newcommand*\quand{%
+\mathrel{\text{%\small%
+\tikz \draw[baseline] (-.2em,1.35ex) .. controls (-.46em,1.6ex) and (-.54em,.65ex) .. (-.25em,.65ex) .. controls (-.06em,.65ex) and (.06em,1.35ex) .. (.25em,1.35ex) .. controls (.54em,1.35ex) and (.46em,.4ex) .. (.2em,.65ex) (-.46em,.4ex) -- (.46em,.4ex) (-.46em,0ex) -- (.46em,0ex);%
+}}}
+
+\begin{document}
+\title{Geometry Problems}\author{Amir Hossein Parvardi\thanks{ Email: a.parvardi@gmail.com, website: parvardi.com/ }\\Lai Yangwenzhao翻译} \maketitle
+
+\par {\bf 注意.} 大多数问题都有解答.只需单击问题旁边的数字以打开网页，然后即可查看解答! 这些问题大多由不同作者发布, 但是所有问题都很不错! 祝解题快乐!
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=1899886#p1899886}{\bf 1.} 圆 $W_1,W_2$ 交于 $P,K$. $XY$ 是更靠近点$P$ 的两圆公切线 , 点$X$ 在 $W_1$ 上, 点$Y$ 在 $W_2$上. $XP$ 与 $W_2$ 第二个交点为$C$ , $YP$ 与 $W_1$ 第二个交点为 $B$. 点$A$是 $BX$ 和 $CY$交点. 证明: 若点$Q$ 是三角形$ABC$ 和三角形$AXY$外接圆的第二个交点,则
+$$\angle QXA=\angle QKP$$
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=1899885#p1899885}{\bf 2.} 令点$M$ 为三角形 $ABC$ 边 $BC$ 上的任意点.圆$W$切 $AB$ 于 $T$,切$BM$于$K$,切三角形$AMC$外接圆于$P$. 证明:若$TK\pxx AM$, 三角形 $APT$ 与三角形 $KPC$ 的外接圆相切.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=1871430#p1871430}{\bf 3.} 三角形 $ABC$ 是一个等腰三角形且 $BC>AB=AC$. $D,M$ 分别是$BC, AB$的中点. 存在点$X$ 使得 $BX\perp AC$ , $XD\pxx AB$. $BX$ 交 $AD$ 于 $H$. 若点 $P$ 是 $DX$ 与三角形 $AHX$外接圆的另一个交点 , 证明:点 $A$ 到三角形 $AMP$外接圆的切线与$BC$平行.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=1871420#p1871420}{\bf 4.} 令 $O$, $H$ 分别是 $\triangle ABC$的外心和垂心. 令 $M$ 和$N$分别是 $BH$ 和 $CH$的中点.点$B'$在 $\triangle ABC$的外接圆上且$BB'$过圆心. 若 $H,O,N,M$ 共圆, 证明: $\displaystyle\overline{B'N}=\frac12\overline{AC}$.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=1385942#p1385942}{\bf 5.} $ OX,OY$ 垂直. 假设在直线 $ OX$上有两个定点 $ P,P'$ 位于 $ O$的同一侧. $ I$ 是一个动点使得 $ IP\equal{}IP'$. $ PI,P'I$ 分别交 $ OY$于 $ A,A'$.
+
+{\bf I.} 若 $ C,C'$分别是$\triangle O,P,A'$,$\triangle O,P,A'$外接圆, 证明:$ I,A,A',M$ 共圆,该圆与一条定直线,一个定圆分别相切.\footnote{译者注:此处原题不完整,采用了AoPS上补充的版本.}
+
+
+{\bf II.} 证明: $ IM$ 过定点.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=1385932#p1385932}{\bf 6.}  $ A,B,C,Q$ 是平面上的定点. $ M,N,P$分别是 $ AQ$,$BQ$,$CQ$ 与$ BC$,\\$CA$,$AB$的交点. $ D',E',F'$是 $ ABC$内切圆与 $ BC,CA,AB$的切点. $ M,N,P$ 到三角形 $ ABC$内切圆的切线(不为三角形$ ABC$三边) 构成三角形 $ DEF$. 证明: $ DD',EE',FF'$ 共点于 $ Q$.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=1385593#p1385593}{\bf 7.} 在三角形 $ ABC$ 中. $ W_a$ 是一个圆心在 $ BC$上的圆,$ W_a$ 过点 $ A$ 并且与 $ ABC$的外接圆直交. 同样定义$ W_b,W_c$.证明: $ W_a,W_b,W_c$ 的圆心共线.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=1385555#p1385555}{\bf 8.} 在四面体 $ABCD$中,四个面的外接圆半径相等. 证明: $AB=CD, AC=BD$ 且 $AD=BC$.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=1385585#p1385585}{\bf 9.} 假设 $ M$ 是三角形 $ ABC$的边 $ BC$上任意点. $ B_1,C_1$ 是边 $ AB,AC$上的点,使得$ MB = MB_1$且$ MC = MC_1$.假设 $ H,I$ 是三角形 $ ABC$的垂心和三角形 $ MB_1C_1$的内心.证明: $ A,B_1,H,I,C_1$ 共圆.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=1370723#p1370723}{\bf 10.}三角形 $ ABC$ 的内切圆切$ AB,AC$于$ P,Q$. $ BI, CI$ 分别交 $ PQ$ 于 $ K,L$. 证明: 当且仅当 $ AB+AC=3BC$时, $\triangle ILK$的外接圆与$\triangle ABC$相切.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=124397#p124397}{\bf 11.} 令 $ M$ 和 $ N$ 是三角形 $ ABC$内的两个点,使得
+$$ \angle MAB = \angle NAC\quad \mbox{且}\quad \angle MBA = \angle NBC.$$
+证明:
+$$ \frac {AM \cdot AN}{AB \cdot AC} + \frac {BM \cdot BN}{BA \cdot BC} + \frac {CM \cdot CN}{CA \cdot CB} = 1.$$
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=191489#p191489}{\bf 12.} 令 $ABCD$ 为任意四边形.$\angle A$ 和 $\angle C$ 的外角平分线交于点 $P$;$\angle B$ 和 $\angle D$ 的外角平分线交于点 $Q$. 直线 $AB$ 和 $CD$ 相交于 $E$, 直线 $BC$ 和 $DA$ 相交于 $F$.  $\angle{AED}$与 $\angle{BFA}$的外角平分线交于$R$ .证明: $P$, $Q$, $R$ 三点共线.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=916020#p916020}{\bf 13.} 向三角形$ABC$ 外侧作正方形$ AB_{c}B_{a}C$, $ CA_{b}A_{c}B$ 和 $ BC_{a}C_{b}A$. 正方形 $ B_{c}B_{c}'B_{a}'B_{a}$ 的中心 $ P$ 在正方形 $ AB_{c}B_{a}C$的外部.证明: $ BP$,$C_{a}B_{a}$,$ A_{c}B_{c}$ 三线共点.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=852412#p852412}{\bf 14.} 三角形 $ABC$ 是等腰三角形($AB=AC$). 过$A$作 $\ell$ 平行于$BC$. $P,Q$ 分别是 $AB,AC$垂直平分线上的点,使得$PQ\perp BC$. $M,N$ 是$\ell$上的点,使得$\angle APM$ 和 $\angle AQN$ 为直角. 证明:
+$$\frac{1}{AM}+\frac1{AN}\leq\frac2{AB}$$
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=835050#p835050}{\bf 15.} 在$ABC$中, $M$ 是$AC$中点,$D$是$BC$上一点,使得 $DB=DM$. 已知 $2BC^{2}-AC^{2}=AB\cdot AC$. 证明: \[BD\cdot DC=\frac{AC^{2}\cdot AB}{2(AB+AC)}\]
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=641483#p641483}{\bf 16.} $H,I,O,N$ 分别是三角形 $ABC$的垂心,内心,外心,界心. $I_{a},I_{b},I_{c}$ 分别是$\triangle ABC$ 顶点 $A,B,C$所对应的旁心. 存在点$S$ 使得 $O$ 是 $HS$的中点. 证明: 三角形$I_{a}I_{b}I_{c}$ 和三角形$SIN$的重心重合.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=638185#p638185}{\bf 17.} 四边形$ABCD$ 是一个凸四边形.对角线$AC,BD$将它划分为4个三角形. $P$ 对角线$AC,BD$的交点. $I_{1},I_{2},I_{3},I_{4}$ 是三角形 $PAD$,$PAB$,$PBC$,$PCD$的旁心(对应顶点 $P$).证明:当且仅当四边形$ABCD$有内切圆时, $I_{1},I_{2},I_{3},I_{4}$共圆.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=634198#p634198}{\bf 18.} 在三角形$ABC$中,若$L,M,N$ 分别是$AB,AC,BC$中点.$H$是三角形$ABC$的垂心,证明: $$LH^{2}+MH^{2}+NH^{2}\leq \frac{1}{4}(AB^{2}+AC^{2}+BC^{2})$$
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=118673#p118673}{\bf 19.} 圆 $S_1$ 与 $S_2$ 交于点 $P$ 和点 $Q$.在$S_1$上有不同两点$A_1$ 和$B_1$ (异于$P$ , $Q$). 直线$A_1P$ 和 $B_1P$ 分别交$S_2$于 $A_2$和$B_2$, 直线 $A_1B_1$和$A_2B_2$交于点$C$.证明:随着 $A_1$ 和$B_1$变化,三角形$A_1A_2C$的外心在一个定圆上运动.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=118667#p118667}{\bf 20.} $B$是圆$S_1$上一点,$A$是$B$到$S_1$的切线上异于$B$的一点. $C$ 是一个不在$S_1$上的点,使得线段 $AC$交$S_1$于两个不同的点. 圆$S_2$与线段$AC$相切于$C$,与$S_1$ 相切于$D$($D$与$B$位于$AC$异侧).证明:三角形 $BCD$的外心在三角形$ABC$的外接圆上.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=2126712#p2126712}{\bf 21.}在三角形$ABC$中,$\angle A$和 $\angle B$的平分线分别交$BC$和$CA$于点 $D$ 和点 $E$. 若$AE+BD=AB$,求$\angle C$的大小.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=2117909#p2117909}{\bf 22.} $A$, $B$, $C$, $P$, $Q$, $R$ 六点共圆.证明:若点$P$, $Q$, $R$对于三角形$ABC$的西姆松线共点,那么 $A$, $B$, $C$对于三角形$PQR$ 的西姆松线共点.此外,证明所共的点是相同的.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=2114602#p2114602}{\bf 23.} 在$ABC$中,点$E$ 和$F$ 分别在线段$BC$ 和 $CA$上,使得 $\displaystyle\frac{CE}{CB}+\frac{CF}{CA}=1$ 且 $\angle CEF=\angle CAB$.令$M$ 是$EF$中点,$G$ 是$CM$ 和$AB$交点.证明:三角形 $FEG$相似于三角形 $ABC$.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=358032#p358032}{\bf 24.} 在三角形 $ABC$中,$\angle C = 90^\circ$且$CA \neq CB$.  $CH$为$AB$边上的高,$CL$是角$C$的平分线.证明:对于 $X \in CL$, $X \neq C$, 有$\angle XAC \neq \angle XBC$.同样的,对于 $Y \in CH$ $Y\neq C$有 $\angle YAC \neq \angle YBC$.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=113332#p113332}{\bf 25.}在一圆上有$A,$ $B,$ $C,$ $D$四点,使得$AB$过圆心,$CD$不过圆心. 证明:在点 $C$与点$D$处的切线交点和 $AC$ 与$BD$交点的连线垂直于$AB.$
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=1992097#p1992097
+ }{\bf 27.} 在 $ABC$ 中, $D$ 在 $AC$上,使得 $AB=DC$ , $\angle BAC=60-2X$ , $\angle DBC=5X$ 且 $\angle BCA=3X$
+证明: $X=10.$
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=333377#p333377
+ }{\bf 28.} 证明:在任意三角形 $ABC$中,
+$$0 < \cot { \left( \frac{A}{4} \right)} - \tan{ \left( \frac{B}{4} \right) } - \tan{ \left( \frac{C}{4} \right) } - 1 < 2 \cot { \left( \frac{A}{2} \right) }.  $$
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=1099544#p1099544
+ }{\bf 29.}在$ \triangle ABC$中, 点$ D$ 和$ E$ 在直线$ AB$上,且排列顺序为 $ D - A - B - E$,有 $AD = AC$, $ BE = BC$. $\angle A$和$\angle B$平分线分别交$ BC,AC$于 $ P$和$ Q$,交三角形$ ABC$的外接圆于 $ M$和 $ N$.点 $ A$和三角形 $ BME$外心的连线与点$ B$和三角形$ AND$的连线交于点$ X$.证明:$ CX \perp PQ$.
+
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=1004026#p1004026
+ }{\bf 30.} 考虑一个以$O$为圆心的圆, 点$A,B$ 在圆上且 $AB$ 不是直径.点 $C$在圆上使得$AC$平分$OB.$ 令 $AB$ 与 $OC$ 交于点 $D$, $BC$和 $AO$ 交于点 $F.$ 证明: $AF=CD.$
+
+
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=962592#p962592
+}{\bf 31.} 在三角形$ ABC$中,点.$ X;Y$分别是 $ AC;AB$上两点.$ CY$交 $ BX$ 于$ Z$,$ AZ$ 交$ XY$于 $ H \ (AZ \perp XY)$. $ BHXC$ 四点共圆.
+证明:$ XB=XC.$
+
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=22914#p22914
+}{\bf 32.} 四边形$ABCD$是一个圆内接四边形,点$L$和$N$分别为其对角线$AC$ 和$BD$的中点. 若 $BD$平方 $\angle ANC$. 证明:$AC$ 平方 $\angle BLD$.
+
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=868538#p868538
+ }{\bf 33.} 在$\triangle ABC$中,$\angle A$的外角平分线与过点$B$和$C$且垂直于$BC$的直线分别交于点$D$ 点$E$. 证明: 直线 $BE$, $CD$, $AO$共点, 其中 $O$是三角形 $\triangle ABC$外心.
+
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=727178#p727178}{\bf 34.} $ABCD$是任意四边形. 定义点 $O= AC\cap BD$. 构造点 $M\in AB$ 和 $N\in CD$, 且$O\in MN$使得 $\displaystyle\frac{MB}{MA}+\frac{NC}{ND}$的值最小.
+
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=365242#p365242}{\bf 35.}在三角形$ABC$中,点$M,N,P$ 分别是 $BC,CA,AM$ 中点, 交点 $E= AC\cap BP$,点$R$ 是点$A$ 在直线 $MN$上的投影.证明: $\angle ERN= \angle CRN$.
+
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=659219#p659219
+ }{\bf 36.} 两个圆交于两点,其中之一是$X.$ 在其中一个圆上存在点$Y$, 另一个圆上存在点$Z$,使得$X, Y$ 和 $Z$ 共线且 $XY \cdot XZ$ 最大.
+
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=337819#p337819
+ }{\bf 37.} 四点 $A, B, C, D$依次位于圆$o$上.点 $S$在$o$内部且$\angle SAD=\angle SCB$ , $\angle SDA= \angle SBC$. $\angle ASB$平分线交圆于点$P$和 $Q$.证明: $PS =QS$.
+
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=246214#p246214
+}{\bf 38.} 在三角形$ ABC$中.点$ G$, $ I$, $ H$分别是重心,内心,垂心. 证明: $ \angle GIH > 90^{\circ}$.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=342752#p342752
+ }{\bf 39.} 存在两条平行线 $k$ 和$l$,以及一个不与直线$k$相交的圆. 考虑直线$k$上的动点$A$.点$A$到圆的两条切线交直线 $l$于 $B$ 和$C$. 直线 $m$过 $A$ 线段 $BC$中点.证明:当 $A$变化时$m$  过定点.
+
+$$ $$
+
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=198163#p198163
+ }{\bf 40.}$ABCD$是一个凸四边形且$AD\notpxx BC$.定义 $E=AD \cap BC$ 和 $I = AC\cap BD$.证明:当且仅当 $AB \pxx CD$ 且 $IC^{2}= IA \cdot AC$时,三角形 $EDC$ 和三角形 $IAB$的重心重合.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=578901#p578901
+ }{\bf 41.} 在正方形$ABCD$中.点$O = AC\cap BD$. 存在一个正数 $k$ 使得对于任意点$M\in OC$, 存在点 $N\in OD$ 使得$AM\cdot BN=k^{2}$. 确定点$L = AN\cap BM$的轨迹.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=447144#p447144
+}{\bf 42.} 考虑一个斜边$AB=1$的直角三角形$ABC$. $\angle{ACB}$的平分线分别交中线$BE$和$AF$于 $N$和$M$.若 ${AF}\cap{BE}=P$,求$\triangle{MNP}$面积的最大值.
+
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=445337#p445337
+ }{\bf 43.} 三角形$ABC$ 是等腰三角形,且$AB = AC$. 令$\angle B$的平分线交 $AC$于点$D$,且$BC = BD+AD$.
+求$\angle A$.
+
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=443384#p443384
+ }{\bf 44.} 给定面积为$S$的三角形, 三边长分别为 $a$, $b$, $c$ .证明: $a^{2}+4b^{2}+12c^{2}\geq 32\cdot S$.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=431965#p431965
+ }{\bf 45.} 在直角三角形 $ABC$中,$\angle A = 90$.取$\angle A$的平分线$AD$ . 有 $DK \perp AC , DL \perp AB$ . $BK , CL$ 交于$H$ .  证明: $AH \perp BC$.
+
+$$ $$
+
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=181685#p181685
+}{\bf 46.}点$H$是三角形$ABC$的垂心. 三角形$ABC$的高为$BB'$和$CC'$\\($B' \in AC$, $C' \in AB$). 动直线 $\ell$过$H$交线段 $BC'$ 和 $CB'$于 $M$ 和 $N$.  过$M$ 和 $N$作$\ell$ 的垂线交$BB'$和$CC'$ 于 $P$和 $Q$. 确定线段$ PQ$中点的轨迹.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=584865#p584865
+}{\bf 47.} 在三角形$ABC$中,$\ AH\bot\ BC$ ,$ BE$是$\angle ABC$平分线.若 $\angle BEA=45^{\circ}$,求 $\angle EHC.$
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=519896#p519896
+}{\bf 48.} 三角形$\triangle ABC$ 是锐角三角形, $AB \not= AC$.  $H$为三角形$ABC$的垂心,$M$是$BC$中点.$D$在$AB$上,$E$在$AC$上,使得 $AE=AD$且 $D$, $H$, $E$共线.证明:$HM$ 垂直于$\triangle ABC$和$\triangle ADE$的外接圆的公共弦.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=519895#p519895
+}{\bf 49.} 点 $D$在$\triangle ABC$内部, $E$ 是$AD$上异于$D$的一点. $\omega_1$和$\omega_2$分别是$\triangle BDE$和$\triangle CDE$的外接圆. $\omega_1$和$\omega_2$ 分别交线段 $BC$于点 $F$和点$G$.$X$是$DG$和$AB$的交点,$Y$是$DF$和$AC$交点.证明:$XY$ $\pxx$ $BC$.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=493656#p493656
+}{\bf 50.} 在 $\triangle{ABC}$ 中,$D$是$BC$中点, $M$是$AD$中点. $BM$ 交$AC$于点$N$.证明:$AB$与 $\triangle{NBC}$的外接圆相切的充要条件是
+$$\frac{{BM}}{{MN}} =\frac{({BC})^2}{({BN})^2}.$$
+
+
+
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=480525#p480525
+}{\bf 51.}$\triangle ABC$三边长分别为$a, b, c$,面积为$K$.证明:
+$$ 27 (b^2 + c^2 - a^2)^2 (c^2 + a^2 - b^2)^2 (a^2 + b^2 - c^2)^2 \le (4K)^6$$
+
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=439274#p439274
+}{\bf 52.} 给定一个三角形$ABC$满足$AC+BC=3\cdot AB$.三角形$ABC$的内切圆圆心为$I$,内切圆分别交$BC$和$CA$于点 $D$和$E$. 点$K$和点$L$分别是点$D$点$E$关于点$I$的对称点.证明: $A$, $B$, $K$, $L$ 四点共圆.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=476117#p476117
+ }{\bf 53.}在一个锐角三角形$ABC$中,满足 $2\cdot AB = AC + BC$.证明:三角形$ABC$的内心,外心,$AC$中点 $BC$中点共圆.
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=463068#p463068
+ }{\bf 54.}在三角形$ABC$中,点$M$是$BC$中点.$\gamma$是三角形$ABC$内切圆. $BC$边上的中线$AM$交$\gamma$于两点$K$和$L$.过$K$和$L$分别作$BC$的平行线,交$\gamma$于点$X$和点$Y$.$AX$和$AY$交$BC$于点$P$点$Q$.证明: $BP = CQ$.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=2#p2
+}{\bf 55.}点$M$是三角形$ABC$内一点使得$\angle MAB=10^\circ$, $\angle MBA=20^\circ$, $\angle MAC=40^\circ$,$\angle MCA=30^\circ$.证明:三角形$ABC$为等腰三角形.
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=448458#p448458
+ }{\bf 56.} 三角形$ABC$是直角三角形($AB\perp AC$).点$M$是 $BC$中点, $D\in BC$, $\angle BAD=\angle CAD$. 证明:存在一点$P\in AD$使得 $PB\perp PM$且$PB=PM$的充要条件是$AC=2\cdot AB$ 并且 $\displaystyle\frac{PA}{PD}=\frac 35$.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=741369#p741369
+}{\bf 57.} 考虑一个凸五边形$ABCDE$,使得
+$$ \angle BAC = \angle CAD = \angle DAE \quad \quad  \angle ABC = \angle ACD = \angle ADE
+$$
+点$ P$是$ BD$和$ CE$的交点.证明:$ AP$过$ CD$的中点.
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=2111860#p2111860
+}{\bf 58.} 三角形$ABC$的周长等于$3+2\sqrt3$.在坐标平面内, 所有与三角形$ABC$全等的三角形内部或是边上均含有至少一个整点.证明:三角形$ABC$是等边三角形.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=20670#p20670
+}{\bf 59.} 三角形 $ ABC$ 的外接圆半径为$ R$,点$ P$在三角形$ABC$内部.证明:
+$$ \frac {PA}{BC^{2}} + \frac {PB}{CA^{2}} + \frac {PC}{AB^{2}}\ge \frac {1}{R}.
+$$
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=794452#p794452
+ }{\bf 60.} 证明:一个平面无法被分成有限数量的抛物线内部的并集(抛物线内部指一条抛物线将平面划分为的两个区域中,抛物线开口朝的方向).
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=960160#p960160
+}{\bf 61.}$ABCD$是圆内接四边形, 点$O = AC \cap BD$,点$ K$, $ L$, $ M$, $ N$分别是点$ O$到$ AB$, $ BC$, $ CD$, $ DA$上的射影.证明: $ \displaystyle\frac {1}{\left|OK\right|} + \frac {1}{\left|OM\right|} = \frac{1}{\left|OL\right|} + \frac {1}{\left|ON\right|}$.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=515828&#p515828
+}{\bf 62.} 在$ABC$中 . 在$BC$  ,$CA$ , $AB$的延长线上,存在点$D,E,F$使得 $CD=AE=BF$.
+证明:若$DEF$是正三角形,则$ABC$也是正三角形.
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=744569#p744569
+ }{\bf 63.}三角形$ABC$的内心为$I$,三角形$IBC$的内切圆交$IB,IC$分别于 $I_{a},I_{a}'$.同样定义$I_{b},I_{b}',I_{c},I_{c}'$,点$A'=I_{b}I_{b}'\cap I_{c}I_{c}'$ ,同样定义点$B',C'$ 证明: $\triangle ABC,\triangle A'B'C'$ 互成透视.
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=715139#p715139
+}{\bf 64.}  $ AA_{1},BB_{1},CC_{1}$ 是锐角三角形 $ ABC$的高,$ X$任意点. $ M$,$N$,$P$,$Q$,$R$,\\$S$分别是$ X$到$ AA_{1},BC,BB_{1},CA,CC_{1},AB$上的射影.证明: $ MN,PQ,RS$共点.
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=558585#p558585
+ }{\bf 65.} 在三角形 $ABC$中 $X,Y$ ,$Z$ 分别是 $BC,CA$ , $AB$上的点,使得$AX=BY=CZ$ 且$BX=CY=AZ.$ 证明: $ABC$ 是正三角形.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=124095#p124095
+}{\bf 66.}  $P$ 和 $P'$分别是三角形 $ABC$上的两个等角共轭点.直线 $AP$, $BP$, $CP$分别交$BC$, $CA$, $AB$于点 $A'$, $B'$, $C'$.
+证明: 直线$AP', BP', CP'$分别关于$B'C', C'A', A'B'$的对称直线共点.
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=99759#p99759
+ }{\bf 67.} 在凸四边形$ABCD$中,对角线$BD$ 不平分 $\angle ABC$ 或 $\angle CDA$. 点$P$位于四边形$ABCD$ 内部并满足
+
+$\angle PBC=\angle DBA\quad $且 $ \quad \angle PDC=\angle BDA. $
+
+证明:四边形$ABCD$ 内接于圆的充要条件是 $AP=CP$.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=564645#p564645
+}{\bf 68.} 设三角形$ABC$外接圆在点$B$和点$C$处的切线相交于点$X.$ 证明:$AX$是三角形$ABC$的一条陪位中线.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=564645#p564645
+}{\bf 69.} 令三角形$ABC$在点$B$和点$C$处的切线相交于点$X,$ $M$是$BC$中点.证明: $AM=AX\cdot\left|\cos A\right|$.
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=529958#p529958
+ }{\bf 70.} L三角形$ABC$是等边三角形. 点$M$是$BC$上一点,$N$是$CA$上一点,$P$是$AB$上一点,使得 $S\left(ANP\right)=S\left(BPM\right)=S\left(CMN\right)$, 其中 $S\left(XYZ\right)$表示三角形$XYZ$的面积.
+ 证明:$\triangle ANP\cong\triangle BPM\cong\triangle CMN$.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=512720#p512720
+}{\bf 71.}  四边形$ABCD$是平行四边形.动直线$g$过点$A$,分别交射线$BC$和 $DC$ 于点$X$和$Y$.点$K$和点$L$ 是三角形$ABX$和三角形$ADY$ 顶点$A$所对的旁心.证明:$\angle KCL$的大小与直线$g$无关.
+
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=477064#p477064
+ }{\bf 72.}三角形$QAP$ 的$\angle A=90^{\circ}.$ 点$B$ 和点$R$ 分别在线段$PA$ 和$PQ$上,使得$BR\pxx AQ.$ 点 $S$和点$T$分别在$AQ$ 和 $BR$上, $AR\perp BS$,  $AT \perp BQ.$ $AR$与$BS$交于点$U,$ $AT$ 与 $BQ$交于点$V.$证明:
+
+{\bf I.} $P,S,T$ 三点共线;
+
+{\bf II.}$P,U,V$ 三点共线.
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=501529#p501529
+ }{\bf 73.}在三角形$ABC$中,直线$m$分别交线段$AB$和$AC$于点$D$和点$F$,交直线$BC$于点$E$使得 $C$ 在$B$ 和 $E$之间. 过$A$, $B$, $C$作$m$的平行线 交三角形$ABC$的外接圆于$A_1$, $B_1$, $C_1$,(异于$A$, $B$, $C$). 证明: $A_1E$ , $B_1F$ ,$C_1D$共点.
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=457871#p457871
+}{\bf 74.} 点$H$是三角形$ABC$的垂心.$X$是平面内一点. 以$XH$为直径的圆 交$AH, BH, CH$于$A_1, B_1, C_1$,交$AX, BX, CX$与$A_2, B_2, C_2$.证明: $A_1A_2, B_1B_2, C_1C_2$共点.
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=279551#p279551
+}{\bf 75.} 确定三角形$ABC$所需具有的性质,使得其内心在$HG$上,其中$H$为垂心,$G$为重心.
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=330584#p330584
+ }{\bf 76.} 三角形$ABC$是直角三角形,斜边为$AB$.\footnote{译者注:此处原题不完整,采用了AoPS上补充的版本}点$D$是$AC$上异于点$A$和 点$C$的一点,使得过三角形$ABC$内心且平行于$\angle ADB$平分线的直线与三角形$BCD$内切圆相切.证明:$AD=BD$
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=347135#p347135
+}{\bf 77.} 点$M$,点$N$分别是 $\triangle ABC$边$BC$和$AC$的中点,$BH$是$ABC$的一条高.过点$M$且垂直于$\angle HMN$平分线的直线交$AC$于点$P$使得$\displaystyle HP = \frac{1}{2}(AB+BC)$且$\angle HMN = 45^{\circ}$.证明:三角形$ABC$为等腰三角形.
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=347236#p347236
+ }{\bf 78.} 点$D,E,F$分别在$BC, CA$,$AB$上,满足$EF \pxx BC$, $D_1$ 是$BC$上一点(异于点$B,D,C$),作$D_1E_1 \pxx DE, D_1F_1 \pxx DF$分别交$AC$和 $AB$于点$E_1$和点$F_1$.作$\triangle PBC \xiangs \triangle DEF$ 使得$P$ 和$A$ 在$BC$的同一侧.证明:$EF, E_1F_1, PD_1$共点.\footnote{译者注:此处题目不完整,采用中国2004年TST的版本}
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=364939#p364939}{\bf 79.}四边形$ABCD$为矩形. 分别在$AB$,$BC$,$CD$,$DA$上选取点$P$,$M$,\\$N$,$Q$.证明:四边形$PMNQ$的周长至少是矩形$ABCD$外接圆直径的2倍.
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=363888#p363888
+}{\bf 80.}五边形$ABCDE$是凸五边形.定义$A'=BD\cap CE$, $B'=CE\cap DA$, $C'=DA\cap EB$, $D'=EB\cap AC$, $E'=AC\cap BD$.同样的,定义 $A''=AA'\cap EB$, $B''=BB'\cap AC$, $C''=CC'\cap BD$, $D''=DD'\cap CE$ ,$E''=EE'\cap DA$.
+证明:
+$$ \frac{EA''}{A''B}\cdot\frac{AB''}{B''C}\cdot\frac{BC''}{C''D}\cdot\frac{CD''}{D''E}\cdot\frac{DE''}{E''A}=1.  $$
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=361066#p361066
+}{\bf 81.}  三角形$ABC$的内切圆$i=C(I,r)$ 交$BC,CA,AB$分别于点$D,E,F$.点 $M,N,P$分别是$AI,BI,CI$与三角形$ABC$外接圆$e=C(O,R)$的第二个交点. 证明:$MD,NE,PF$三线共点.
+
+{\bf Remark.}  若点$A',B',C'$分别是$AO,BO,CO$与圆$e$的第二个交点,证明:点$U= MD\cap A'I$,点$V=NE\cap B'I$,点$W=PF\cap C'I$在圆$e$上.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=331636#p331636
+}{\bf 82.} 三角形$ABC$是一个锐角三角形且$\angle BAC>\angle BCA$,点$D$是$AC$上一点,使得$|AB|=|BD|$. 点$F$是三角形$ABC$外接圆上一点,使得$FD$垂直于$BC$于点$F$,点$B$与$AC$于$FD$不同侧.
+证明:$FB\perp AC.$
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=245463#p245463
+}{\bf 83.}  在三角形$ABC$中,点$H$为垂心,点$I$为内心,点$S$为重心,$d$是三角形$ABC$外接圆直径.
+
+证明:
+
+$9\cdot HS^2+4\left(AH\cdot AI+BH\cdot BI+CH\cdot CI\right)\geq 3d^2$,
+
+并且求出取等情况.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=336205#p336205
+}{\bf 84.} 在三角形 $ABC$中, 一圆过点$A$和点$B$分别交线段$AC$和$BC$于点 $D$ 和点$E$.直线$AB$与$DE$交于点$F$,直线$BD$与$CF$交于点$M$.证明:$MF = MC$的充要条件是$MB\cdot MD = MC^2$.
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=329277#p329277
+ }{\bf 85.} 三角形$ABC$ 内接于圆$(O,R)$.点$C'$ 在$AB$上,使得 $AC=AC'$ 点$B'$在$AC$上,使得$AB'=AB$.直线$B'C'$ 交圆于两点$E,D$,交$BC$于$M$.
+证明:当点$A$于$\wideparen {BAC}$ 上运动时$AM$过定点.
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=320049#p320049
+ }{\bf 86.} 在锐角三角形$ABC$中,考虑点$A$和点$B$到对应边上的射影$H_a$和 $H_b$,以及$\angle A$平分线与$BC$交点$W_a$和$\angle B$平分线与$CA$交点$W_b$.证明: 三角形$ABC$的内心$I$ 在线段$H_aH_b$上的充要条件为三角形$ABC$的外心$O$在线段$W_aW_b$上.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=316789#p316789
+}{\bf 87.} 点$O$是三角形$ABC$内的一点.直线$BO$和直线$CO$分别交直线$CA$和直线$AB$于点$M$和点$N,$.过点$M$和点$ N$且平行于$CN$和$BM$相交于点$E,$ 过点$B$ 和$C$且平行于$CN$和$BM$的直线相交于点$F.$证明:
+
+{\bf I.}点$A,E,F$共线;
+
+{\bf II.}$\displaystyle\frac{AE}{AF}=\frac{AM\cdot AN}{AB\cdot AC}=\frac{OM\cdot ON}{OB\cdot OC}$.
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=310011#p310011
+}{\bf 88.} 在空间中给定直角三角形$ABC$ ,$\angle A=90^{\circ},$给定点$D$ 使得直线$CD$垂直于平面$ABC.$ 令$d = AB, h = CD$, $\alpha=\angle DAC$ ,$\beta=\angle DBC$. 证明: $$ h=\frac{d\tan\alpha\tan\beta}{\sqrt{\tan^2\alpha-\tan^2\beta}}$$
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=311023#p311023
+ }{\bf 89.} 在三角形$ABC$中,角$A, B, C$的平分线分别交$BC, CA, AB$于点$A', B', C'.$ 点$P$是角$A$的平分线与$B'C'$的交点.过点$P$作平行于$BC$的直线分别交$AB $和$AC$于点$M$和$N.$证明:$2\cdot MN = BM + CN$.
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=307795#p307795
+ }{\bf 90.} 三角形$ABC$三边长分别为$a$, $b$, $c$.\\
+若$a\left(1-2 \cos A\right)+b\left(1-2 \cos B\right)+c\left(1-2 \cos C\right) = 0$,证明:三角形$ABC$是等边三角形.
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=376521#p376521
+}{\bf 91.}  圆$C(O_1)$和圆$C(O_2)$相交于点$A$, 点$B$. $CD$过点$O_1$ 交圆$C(O_1)$ 于点$D$,切圆$C(O_2)$于点 $C$. $AC$切$C(O_1)$于点$A$. 作 $AE \bot CD$,$AE$ 交圆$C(O_1)$于点$E$.作$AF \bot DE$, $AF$交$DE$ 于点$F$. 证明:$BD$ 平分$AF$.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=292643#p292643
+ }{\bf 92.} 在三角形$ABC$中, $A_{1}$, $B_{1}$, $C_{1}$ 分别是三个旁切圆与线段$BC$, $CA$,$AB$的切点.证明$A A_{1}$, $B B_{1}$ ,$C C_{1}$ 可以构成三角形.
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=213011#p213011
+ }{\bf 93.} 在锐角三角形$ABC$中,点$P$和点$Q$是 $BC$边上两点. 存在一点$C_{1}$使得$A,P,B,C_{1}$四点共圆,且$QC_{1}\pxx CA$,点$C_{1}$和$Q$在直线$AB$两侧.存在一点$B_{1}$使得$A,P,C,B_{1}$四点共圆, 且$QB_{1}\pxx BA$,点$B_{1}$和 $Q$ 在直线$AC$两侧.  
+
+证明: $B_{1}$, $C_{1}$, $P$, $Q$四点共圆.
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=191489#p191489
+}{\bf 94.} 令$ABCD$为任意四边形.$\angle A$和$\angle C$的外角平分线交于点$P$; $\angle B$ 和$\angle D$的外角平分线交于点$Q$. 直线$AB$ 和 $CD$交于点$E$, 直线$BC$ 和$DA$ 交于点$F$.  $\angle AED$和 $\angle BFA$的外角平分线交于点$R$. 证明: $P$,$Q$,$R$ 共线.
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=190783#p190783
+ }{\bf 95.} 点$I$是三角形$ABC$内心,三角形$A_1B_1C_1$为中点三角形(即 点$A_1$是$BC$中点). 证明:三角形$BIC, CIA, AIB$的九点圆圆心在三角形$A_1B_1C_1$的角平分线上.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=190783#p190783
+ }{\bf 96.} 考虑三个半径为 $R$的等圆,三个圆相交于$H.$ 每两个圆分别相交于异于点$H,$的三点$A, B, C.$ 证明:三角形$ABC$的外接圆半径也是 $R.$
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=6461#p6461
+}{\bf 97.} 三个等圆 $G_{1}$, $G_{2}$, $G_{3}$ 有公共点$P$.
+定义$G_{2}\cap G_{3}=\left\{A,\ P\right\}$, $G_{3}\cap G_{1}=\left\{B,\ P\right\}$, $G_{1}\cap G_{2}=\left\{C,\ P\right\}$.
+
+{\bf I.} 证明:点$P$ 是三角形$ABC$的垂心.
+
+{\bf II.} 证明:三角形$ABC$的外接圆半径与$G_{1}$, $G_{2}$, $G_{3}$半径相等.
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=235599#p235599
+ }{\bf 98.} 凸四边形$ABXY$是一个梯形,且$BX \pxx AY.$ 点$C$是$XY$中点, 点 $P$和点$Q$分别是 $BC$和$CA$中点. $XP$和$YQ$ 交于点 $N.$ 证明:点$N$在三角形$ ABC$的边上的充要条件是 $\displaystyle \frac13\leq\frac{BX}{AY}\leq 3$.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=117045#p117045
+}{\bf 99.} 点$P$是圆锥上的一定点,点$M,N$ 是圆锥上的动点使得$PM\perp PN$. 证明:$MN$过定点.
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=239221#p239221
+}{\bf 100.} 给定的三角形$ABC$.点$L$是莱莫恩点.点$F$是费马点,点$H$是垂心 , 点$O$是外心.直线$l$是三角形$ABC$的欧拉线,$l'$ 是$l$关于$AB$的对称直线.点$H'$是点$H$ 关于 $AB$的对称点, 点$D$ 是$l'$与三角形$ABC$外接圆的第二个交点(异于$H'$), 点$E$是$FL$和 $OD$的交点. 点 $G$ 是异于点$H$的点,使得点$G$关于三角形$ABC$的塞瓦三角形与垂足三角形相似.证明:$\angle ACB$ 和$\angle GCE$ 的角平分线重合或垂直.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=230527#p230527
+ }{\bf 101.} 三角形$ABC$的面积为$S$, 点$P$是平面内任意一点. 证明: $AP+BP+CP\geq 2\sqrt[4]{3}\sqrt{S}$.
+
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=124968#p124968
+ }{\bf 102.} 假设$M$是三角形$ABC$边$AB$上一点,使得三角形$AMC$ 和三角形$BMC$内切圆半径相同.两圆圆心分别为$O_1$ 和$O_2$,分别交$AB$于点 $P$和点$Q$. 已知$ABC$的面积是四边形$PQO_2O_1$的面积的6倍, 求$\displaystyle \frac{AC+BC}{AB}$的取值范围.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=146876#p146876
+}{\bf 103.} $\triangle AB_{1}C_{1}$,$\triangle AB_{2}C_{2}$, $\triangle AB_{3}C_{3}$是三个全等的正三角形.证明:$\triangle AB_{1}C_{2}$, $\triangle AB_{2}C_{3}$, $\triangle AB_{3}C_{1}$的外接圆分别相交所得的第二个交点所构成的三角形外接圆与$\triangle AB_{1}C_{1}$,$\triangle AB_{2}C_{2}$, $\triangle AB_{3}C_{3}$外接圆是等圆.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=201120#p201120
+}{\bf 104.}对于锐角三角形$ABC$, $AD$, $BE$, $CF$交于点$P$.
+证明:\\
+$$\displaystyle 2\left(\frac{1}{AP}+\frac{1}{BP}+\frac{1}{CP}\right)\leq \frac{1}{PD}+\frac{1}{PE}+\frac{1}{PF}$$
+并求出取等条件.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=268390#p268390
+ }{\bf 105.} 给定一个三角形$ABC$. 点$O$是三角形$ABC$外心.点$H$, 点$K$,点 $L$ 分别是三角形$ABC$三边$BC$, $CA$, $AB$上的高. 点$A_{0}$,点$B_{0}$,点 $C_{0}$分别是$AH$, $BK$, $CL$中点.三角形$ABC$的内切圆圆心为$I$且分别交$BC$, $CA$, $AB$于点 $D$, 点$E$, 点$F$. 证明:$A_{0}D$, $B_{0}E$, $C_{0}F$, $OI$共点.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=268044#p268044
+ }{\bf 106.} 给定的等边三角形$ABC$和平面内一点$M$. 点$A'$,点$B'$,点$C'$ 分别是 $A, B, C$关于点$M$的对称点.
+
+{\bf I.} 证明:存在唯一一点 $P$ 到点$A$与点$B'$,点$B$与点$C'$ ,点$C$与点$A'$的距离分别相等.
+
+{\bf II.}  点$D$是$AB$中点,点$N$ 是$DM$与$AP$交点.当$M$移动时 ($M$与$D$不重合),证明:三角形$MNP$的外接圆过定点 .
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=220569#p220569
+}{\bf 107.} 四边形$ABCD$是正方形,$\gamma$是以$AB$为直径的圆.点$Q$是线段$CD$上任意点.$QA$交$\gamma$于点$E$,$QB$交$\gamma$于点$F.$ $CF$交$DE$于点$M.$ 证明:$M$ 在圆$\gamma$上.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=278616#p278616
+}{\bf 108.} 令三角形$ABC$三边长分别为$a,b,c$,三边上的高分别为$h_a, h_b, h_c$.证明:$$(\frac{a}{h_a})^2+(\frac{b}{h_b})^2+(\frac{c}{h_c})^2 \geq 4$$
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=135082#p135082
+ }{\bf 109.} 在三角形$ABC$中.点$X$在$AC$上.存在一个圆过点$X$,且与$AC$相切,交三角形$ABC$外接圆于点$M$和点$N$,使得 $MN$平分$BX$,$MN$分别交$AB$和$BC$于点 $P$和点 $Q$. 证明:三角形$PBQ$的外接圆过一个异于$B$的定点.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=159507#p159507
+}{\bf 110.} 三角形 $ABC$为等腰三角形且$\angle ACB=90^{\circ}$, 点$P$是三角形内一点.证明: $\angle PAB+\angle PBC\ge\min(\angle PCA,\angle PCB)$并求出取等条件.
+
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=117329#p117329
+}{\bf 111.} 给定边长为1正四面体$ABCD$以及其内一点$P$.
+求$\left|PA\right|+\left|PB\right|+\left|PC\right|+\left|PD\right|$的最大值.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=134422#p134422
+}{\bf 112.} 给定一个四个面全等的四面体$ABCD$. 顶点$A$, $B$, $C$分别在$x$轴, $y$轴,$z$轴的正半轴,$AB=2l-1$, $BC=2l$, $CA=2l+1$,其中 $l>2$.四面体$ABCD$的体积为$V\left(l\right)$.
+
+求$$\lim_{l\to 2} \frac{V\left(l\right)}{\sqrt{l-2}}$$.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=134462#p134462
+ }{\bf 113.} 在三角形$ABC$中.点$M$,点$N$,点$P$分别是$BC$, $CA$, $AB$.中点
+ 
+{\bf I.} $d_1, d_2, d_3$ 过点$M$,$N$,$P$ 且等分三角形$ABC$周长的直线.证明: $d_1, d_2, d_3$交于点$K$ .
+
+{\bf II.} 证明 :  $\displaystyle min(\frac{KA}{BC}, \frac{KB}{AC}, \frac{KC}{AB}) \geq \frac{1}{\sqrt3}$.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=133409#p133409
+ }{\bf 114.} 给定矩形$ABCD  (AB=a,BC=b)$ ,求点$M$的轨迹,使得点$M$关于矩形各边的对称点共圆.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=136311#p136311
+ }{\bf 115.}三角形$ABC$的内切圆分别切$AB$, $BC$,$CA$ 于点$C'$, $A'$,$B'$ .点$M$, $N$, $K$, $L$分别是$C'A$, $B'A$, $A'C$, $B'C$中点.直线 $A'C'$ 分别交$MN$和$KL$于点$E$和$F$;直线$A'B'$与$MN$相交于点$P$;直线$B'C'$与点 $KL$ 相交于点$Q$.$\Omega_A$是$\Omega_C$分别是三角形$EAP$和$FCQ$的外接圆.
+ 
+{\bf I.}直线$l_1$和$l_2$是$\Omega_A$和$\Omega_C$的公切线.证明:$l_1$, $l_2$, $EF$ ,$PQ$共点.
+
+{\bf II.} $\Omega_A$ 与$\Omega_C$交于点 $X$和点$Y$.证明: $X$, $Y$ ,$B$ 三点共线.
+
+$$ $$
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=138570#p138570
+ }{\bf 116.} 两圆$\left(O_1\right)$和$\left(O_2\right)$交于点$A$和点$B$. 点$M$在$\left(O_1\right)$上运动.定义$K$为圆$\left(O_1\right)$在$A$与$B$处的切线交点.$MK$交圆$\left(O_1\right)$于另一点$C$. $AC$交圆$\left(O_2\right)$于另一点$Q$.$MA$交圆$\left(O_2\right)$ 于另一点$P$.
+ 
+{\bf I.} 证明:$KM$平分线段$PQ$.
+
+{\bf II.} 当点$M$在圆$\left(O_1\right)$上运动时, 证明: 直线$PQ$过定点.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=112682#p112682
+}{\bf 117.} 给定$n$个球$B_1$, $B_2$, ..., $B_n$,其半径分别为$R_1$, $R_2$, ..., $R_n$.若不存在一个平面将这$n$个球分隔开(一个平面分隔开球$ B_1 $， $ B_2 $， ...，$ B_n $指它不与任何球相交，并且此平面的两侧都有球).证明:存在一个半径为$R_1+R_2+...+R_n$的球覆盖$B_1$, $B_2$, ..., $B_n$.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=143442#p143442
+}{\bf 118.}在三角形$ABC$外有三个矩形$ABB_1A_2$, $BCC_1B_2$, $CAA_1C_2$ . 证明:线段 $A_1A_2$, $B_1B_2$, $C_1C_2$的垂直平分线共点.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=112052#p112052
+}{\bf 119.} 在一条直线上有$A,B,C,D$四点且$AB=CD$.能否只用无刻度的直尺作出$BC$ 的中点?
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=143448#p143448
+}{\bf 120.} 在三角形$ABC$中点,点$D$, 点$E$, 点$F$分别是内切圆在$BC$, $CA$, $AB$上的切点.过$E$作$AB$ 的平行线交$DF$ 于点$Q$,过$D$作$AB$的平行线交$EF$于点$T$.证明:$CF$, $DE$, $QT$ 三线共点.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=144399#p144399
+}{\bf 121.}在三角形$ABC$中. 点$I$和点$N$ 分别为内心和界心, $r$是内切圆半径$ABC.$ 证明:
+$$IN=r \iff  a+b=3c \text{ or } b+c=3a \text{ or } c+a=3b$$
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=149725#p149725
+ }{\bf 122.} 证明:三角形$ABC$的三个阿波罗尼斯圆的中心对于相应边$BC$，$CA$，$AB$的中点处的对称点位于同一条直线上，该直线垂直于三角形$ABC$的欧拉线。
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=10533#p10533
+ }{\bf 123.} 点$M$和点$M'$是三角形$ABC$所在平面内的两点.点$X$和点$X'$ 是直线$BC$上的两点,点$Y$和点$Y'$ 是直线$CA$上的两点,点 $Z$和点$Z'$ 是直线$AB$上的两点.若
+$$M'X  \pxx  AM; M'Y \pxx  BM; M'Z \pxx  CM; MX' \pxx  AM'; MY' \pxx  BM'; MZ' \pxx  CM'. $$
+证明: $AX, BY, CZ$ 共点的充要条件是$AX', BY', CZ'$共点.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=154202#p154202
+ }{\bf 124.} 若平面内六元组$(A, B, C, D, E, F)$满足 $AB\cap DE$, $BC\cap EF$ , $CD\cap FA$三点共线,称该六元组为帕斯卡六元组.
+证明:若一个六元组是帕斯卡六元组,则该六元组的所有排列均为帕斯卡六元组.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=157209#p157209
+ }{\bf 125.} 若点$ P$ 在三角形 $ ABC$外接圆上,三角形$ABC$的莱莫恩点为 $ K$,$ PK$分别交$ BC$, $ CA$, $ AB$于点$ X$, 点$ Y$,点 $ Z$ .证明:
+$$ \frac{3}{\overline{PK}}=\frac{1}{\overline{PX}}+\frac{1}{\overline{PY}}+\frac{1}{\overline{PZ}}$$
+.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=121765#p121765
+ }{\bf 126.} 给定平面内四点 $A_1,A_2,B_1,B_2$. 证明:若过$A_1,A_2$的每一个圆都与过$B_1,B_2$的每一个圆相交,则 $A_1,A_2,B_1,B_2$共线或共圆.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=131325#p131325
+}{\bf 127.} 四边形$ABCD$ 是一个凸四边形且$AB$与$CD$不平行.过$A,B$ 的圆切$CD$于点$X$,过$C,D$的圆切$AB$于点$Y$.两圆相交于$U,V$.证明 $AD\pxx BC\iff$ $UV$平分$XY$.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=142514#p142514
+}{\bf 128.} 给定定长线段$R,r$, 用$R,r$为半径作出两圆使得其圆心距等于其公共弦长度.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=142902#p142902
+}{\bf 129.} $ABC$,给定 三角形$ABC$边$BC$中点$M$,三角形$ABC$垂心$H$,$AH$中点$N$,以及内切圆在边$BC$上的切点$A'$.作出三角形$ABC$.
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=157721#p157721
+}{\bf 130.} 点$A',B',C'$分别是点$A,B,C$关于$BC,CA,AB$的对称点.点 $O$ 是三角形$ABC$的外心.证明:$AOA',BOB',COC'$的外接圆交于点$P$, 该点是九点圆圆心的等角共轭点关于三角形$ABC$外接圆的反演点.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=159507#p159507
+}{\bf 131.} 三角形 $ABC$为等腰三角形且$\angle ACB=90^{\circ}$, 点$P$是三角形内一点.证明: $\angle PAB+\angle PBC\ge\min(\angle PCA,\angle PCB)$并求出取等条件.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=189522#p189522
+}{\bf 132.} 令 $S$ 是平面内所有多边形面的集合(多边形的面是指多边形的内部以及其边界,多边形不一定要是凸的,但是不能是自交多边形).证明:存在$f:S\to (0,1)$ ,使得若存在 $S_1,S_2,S_1\cup S_2\in S$ 并且$S_1,S_2$内部无公共点,则$f(S_1\cup S_2)=f(S_1)+f(S_2)$.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=204466#p204466 }{\bf 133.} 三角形$A'B'C'$ 是三角形$ABC$的垂足三角形, 点$A'',B'',C''$分别是三角形$AB'C',A'BC',A'B'C$的垂心. 证明: $A'B'C',A''B''C''$位似.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=215657#p215657
+}{\bf 134.}点 $O$是一个椭圆的弦$AB$中点.过$O$作椭圆的另一条弦$PQ$. 过$P,Q$作椭圆的切线分别交$AB$ 于点$S,T$.证明:$AS=BT$.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=220177#p220177
+ }{\bf 135.} 给定一个平行四边形$ABCD$,$AB<BC$, 点$P,Q$ 分别在边$BC,CD$上运动且$CP=CQ$,证明:三角形$APQ$外接圆过定点 (异于$A$) .
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=220179#p220179
+}{\bf 136.} 在锐角三角形$ABC$中,$AA',BB'$是它的高.在三角形$ABC$的外接圆上的弧$\wideparen{ACB}$有一点$D$.若$P=AA'\cap BD,Q=BB'\cap AD$,证明:$PQ$ 位于直线$A'B'$上.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=229579#p229579
+ }{\bf 137.} 圆$(I),(O)$分别是三角形$ABC$的内切圆与外接圆. $(I)$ 分别切$BC,CA,AB$于$D,E,F$. 给定的三个圆$\omega_a,\omega_b,\omega_c$, 分别切$(I),(O)$ 于 $D,K$ ($\omega_a$), $E,M$ ($\omega_b$),$F,N$ ($\omega_c$).
+ 
+{\bf I.} 证明:$DK,EM,FN$ 交于点 $P$;
+
+{\bf II.}证明:三角形$DEF$ 的垂心在直线$OP$上.
+
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=260264#p260264
+ }{\bf 138.} 给定平面内$A,B,C,D$和另一点$P$,证明:点$P$关于过$A,B,C,D$四点的圆锥曲线的极线过一个固定点(除非$P$ 是 $AB\cap CD,AD\cap BC,AC\cap BD$之一).
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=319718#p319718
+}{\bf 139.} 证明:若六边形 $A_1A_2A_3A_4A_5A_6$ 所有边长 小于等于 1, 那么六边形$A_1A_4,A_2A_5,A_3A_6$至少有一条对角线长度小于等于2.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=320556#p320556
+}{\bf 140.}求满足下列条件的最大的$k$,使得$k>0$ 对于平面内任意面积为 $S$的凸多边形以及平面内任意直线$\ell$, 可以在在该多边形中作一个面积$S'\ge kS$且有一边平行于$\ell$的三角形.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=324872#p324872
+}{\bf 141.}  给定平面内数量有限的平行线段使得对于任意三条平行线段,存在一条直线与它们相交,证明:存在一条直线与所有线段相交.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=397953#p397953
+}{\bf 142.} 令$A_0A_1\ldots A_n$ 是一个 $n$维单形,$r,R$分别是其外接球半径与内切球半径.证明:$R\ge nr$.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=415477#p415477
+}{\bf 143.} 求$n$的取值范围,使得$n\ge 2$且满足:
+
+对于任意$n+2$ 个点$P_1,\ldots,P_{n+2}\in\mathbb R^n$, 无三点共线,可以找到$i\ne j\in [1,n+2]$使得$P_iP_j$ 不是点$P_i$凸包的边.
+
+
+$$ $$
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=434449#p434449
+}{\bf 144.} 给定在$\mathbb R^n$中的一个$n+1$个凸多面体,证明下列两个命题等价:
+
+{\bf I.} 不存在过  $n+1$个多面体的超平面;
+
+{\bf II.} 任意一个多面体与剩余$n$个多面体可以被一个超平面分开.
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=475049#p475049
+}{\bf 145.} 求所有多面体,满足:它可以被$3$个与它位似且严格小于它的多面体覆盖 (即位似比在$(0,1)$之间的位似图形).
+
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=20670#p20670 }{\bf 146.} 三角形$ ABC$内接于一个半径为$ R$的圆,点$ P$是三角形$ ABC$内一点.证明:
+$$\frac {PA}{BC^{2}} \plus{} \frac {PB}{CA^{2}} \plus{} \frac {PC}{AB^{2}}\ge \frac {1}{R}.$$
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=773#p773}{\bf 147.}  有奇数个士兵,他们每个人之间的距离不同,且每一个人都看着与自己距离最近的一个士兵.证明:存在一个士兵,没有人看着他.
+
+$$ $$
+
+
+\href{ http://www.artofproblemsolving.com/Forum/viewtopic.php?p=181685#p181685}{\bf 148.} 点$H$是三角形$ABC$的垂心. 三角形$ABC$的高为$BB'$和$CC'$\\($B' \in AC$, $C' \in AB$). 动直线 $\ell$过$H$交线段 $BC'$ 和 $CB'$于 $M$ 和 $N$.  过$M$ 和 $N$作$\ell$ 的垂线交$BB'$和$CC'$ 于 $P$和 $Q$. 确定线段$ PQ$中点的轨迹.
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=117715#p117715 }{\bf 149.} 证明:不存在内接于一个椭圆的边数大于$4$的正多边形.
+
+$$ $$
+
+
+\href{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=117345#p117345 }{\bf 150.} 给定一个定圆以及内接于圆的$2n$边形,使得其$2n-1$ 条边过 一条直线$\ell$上的$2n-1$个定点,证明:第$2n$条边也过$\ell$上的一个定点.
+
+
+$$ \huge \text{ END.}$$
+
+\end{document}

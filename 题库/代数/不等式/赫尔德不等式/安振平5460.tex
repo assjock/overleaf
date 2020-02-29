@@ -1,0 +1,91 @@
+\documentclass[]{article}
+
+
+%导入宏包
+\usepackage{ctex}
+\usepackage{graphics}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{pst-blur}
+\usepackage{pstricks-add}
+\usepackage{pstricks}
+\usepackage{pstricks-pdf}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+%\usepackage{background}
+\usepackage{xeCJK}
+    \xeCJKsetup{CJKmath=true}
+%\usepackage{wallpaper}
+
+
+%opening
+\title{}
+\author{}
+\date{}
+\setlength\parindent{0em}
+
+\begin{document}
+%\maketitle
+\section{安振平5460}{
+已知$a,b,c\geq 0$,求证:
+\begin{equation}\nonumber
+    \frac{b+c}{\sqrt{a^2+bc}}+\frac{c+a}{\sqrt{b^2+ca}}+ \frac{a+b}{\sqrt{c^2+ab}}\geq 4+\frac{abc}{(a+b)(b+c)(c+a)}
+\end{equation}
+
+\begin{proof}
+\begin{enumerate}
+    \item 若$a,b,c>0$.\\
+        由赫尔德不等式得
+        \begin{equation}\nonumber
+            (\sum\frac{b+c}{\sqrt{a^2+bc}})^2(\sum (a^2+bc)(b+c))\geq (2(a+b+c))^3
+        \end{equation}
+       只需证
+       \begin{equation}\nonumber
+           \frac{8(a+b+c)^3}{\sum (a^2+bc)(b+c)}\geq (4+\frac{abc}{(a+b)(b+c)(c+a)})^2
+       \end{equation}
+       \begin{equation}\nonumber
+            \Longleftrightarrow 4(\sum a^3+3\sum\limits_{sym}a^2b+6abc)(\sum\limits_{sym}a^2b+2abc)^2\geq (\sum\limits_{sym}a^2b)(4\sum\limits_{sym}a^2b+9abc)^2
+       \end{equation}
+       展开
+       \begin{equation}\nonumber
+       \begin{split}
+           \Longleftrightarrow 4(\sum a^3)(\sum\limits_{sym}a^2b)^2+16x^2y^2z^2(\sum a^3)\\+63a^2b^2c^2(\sum\limits_{sym}a^2b)+16abc(\sum a^3)(\sum\limits_{sym}a^2b)\\-4(\sum\limits_{sym}a^2b)^3+96a^3b^3c^3\geq 0
+       \end{split}
+       \end{equation}
+       由舒尔不等式知
+       \begin{equation}\nonumber
+           \sum a^3+3abc\geq \sum\limits_{sym}a^2b
+       \end{equation}
+       \begin{equation}\nonumber
+       \begin{split}
+           \Longleftrightarrow 4(\sum\limits_{sym}a^2b)^2(\sum a^3-\sum\limits_{sym}a^2b+3abc)\\-12abc(\sum\limits_{sym}a^2b)^2+16a^2b^2c^2(\sum a^3)+63a^2b^2c^2(\sum\limits_{sym}a^2b)\\+16abc(\sum a^3)(\sum\limits_{sym}a^2b)+96a^3b^3c^3\geq 0
+       \end{split}
+       \end{equation}
+       \begin{equation}\nonumber
+       \begin{split}
+           -12abc(\sum\limits_{sym}a^2b)^2+16a^2b^2c^2(\sum a^3)+63a^2b^2c^2(\sum\limits_{sym}a^2b)\\+16abc(\sum a^3)(\sum\limits_{sym}a^2b)+96a^3b^3c^3\geq 0
+       \end{split}
+       \end{equation}
+       \begin{equation}\nonumber
+       \begin{split}
+           \Longleftrightarrow 12abc(\sum\limits_{sym}a^2b)(\sum a^3-\sum\limits_{sym}a^2b+3abc)\\+16a^2b^2c^2(\sum a^3)+27a^2b^2c^2(\sum\limits_{sym}a^2b)\\+4abc(\sum a^3)(\sum\limits_{sym}a^2b)+96a^3b^3c^3\geq 0
+       \end{split}
+       \end{equation}
+       而
+       \begin{equation}\nonumber
+           \begin{split}
+               16a^2b^2c^2(\sum a^3)+27a^2b^2c^2(\sum\limits_{sym}a^2b)\\+4abc(\sum a^3)(\sum\limits_{sym}a^2b)+96a^3b^3c^3\geq 0
+           \end{split}
+       \end{equation}
+       成立.
+    \item 若$a,b,c$中有一个为$0$,不妨令$c=0$.
+        \begin{equation}\nonumber
+            \Longleftrightarrow \frac{a}{b}+\frac{b}{a}+\frac{a+b}{\sqrt{ab}}\geq 4.
+        \end{equation}
+        成立.
+\end{enumerate}
+\end{proof}
+}
+\end{document}

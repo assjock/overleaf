@@ -1,0 +1,854 @@
+%
+% Abstract: Lifting The Exponent Lemma
+% Author: Amir Hossein Parvardi
+% Source: http://math-olympiad.blogsky.com
+%
+\documentclass{article}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{newlfont}
+\usepackage{setspace}
+\usepackage{hyperref}
+\newcommand{\co}{\mathrm{const}}
+\newcommand{\e}{\epsilon}
+\newcommand{\la}{\lambda}
+%\newcommand{\G}{\Gamma}
+\newcommand{\plus}{+}
+\newcommand{\minus}{-}
+\newcommand{\equal}{=}
+
+\theoremstyle{definition}
+\newtheorem{p}{}
+\newtheorem{s}{}
+
+
+\begin{document}
+\title{Combinatorics Problems}\author{Amir Hossein Parvardi \thanks {email: \texttt{a.parvardi@gmail.com}, website: \texttt{parvardi.com}.}} \maketitle 
+This is a little bit different from the other problem sets I've made before. I've written the source of the problems beside their numbers. If you need solutions, visit AoPS Resources Page, select the competition, select the year and go to the link of the problem. All of these problems have been posted by Orlando Doehring (orl).
+
+\tableofcontents
+
+\section{Problems}
+
+\subsection{IMO Problems}
+
+
+
+
+
+
+\begin{p}{\bf (IMO 1970, Day 2, Problem 4)}
+Find all positive integers $n$ such that the set $\{n,n+1,n+2,n+3,n+4,n+5\}$ can be partitioned into two subsets so that the product of the numbers in each subset is equal.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO 1970, Day 2, Problem 6)}
+Given $100$ coplanar points, no three collinear, prove that at most $70\%$ of the triangles formed by the points have all angles acute.
+\end{p}
+
+
+
+\begin{p}{\bf (IMO 1971, Day 2, Problem 5)}
+Prove that for every positive integer $m$ we can find a finite set $S$ of points in the plane, such that given any point $A$ of $S$, there are exactly $m$ points in $S$ at unit distance from $A$.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO 1972, Day 1, Problem 1)}
+Prove that from a set of ten distinct two-digit numbers, it is always possible to find two disjoint subsets whose members have the same sum.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO 1975, Day 2, Problem 5)}
+Can there be drawn on a circle of radius $1$ a number of $1975$ distinct points, so that the distance (measured on the chord) between any two points (from the considered points) is a rational number?
+\end{p}
+
+
+
+\begin{p}{\bf (IMO 1976, Day 1, Problem 3)}
+A box whose shape is a parallelepiped can be completely filled with cubes of side $1.$ If we put in it the maximum possible number of cubes, each ofvolume, $2$, with the sides parallel to those of the box, then exactly $40$ percent from the volume of the box is occupied. Determine the possible dimensions of the box.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO 1978, Day 2, Problem 6)}
+An international society has its members from six different countries.  The list of members contain $1978$ names, numbered $1, 2, \dots, 1978$.  Prove that there is at least one member whose number is the sum of the numbers of two members from his own country, or twice as large as the number of one member from his own country.
+\end{p}
+
+
+
+
+
+
+
+\begin{p}{\bf (IMO 1981, Day 1, Problem 2)}
+Take $r$ such that $1\le r\le n$, and consider all subsets of $r$ elements of the set $\{1,2,\ldots,n\}$. Each subset has a smallest element. Let $F(n,r)$ be the arithmetic mean of these smallest elements. Prove that: \[ F(n,r)={n+1\over r+1}. \]
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO 1985, Day 2, Problem 4)}
+Given a set $M$ of $1985$ distinct positive integers, none of which has a prime divisor greater than $23$, prove that $M$ contains a subset of $4$ elements whose product is the $4$th power of an integer.
+\end{p}
+
+
+
+\begin{p}{\bf (IMO 1986, Day 1, Problem 3)}
+To each vertex of a regular pentagon an integer is assigned, so that the sum of all five numbers is positive. If three consecutive vertices are assigned the numbers $x,y,z$ respectively, and $y<0$, then the following operation is allowed: $x,y,z$ are replaced by $x+y,-y,z+y$ respectively. Such an operation is performed repeatedly as long as at least one of the five numbers is negative. Determine whether this procedure necessarily comes to an end after a finite number of steps.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (1986, Day 2, Problem 6)}
+Given a finite set of points in the plane, each with integer coordinates, is it always possible to color the points red or white so that for any straight line $L$ parallel to one of the coordinate axes the difference (in absolute value) between the numbers of white and red points on $L$ is not greater than $1$?
+\end{p}
+
+
+
+\begin{p}{\bf (IMO 1987, Day 1, Problem 1)}
+Let $p_n(k)$ be the number of permutations of the set $\{1,2,3,\ldots,n\}$ which have exactly $k$ fixed points. Prove that $\sum_{k=0}^nk p_n(k)=n!$.
+\end{p}
+
+
+
+
+
+
+
+
+\begin{p}{\bf (IMO 1989, Day 1, Problem 3)}
+Let $ n$ and $ k$ be positive integers and let $ S$ be a set of $ n$ points in the plane such that
+
+\begin{itemize}
+
+\item no three points of $ S$ are collinear, and
+
+\item for every point $ P$ of $ S$ there are at least $ k$ points of $ S$ equidistant from $ P.$
+\end{itemize}
+
+Prove that:
+\[ k < \frac {1}{2} \plus{} \sqrt {2 \cdot n}\]
+\end{p}
+
+
+
+
+
+
+\begin{p}{\bf (IMO 1989, Day 2, Problem 6)}
+A permutation $ \{x_1, \ldots, x_{2n}\}$ of the set $ \{1,2, \ldots, 2n\}$ where $ n$ is a positive integer, is said to have property $ T$ if $ |x_i \minus{} x_{i \plus{} 1}| \equal{} n$ for at least one $ i$ in $ \{1,2, \ldots, 2n \minus{} 1\}.$ Show that, for each $ n$, there are more permutations with property $ T$ than without.
+\end{p}
+
+
+
+
+
+
+
+
+
+\begin{p}{\bf (IMO 1990, Day 1, Problem 2)}
+Let $ n \geq 3$ and consider a set $ E$ of $ 2n \minus{} 1$ distinct points on a circle. Suppose that exactly $ k$ of these points are to be colored black.  Such a coloring is good if there is at least one pair of black points such that the interior of one of the arcs between them contains exactly $ n$ points from $ E$.  Find the smallest value of $ k$ so that every such coloring of $ k$ points of $ E$ is good.
+\end{p}
+
+
+
+
+
+
+
+
+
+
+\begin{p}{\bf (IMO 1991, Day 1, Problem 3)}
+Let $ S \equal{} \{1,2,3,\cdots ,280\}$. Find the smallest integer $ n$ such that each $ n$-element subset of $ S$ contains five numbers which are pairwise relatively prime.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO 1992, Day 1, Problem 3)}
+Consider $9$ points in space, no four of which are coplanar. Each pair of points is joined by an edge (that is, a line segment) and each edge is either colored blue or red or left uncolored. Find the smallest value of  $\,n\,$ such that whenever exactly $\,n\,$ edges are colored, the set of colored edges necessarily contains a triangle all of whose edges have the same color.
+\end{p}
+
+
+\begin{p}{\bf (IMO 1993, Day 1, Problem 3)}
+On an infinite chessboard, a solitaire game is played as follows: at the start, we have $n^2$ pieces occupying a square of side $n.$ The only allowed move is to jump over an occupied square to an unoccupied one, and the piece which has been jumped over is removed. For which $n$ can the game end with only one piece remaining on the board?
+\end{p}
+
+
+
+\begin{p}{\bf (IMO 1993, Day 2, Problem 6)}
+Let $n > 1$ be an integer. In a circular arrangement of $n$ lamps $L_0, \ldots, L_{n-1},$ each of of which can either ON or OFF, we start with the situation where all lamps are ON, and then carry out a sequence of steps, $Step_0, Step_1, \ldots .$  If $L_{j-1}$ ($j$ is taken mod $n$) is ON then $Step_j$ changes the state of $L_j$ (it goes from ON to OFF or from OFF to ON) but does not change the state of any of the other lamps. If $L_{j-1}$ is OFF then $Step_j$ does not change anything at all. Show that:
+\begin{itemize}
+\item There is a positive integer $M(n)$ such that after $M(n)$ steps all lamps are ON again,
+
+\item If $n$ has the form $2^k$ then all the lamps are ON after $n^2-1$ steps,
+
+\item If $n$ has the form $2^k + 1$ then all lamps are ON after $n^2 - n + 1$ steps.
+\end{itemize}
+\end{p}
+
+
+
+\subsection{ISL and ILL Problems}
+
+
+\begin{p}{\bf(IMO LongList 1959-1966 Problem 14)}
+What is the maximal number of regions a circle can be divided in by segments joining $n$ points on the boundary of the circle ? 
+\end{p}
+
+
+
+\begin{p}{\bf(IMO LongList 1959-1966 Problem 45)}
+An alphabet consists of $n$ letters. What is the maximal length of a word if we know that any two consecutive letters $a,b$ of the word are different and that the word cannot be reduced to a word of the kind $abab$ with $a\neq b$ by removing letters.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO ShortList 1973, Romania 1)}
+Show that there exists exactly $\binom{\left[ \frac{k}{2} \right]}{k}$ sequences $\ a_{1}, a_{2}, \ldots, a_{k+1}$ of integer numbers $\geq 0,$ for which $a_{1}=0$ and $|a_{i} - a_{i+1}|=1$ for all $i = 0, \ldots, k.$
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO ShortList 1974, USA 1)}
+Three players $A,B$ and $C$ play a game with three cards and on each of these $3$ cards it is written a positive integer, all $3$ numbers are different. A game consists of shuffling the cards, giving each player a card and each player is attributed a number of points equal to the number written on the card and then they give the cards back. After a number $(\geq 2)$ of games we find out that A has $20$ points, $B$ has $10$ points and $C$ has $9$ points. We also know that in the last game B had the card with the biggest number. Who had in the first game the card with the second value (this means the middle card concerning its value).
+\end{p}
+
+
+
+
+
+
+\begin{p}{\bf(IMO ShortList 1988, Problem 11)}
+The lock of a safe consists of 3 wheels, each of which may be set in 8 different ways positions. Due to a defect in the safe mechanism the door will open if any two of the three wheels are in the correct position. What is the smallest number of combinations which must be tried if one is to guarantee being able to open the safe (assuming the "right combination" is not known)?
+\end{p}
+
+
+
+\begin{p}{\bf (IMO ShortList 1988, Problem 20)}
+Find the least natural number $ n$ such that, if the set $ \{1,2, \ldots, n\}$ is arbitrarily divided into two non-intersecting subsets, then one of the subsets contains 3 distinct numbers such that the product of two of them equals the third.
+\end{p}
+
+
+
+\begin{p}{\bf (IMO ShortList 1988, Problem 31)}
+Around a circular table an even number of persons have a discussion. After a break they sit again around the circular table in a different order. Prove that there are at least two people such that the number of participants sitting between them before and after a break is the same.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO Longlist 1989, Problem 27)}
+Let $ L$ denote the set of all lattice points of the plane (points with integral coordinates). Show that for any three points $ A,B,C$ of $ L$ there is a fourth point $ D,$ different from $ A,B,C,$ such that the interiors of the segments $ AD,BD,CD$ contain no points of $ L.$ Is the statement true if one considers four points of $ L$ instead of three?
+\end{p}
+
+
+
+\begin{p}{\bf (IMO Longlist 1989, Problem 80)}
+A balance has a left pan, a right pan, and a pointer that moves along a graduated ruler. Like many other grocer balances, this one works as follows: An object of weight $ L$ is placed in the left pan and another of weight $ R$ in the right pan, the pointer stops at the number $ R \minus{} L$ on the graduated ruler. There are $ n, (n \geq 2)$ bags of coins, each containing $ \frac{n(n\minus{}1)}{2} \plus{} 1$ coins. All coins look the same (shape, color, and so on).  $ n\minus{}1$ bags contain real coins, all with the same weight. The other bag (we don�t know which one it is) contains false coins.  All false coins have the same weight, and this weight is different from the weight of the real coins. A legal weighing consists of placing a certain number of coins in one of the pans, putting a certain number of coins in the other pan, and reading the number given by the pointer in the graduated ruler. With just two legal weighings it is possible to identify the bag containing false coins. Find a way to do this and explain it.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO ShortList 1988, Problem 4)}
+An $ n \times n, n \geq 2$ chessboard is numbered by the numbers $ 1, 2, \ldots, n^2$ (and every number occurs). Prove that there exist two neighbouring (with common edge) squares such that their numbers differ by at least $ n.$
+\end{p}
+
+
+
+\begin{p}{\bf (IMO ShortList 1990, Problem 15)}
+Determine for which positive integers $ k$ the set \[ X \equal{} \{1990, 1990 \plus{} 1, 1990 \plus{} 2, \ldots, 1990 \plus{} k\}\] can be partitioned into two disjoint subsets $ A$ and $ B$ such that the sum of the elements of $ A$ is equal to the sum of the elements of $ B.$
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO Shortlist 1993, Ireland 2)}
+Let $n,k \in \mathbb{Z}^{+}$ with $k \leq n$ and let $S$ be a set containing $n$ distinct real numbers. Let $T$ be a set of all real numbers of the form $x_1 + x_2 + \ldots + x_k$ where $x_1, x_2, \ldots, x_k$ are distinct elements of $S.$ Prove that $T$ contains at least $k(n-k)+1$ distinct elements.
+\end{p}
+
+
+\begin{p}{\bf (IMO Shortlist 1994, Combinatorics Problem 2)}
+In a certain city, age is reckoned in terms of real numbers rather than integers. Every two citizens $ x$ and $ x'$ either know each other or do not know each other. Moreover, if they do not, then there exists a chain of citizens $ x \equal{} x_0, x_1, \ldots, x_n \equal{} x'$ for some integer $ n \geq 2$ such that $ x_{i\minus{}1}$ and $ x_i$ know each other. In a census, all male citizens declare their ages, and there is at least one male citizen. Each female citizen provides only the information that her age is the average of the ages of all the citizens she knows. Prove that this is enough to determine uniquely the ages of all the female citizens.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO Shortlist 1995, Combinatorics Problem 5)}
+At a meeting of $ 12k$ people, each person exchanges greetings with exactly $ 3k\plus{}6$ others. For any two people, the number who exchange greetings with both is the same. How many people are at the meeting?
+\end{p}
+
+
+\begin{p}{\bf (IMO Shortlist 1996, Combinatorics Problem 1)}
+We are given a positive integer $ r$ and a rectangular board $ ABCD$ with dimensions $ AB \equal{} 20, BC \equal{} 12$. The rectangle is divided into a grid of $ 20 \times 12$ unit squares. The following moves are permitted on the board: one can move from one square to another only if the distance between the centers of the two squares is $ \sqrt {r}$. The task is to find a sequence of moves leading from the square with $ A$ as a vertex to the square with $ B$ as a vertex.
+\begin{itemize}
+\item Show that the task cannot be done if $ r$ is divisible by 2 or 3.
+
+\item Prove that the task is possible when $ r \equal{} 73$. 
+
+\item Can the task be done when $ r \equal{} 97$?
+\end{itemize}
+\end{p}
+
+
+
+\begin{p}{\bf (IMO Shortlist 1996, Combinatorics Problem 4)}
+Determine whether or nor there exist two disjoint infinite sets $ A$ and $ B$ of points in the plane satisfying the following conditions:
+\begin{itemize}
+\item a) No three points in $ A \cup B$ are collinear, and the distance between any two points in $ A \cup B$ is at least 1.
+
+\item b) There is a point of $ A$ in any triangle whose vertices are in $ B,$ and there is a point of $ B$ in any triangle whose vertices are in $ A.$
+\end{itemize}
+\end{p}
+
+
+\begin{p}{\bf (IMO Shortlist 1996, Combinatorics Problem 6)}
+A finite number of coins are placed on an infinite row of squares. A sequence of moves is performed as follows: at each stage a square containing more than one coin is chosen. Two coins are taken from this square; one of them is placed on the square immediately to the left while the other is placed on the square immediately to the right of the chosen square. The sequence terminates if at some point there is at most one coin on each square. Given some initial configuration, show that any legal sequence of moves will terminate after the same number of steps and with the same final configuration.
+\end{p}
+
+
+
+\begin{p}{\bf(IMO ShortList 1998, Combinatorics Problem 1)}
+A rectangular array of numbers is given. In each row and each column, the sum of all numbers is an integer. Prove that each nonintegral number $x$ in the array can be changed into either $\lceil x\rceil $ or $\lfloor x\rfloor $ so that the row-sums and column-sums remain unchanged. (Note that $\lceil x\rceil $ is the least integer greater than or equal to $x$, while $\lfloor x\rfloor $ is the greatest integer less than or equal to $x$.)
+\end{p}
+
+
+
+
+\begin{p}{\bf(IMO ShortList 1998, Combinatorics Problem 5)}
+In a contest, there are $m$ candidates and $n$ judges, where $n\geq 3$ is an odd integer. Each candidate is evaluated by each judge as either pass or fail. Suppose that each pair of judges agrees on at most $k$ candidates. Prove that \[{\frac{k}{m}} \geq {\frac{n-1}{2n}}. \]
+\end{p}
+
+
+
+
+
+\begin{p}{\bf(IMO ShortList 1999, Combinatorics Problem 4)}
+Let $A$ be a set of $N$ residues $\pmod{N^{2}}$. Prove that there exists a set $B$ of of $N$ residues $\pmod{N^{2}}$ such that $A + B = \{a+b|a \in A, b \in B\}$ contains at least half of all the residues $\pmod{N^{2}}$.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf(IMO ShortList 1999, Combinatorics Problem 6)}
+Suppose that every integer has been given one of the colours red, blue, green or yellow. Let $x$ and $y$ be odd integers so that $|x| \neq |y|$. Show that there are two integers of the same colour whose difference has one of the following values: $x,y,x+y$ or $x-y$.
+\end{p}
+
+
+
+\begin{p}{\bf (IMO Shortlist 2000, Combinatorics Problem 3)}
+Let $ n \geq 4$ be a fixed positive integer. Given a set $ S \equal{} \{P_1, P_2, \ldots, P_n\}$ of $ n$ points in the plane such that no three are collinear and no four concyclic, let $ a_t,$ $ 1 \leq t \leq n,$ be the number of circles $ P_iP_jP_k$ that contain $ P_t$ in their interior, and let $ m(S) \equal{} \sum^n_{i\equal{}1} a_i.$ Prove that there exists a positive integer $ f(n),$ depending only on $ n,$ such that the points of $ S$ are the vertices of a convex polygon if and only if $ m(S) \equal{} f(n).$
+\end{p}
+
+
+
+\begin{p}{\bf (IMO Shortlist 2000, Combinatorics Problem 4)}
+Let $ n$ and $ k$ be positive integers such that $ \frac{1}{2} n < k \leq \frac{2}{3} n.$ Find the least number $ m$ for which it is possible to place $ m$ pawns on $ m$ squares of an $ n \times n$ chessboard so that no column or row contains a block of $ k$ adjacent unoccupied squares.
+\end{p}
+
+
+
+\begin{p}{\bf(IMO ShortList 2001, Combinatorics Problem 1)}
+Let $A = (a_1, a_2, \ldots,$  $a_{2001})$ be a sequence of positive integers. Let $m$ be the number of 3-element subsequences $(a_i,a_j,a_k)$ with $1 \leq i < j < k \leq 2001$, such that $a_j = a_i + 1$ and $a_k = a_j + 1$.  Considering all such sequences $A$, find the greatest value of $m$.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf(IMO ShortList 2001, Combinatorics Problem 2)}
+Let $n$ be an odd integer greater than 1 and let $c_1, c_2, \ldots, c_n$ be integers. For each permutation $a = (a_1, a_2, \ldots, a_n)$ of $\{1,2,\ldots,n\}$, define $S(a) = \sum_{i=1}^n c_i a_i$. Prove that there exist permutations $a \neq b$ of $\{1,2,\ldots,n\}$ such that $n!$ is a divisor of $S(a)-S(b)$.
+\end{p}
+
+
+\begin{p}{\bf(IMO ShortList 2001, Combinatorics Problem 3)}
+Define a $k$-clique to be a set of $k$ people such that every pair of them are acquainted with each other. At a certain party, every pair of 3-cliques has at least one person in common, and there are no $5$-cliques. Prove that there are two or fewer people at the party whose departure leaves no $3$-clique remaining.
+\end{p}
+
+
+
+\begin{p}{\bf(IMO ShortList 2002, Combinatorics Problem 1)}
+Let $n$ be a positive integer. Each point $(x,y)$ in the plane, where $x$ and $y$ are non-negative integers with $x+y<n$, is coloured red or blue, subject to the following condition: if a point $(x,y)$ is red, then so are all points $(x',y')$ with $x'\leq x$ and $y'\leq y$. Let $A$ be the number of ways to choose $n$ blue points with distinct $x$-coordinates, and let $B$ be the number of ways to choose $n$ blue points with distinct $y$-coordinates. Prove that $A=B$.
+\end{p}
+
+
+
+
+\begin{p}{\bf(IMO ShortList 2002, Combinatorics Problem 2)}
+For $n$ an odd positive integer, the unit squares of an $n\times n$ chessboard are coloured alternately black and white, with the four corners coloured black. A it tromino is an $L$-shape formed by three connected unit squares. For which values of $n$ is it possible to cover all the black squares with non-overlapping trominos?  When it is possible, what is the minimum number of trominos needed?
+\end{p}
+
+
+
+
+\begin{p}{\bf(IMO ShortList 2002, Combinatorics Problem 3)}
+Let $n$ be a positive integer. A sequence of $n$ positive integers (not necessarily distinct) is called full if it satisfies the following condition: for each positive integer $k\geq2$, if the number $k$ appears in the sequence then so does the number $k-1$, and moreover the first occurrence of $k-1$ comes before the last occurrence of $k$. For each $n$, how many full sequences are there ?
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO ShortList 2004, Combinatorics Problem 8)}
+For a finite graph $G$, let $f(G)$ be the number of triangles and $g(G)$ the number of tetrahedra formed by edges of $G$. Find the least constant $c$ such that
+\[
+g(G)^3\le c\cdot f(G)^4
+\]
+for every graph $G$.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO Shortlist 2007, Combinatorics Problem 1)}
+Let $ n > 1$ be an integer. Find all sequences $ a_1, a_2, \ldots a_{n^2 \plus{} n}$ satisfying the following conditions:
+\begin{itemize}
+\item a) $a_i \in \left\{0,1\right\} \text{ for all } 1 \leq i \leq n^2 \plus{} n$
+\item b) $a_{i \plus{} 1} \plus{} a_{i \plus{} 2} \plus{} \ldots \plus{} a_{i \plus{} n} < a_{i \plus{} n \plus{} 1} \plus{} a_{i \plus{} n \plus{} 2} \plus{} \ldots \plus{} a_{i \plus{} 2n} \text{ for all } 0 \leq i \leq n^2 \minus{} n.$
+\end{itemize}
+\end{p}
+
+
+\begin{p}{\bf (IMO Shortlist 2007, Combinatorics Problem 3)}
+Find all positive integers $ n$ for which the numbers in the set $ S \equal{} \{1,2, \ldots,n \}$ can be colored red and blue, with the following condition being satisfied: The set $ S \times S \times S$ contains exactly $ 2007$ ordered triples $ \left(x, y, z\right)$ such that:
+\begin{itemize}
+\item(i) the numbers $ x$, $ y$, $ z$ are of the same color, and
+\item(ii) the number $ x \plus{} y \plus{} z$ is divisible by $ n$.
+\end{itemize}
+\end{p}
+
+
+
+
+\subsection{Ohter Competitions}
+
+\subsubsection{China IMO Team Selection Test Problems}
+
+\begin{p}{\bf(China TST 1987, Problem 6)}
+Let $ G$ be a simple graph with $ 2 \cdot n$ vertices and $ n^{2}+1$ edges. Show that this graph $ G$ contains a $ K_{4}-\text{one edge}$, that is, two triangles with a common edge.
+\end{p}
+
+
+
+
+\begin{p}{\bf(China TST 1988, Problem 4)}
+Let $k \in \mathbb{N},$ $S_k = \{(a, b) | a, b = 1, 2, \ldots, k \}.$ Any two elements $(a, b)$, $(c, d)$ $\in S_k$ are called "undistinguishing" in $S_k$ if $a - c \equiv 0$ or $\pm 1 \pmod{k}$ and $b - d \equiv 0$ or $\pm 1 \pmod{k}$; otherwise, we call them "distinguishing". For example, $(1, 1)$ and $(2, 5)$ are undistinguishing in $S_5$. Considering the subset $A$ of $S_k$ such that the elements of $A$ are pairwise distinguishing. Let $r_k$ be the maximum possible number of elements of $A$.
+\begin{itemize}
+\item Find $r_5$.
+\item Find $r_7$.
+\item Find $r_k$ for $k \in \mathbb{N}$.
+\end{itemize}
+\end{p}
+
+
+
+
+\begin{p}{\bf(China TST 1988, Problem 7)}
+A polygon $\prod$ is given in the $OXY$ plane and its area exceeds $n.$ Prove that there exist $n+1$ points $P_{1}(x_1, y_1), P_{2}(x_2, y_2),$  $\ldots, P_{n+1}(x_{n+1}, y_{n+1})$ in $\prod$ such that $\forall i,j \in \{1, 2, \ldots, n+1\}$, $x_j - x_i$ and $y_j - y_i$ are all integers.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf(China TST 1989, Problem 7)}
+$1989$ equal circles are arbitrarily placed on the table without overlap. What is the least number of colors are needed such that all the circles can be painted with any two tangential circles colored differently.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf(China TST 1990, Problem 1)}
+In a wagon, every $m \geq 3$ people have exactly one common friend. (When $A$ is $B$'s friend, $B$ is also $A$'s friend. No one was considered as his own friend.) Find the number of friends of the person who has the most friends.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf(China TST 1990, Problem 8)}
+There are arbitrary 7 points in the plane. Circles are drawn through every 4 possible concyclic points. Find the maximum number of circles that can be drawn.
+\end{p}
+
+\begin{p}{\bf (China TST 1991, Problem 3)}
+5 points are given in the plane. Any three of them are non-collinear. Any four are non-cyclic. If three points determine a circle that has one of the remaining points inside it and the other one outside it, then the circle is said to be good. Let the number of good circles be $n,$ find all possible values of $n.$
+\end{p}
+
+
+
+\begin{p}{\bf (China TST 1991, Problem 6)}
+All edges of a polyhedron are painted with red or yellow. For an angle determined by consecutive edges on the surface, if the edges are of distinct colors, then the angle is called excentric. The excentricity of a vertex $A$, namely $S_A$, is defined as the number of excentrix angles it has. Prove that there exist two vertices $B$ and $C$ such that $S_B + S_C \leq 4$.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (China TST 1992, Problem 1)}
+16 students took part in a competition. All problems were multiple choice style. Each problem had four choices. It was said that any two students had at most one answer in common, find the maximum number of problems.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (China TST 1992, Problem 5)}
+A $(3n + 1) \times (3n + 1)$ table $(n \in \mathbb{N})$ is given. Prove that deleting any one of its squares yields a shape cuttable into pieces of the following form and its rotations: ''L" shape formed by cutting one square from a $4 \times 4$ squares.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (China TST 1993, Problem 3)}
+A graph $G=(V,E)$ is given. If at least $n$ colors are required to paints its vertices so that between any two same colored vertices no edge is connected, then call this graph ''$n-$colored''. Prove that for any $n \in \mathbb{N}$, there is a $n-$colored graph without triangles.
+\end{p}
+
+
+
+
+\begin{p}{\bf(China TST 1994, Problem 2)}
+An $n$ by $n$ grid, where every square contains a number, is called an $n$-code if the numbers in every row and column form an arithmetic progression.  If it is sufficient to know the numbers in certain squares of an $n$-code to obtain the numbers in the entire grid, call these squares a key.
+\begin{itemize}
+
+\item a.) Find the smallest $s \in \mathbb{N}$  such that any $s$ squares in an $n-$code $(n \geq 4)$ form a key.
+
+\item b.) Find the smallest $t \in \mathbb{N}$ such that any $t$ squares along the diagonals of an $n$-code $(n \geq 4)$ form a key.
+\end{itemize}
+\end{p}
+
+
+
+
+
+\begin{p}{\bf(China TST 1994, Problem 3)}
+Find the smallest $n \in \mathbb{N}$ such that if any 5 vertices of a regular $n$-gon are colored red, there exists a line of symmetry $l$ of the $n$-gon such that every red point is reflected across $l$ to a non-red point.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf(China TST 1995, Problem 3)}
+21 people take a test with 15 true or false questions. It is known that every 2 people have at least 1 correct answer in common. What is the minimum number of people that could have correctly answered the question which the most people were correct on?
+\end{p}
+
+
+
+\begin{p}{\bf(China TST 1995, Problem 4)}
+Let $S = \lbrace A = (a_1, \ldots, a_s) \mid a_i = 0$ or $1, i = 1, \ldots, 8 \rbrace$.  For any 2 elements of $S$, $A = \lbrace a_1, \ldots, a_8\rbrace$ and $B = \lbrace b_1, \ldots, b_8\rbrace$.  Let $d(A,B) = \sum_{i=1}{8} |a_i - b_i|$. Call $d(A,B)$ the distance between $A$ and $B$.  At most how many elements can $S$ have such that the distance between any 2 sets is at least 5?
+\end{p}
+
+
+
+
+
+\begin{p}{\bf(China TST 1996, Problem 4)}
+3 countries $A, B, C$ participate in a competition where each country has 9 representatives.  The rules are as follows: every round of competition is between 1 competitor each from 2 countries.  The winner plays in the next round, while the loser is knocked out.  The remaining country will then send a representative to take on the winner of the previous round. The competition begins with $A$ and $B$ sending a competitor each.  If all competitors from one country have been knocked out, the competition continues between the remaining 2 countries until another country is knocked out.  The remaining team is the champion.
+
+\begin{itemize}
+
+\item {\bf I.} At least how many games does the champion team win?
+
+\item {\bf II.} If the champion team won 11 matches, at least how many matches were played?
+\end{itemize}
+\end{p}
+
+
+
+
+\begin{p}{\bf(China TST 1998, Problem 5)}
+Let $n$ be a natural number greater than 2. $l$ is a line on a plane. There are $n$ distinct points $P_1$, $P_2$, �, $P_n$ on $l$. Let the product of distances between $P_i$ and the other $n-1$ points be $d_i$ ($i = 1, 2,$ �, $n$). There exists a point $Q$, which does not lie on $l$, on the plane. Let the distance from $Q$ to $P_i$ be $C_i$ ($i = 1, 2,$ �, $n$). Find $S_n = \sum_{i = 1}^{n} (-1)^{n-i} \frac{c_i^2}{d_i}$.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf(China TST 2000, Problem 2)}
+Given positive integers $k, m, n$ such that $1 \leq  k \leq  m \leq  n$. Evaluate
+\[\sum^{n}_{i=0} \frac{1}{n+k+i} \cdot \frac{(m+n+i)!}{i!(n-i)!(m+i)!}.\]
+\end{p}
+
+
+\begin{p}{\bf(China Team Selection Test 2002, Day 1, Problem 3)}
+Seventeen football fans were planning to go to Korea to watch the World Cup football match. They selected 17 matches. The conditions of the admission tickets they booked were such that
+
+\begin{itemize}
+
+\item One person should book at most one admission ticket for one match;
+
+\item At most one match was same in the tickets booked by every two persons;
+
+\item  There was one person who booked six tickets.
+
+\end{itemize}
+How many tickets did those football fans book at most?
+\end{p}
+
+
+
+
+\begin{p}{\bf (China Team Selection Test 2003, Day 1, Problem 2)}
+Suppose $A\subseteq \{0,1,\dots,29\}$. It satisfies that for any integer $k$ and any two members $a,b\in A$($a,b$ is allowed to be same), $a+b+30k$ is always not the product of two consecutive integers. Please find $A$ with largest possible cardinality.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (China Team Selection Test 2003, Day 2, Problem 2)}
+Suppose $A=\{1,2,\dots,2002\}$ and $M=\{1001,2003,3005\}$. $B$ is an non-empty subset of $A$. $B$ is called a $M$-free set if the sum of any two numbers in $B$ does not belong to $M$. If $A=A_1\cup A_2$, $A_1\cap A_2=\emptyset$ and $A_1,A_2$ are $M$-free sets, we call the ordered pair $(A_1,A_2)$ a $M$-partition of $A$. Find the number of $M$-partitions of $A$.
+\end{p}
+
+
+
+
+
+
+\subsubsection{Vietnam IMO Team Selection Test Problems}
+
+
+
+\begin{p}{\bf(Vietnam TST 1994, Problem 6)}
+Calculate 
+\[T = \sum \frac{1}{n_1! \cdot n_2! \cdot \cdots n_{1994}! \cdot (n_2 + 2 \cdot n_3 + 3 \cdot n_4 + \ldots + 1993 \cdot n_{1994})!}\]
+where the sum is taken over all 1994-tuples of the numbers $n_1, n_2, \ldots, n_{1994} \in \mathbb{N} \cup \{0\}$ satisfying $n_1 + 2 \cdot n_2 + 3 \cdot n_3 + \ldots + 1994 \cdot n_{1994} = 1994.$
+\end{p}
+
+
+
+\begin{p}{\bf(Vietnam TST 1996, Problem 5)}
+There are some people in a meeting; each doesn't know at least 56 others, and for any pair, there exist a third one who knows both of them. Can the number of people be 65?
+\end{p}
+
+\begin{p}{\bf(Vietnam TST 1996, Problem 1)}
+In the plane we are given $3 \cdot n$ points ($n>$1) no three collinear, and the distance between any two of them  is $\leq 1$. Prove that we can construct $n$ pairwise disjoint triangles such that: The vertex set of these triangles are exactly the given 3n points and the sum of the  area of these triangles $< 1/2$.
+\end{p}
+
+\begin{p}{\bf(Vietnam TST 1999, Problem 6)}
+Let a regular polygon with $p$ vertices be given, where $p$ is an odd prime number. At every vertex there is one monkey. An owner of monkeys takes $p$ peanuts, goes along the perimeter of polygon clockwise and delivers to the monkeys by the following rule: Gives the first peanut for the leader, skips the two next vertices and gives the second peanut to the monkey at the next vertex; skip four next vertices gives the second peanut for the monkey at the next vertex ... after giving the $k$-th peanut, he skips the $2 \cdot k$ next vertices and gives $k+1$-th for the monkey at the next vertex. He does so until all $p$ peanuts are delivered.
+\begin{itemize}
+\item {\bf I.} How many monkeys are there which does not receive peanuts?
+\item {\bf II.} How many edges of polygon are there which satisfying condition: both two monkey at its vertex received peanut(s)?
+\end{itemize}
+\end{p}
+
+
+\begin{p}{\bf(Vietnam TST 2001, Problem 3)}
+Some club has 42 members. It�s known that among 31 arbitrary club members, we can find one pair of a boy and a girl that they know each other. Show that from club members we can choose 12 pairs of knowing each other boys and girls.
+\end{p}
+
+
+\begin{p}{\bf(Vietnam TST 2001, Problem 5)}
+Let an integer $n > 1$ be given. In the space with orthogonal coordinate system $Oxyz$ we denote by $T$  the set of all points $(x, y, z)$ with $x, y, z$ are integers, satisfying the condition: $1 \leq x, y, z \leq n$. We  paint all the points of $T$ in such a way that: if the point $A(x_0, y_0, z_0)$ is painted then points $B(x_1, y_1, z_1)$ for which $x_1 \leq x_0, y_1 \leq y_0$ and $z_1 \leq z_0$ could not be painted. Find the maximal number of points that we can paint in such a way the above mentioned condition is satisfied.
+\end{p}
+
+
+
+
+
+
+\begin{p}{\bf(Vietnam TST 2002, Problem 4)}
+Let $n\geq 2$ be an integer and consider an array composed of $n$ rows and $2n$ columns. Half of the elements in the array are colored in red. Prove that for each integer $k$, $1<k\leq \left\lfloor \frac{n}{2}\right\rfloor+1$, there exist $k$ rows such that the array of size $k\times 2n$ formed with these $k$ rows has at least
+\[ \frac{ k! (n-2k+2) }{(n-k+1)(n-k+2)\cdots (n-1)} \] 
+columns which contain only red cells.
+\end{p}
+
+
+
+
+\begin{p}{\bf(Vietnam TST 2003, Problem 1)}
+Let be four positive integers $m, n, p, q$, with $p < m$ given and $q < n$. Take four points $A(0; 0), B(p; 0), C (m; q)$ and $D(m; n)$ in the coordinate plane. Consider the paths $f$ from $A$ to $D$ and the paths $g$ from $B$ to $C$ such that when going along $f$ or $g$, one goes only in the positive directions of coordinates and one can only change directions (from the positive direction of one axe coordinate into the the positive direction of the other axe coordinate) at the points with integral coordinates. Let $S$ be the number of couples $(f, g)$ such that $f$ and $g$ have no common points. Prove that
+\[S = \binom{n}{m+n} \cdot \binom{q}{m+q-p} - \binom{q}{m+q} \cdot \binom{n}{m+n-p}.\]
+\end{p}
+
+
+
+\begin{p}{\bf(Vietnam TST 2003, Problem 5)}
+Let $A$ be the set of all permutations $a = (a_1, a_2, \ldots, a_{2003})$ of the 2003 first positive integers such that each permutation satisfies the condition: there is no proper subset $S$ of the set $\{1, 2, \ldots, 2003\}$ such that $\{a_k | k \in S\} = S.$
+For each $a = (a_1, a_2, \ldots, a_{2003}) \in A$, let $d(a) = \sum^{2003}_{k=1} \left(a_k - k \right)^2.$
+\begin{itemize}
+\item {\bf I.} Find the least value of $d(a)$. Denote this least value by $d_0$.
+\item {\bf II.} Find all permutations $a \in A$ such that $d(a) = d_0$.
+\end{itemize}
+\end{p}
+
+
+
+
+\subsubsection{Other Problems}
+
+
+
+\begin{p}{\bf (APMO 2006, Problem 3)}
+Let $p\ge5$ be a prime and let $r$ be the number of ways of placing $p$ checkers on a $p\times p$ checkerboard so that not all checkers are in the same row (but they may all be in the same column). Show that $r$ is divisible by $p^5$. Here, we assume that all the checkers are identical.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (APMO 2006, Problem 5)}
+In a circus, there are $n$ clowns who dress and paint themselves up using a selection of 12 distinct colours. Each clown is required to use at least five different colours. One day, the ringmaster of the circus orders that no two clowns have exactly the same set of colours and no more than 20 clowns may use any one particular colour. Find the largest number $n$ of clowns so as to make the ringmaster's order possible.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (USAMO 2006, Problem 2)}
+For a given positive integer $k$ find, in terms of $k$, the minimum value of $N$ for which there is a set of $2k + 1$ distinct positive integers that has sum greater than $N$ but every subset of size $k$ has sum at most $\frac{N}{2}.$
+\end{p}
+
+\begin{p}{\bf (China Girls Math Olympiad 2008, Problem 1)}
+\begin{itemize}
+\item Determine if the set $ \{1,2,\ldots,96\}$ can be partitioned into 32 sets of equal size and equal sum.
+\item Determine if the set $ \{1,2,\ldots,99\}$ can be partitioned into 33 sets of equal size and equal sum.
+\end{itemize}
+\end{p}
+
+
+
+\begin{p}{\bf (USA TST 2008, Day 1, Problem 1)}
+There is a set of $ n$ coins with distinct integer weights $ w_1, w_2, \ldots , w_n$. It is known that if any coin with weight $ w_k$, where $ 1 \leq k \leq n$, is removed from the set, the remaining coins can be split into two groups of the same weight. (The number of coins in the two groups can be different.) Find all $ n$ for which such a set of coins exists.
+\end{p}
+
+
+
+
+\begin{p}{\bf (USA TST 2008, Day 1, Problem 3)}
+For a pair $ A \equal{} (x_1, y_1)$ and $ B \equal{} (x_2, y_2)$ of points on the coordinate plane, let $ d(A,B) \equal{} |x_1 \minus{} x_2| \plus{} |y_1 \minus{} y_2|$. We call a pair $ (A,B)$ of (unordered) points {\it harmonic} if $ 1 < d(A,B) \leq 2$. Determine the maximum number of harmonic pairs among 100 points in the plane.
+\end{p}
+
+
+
+
+\begin{p}{\bf (Germany Bundeswettbewerb Mathematik 2008, Round 2, Problem 4)}
+On a bookcase there are $ n \geq 3$ books side by side by different authors. A librarian considers the first and second book from left and exchanges them iff they are not alphabetically sorted. Then he is doing the same operation with the second and third book from left etc. Using this procedure he iterates through the bookcase three times from left to right. Considering all possible initial book configurations how many of them will then be alphabetically sorted?
+\end{p}
+
+
+
+\begin{p}{\bf(All Russian Olympiads 2002)}
+There are some markets in a city. Some of them are joined by streets with one-sided movement such that for any square, there are exactly two streets to leave it. Prove that the city may be partitioned on 1014 districts such that streets join only markets from distinct districts, and by the same way for any two districts (either only from first to second, or vice versa).
+\end{p}
+
+
+\begin{p}{\bf(All Russian Olympiads 2005)}
+Given 2005 distinct numbers $a_1,\,a_2,\dots,$ $a_{2005}$. By one question, we may take three different indices $1\le i<j<k\le 2005$ and find out the set of numbers $\{a_i,\,a_j,\,a_k\}$ (unordered, of course).  Find the minimal number of questions, which are necessary to find out all numbers $a_i$.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf(All Russian Olympiads 2005 - Problem 9.8)}
+100 people from 50 countries, two from each countries, stay on a circle. Prove that one may partition them onto 2 groups in such way that neither no two countrymen, nor three consecutive people on a circle, are in the same group.
+\end{p}
+
+
+
+
+\begin{p}{\bf(Germany, Bundeswettbewerb Mathematik 1991, Round Two, Problem 2)}
+In the space there are 8 points that no four of them are in the plane. 17 of the connecting segments are coloured blue and the other segments are to be coloured red. Prove that this colouring will create at least four triangles. Prove also that four cannot be subsituted by five.
+\newline
+Remark: Blue triangles are those triangles whose three edges are coloured blue.
+\end{p}
+
+
+
+\begin{p}{\bf (China West Mathematical Olympiad 2003, Problem 8)}
+$ 1650$ students are arranged in $ 22$ rows and $ 75$ columns.  It is known that in any two columns, the number of pairs of students in the same row and of the same sex is not greater than $ 11$.  Prove that the number of boys is not greater than $ 928$.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (China Girls Mathematical Olympiad 2005, Problem 4)}
+Determine all positive real numbers $ a$ such that there exists a positive integer $ n$ and sets $ A_1, A_2, \ldots, A_n$ satisfying the following conditions:
+\begin{itemize}
+\item every set $ A_i$ has infinitely many elements;
+\item every pair of distinct sets $ A_i$ and $ A_j$ do not share any common element
+\item the union of sets $ A_1, A_2, \ldots, A_n$ is the set of all integers;
+\item for every set $ A_i,$ the positive difference of any pair of elements in $ A_i$ is at least $ a^i.$
+\end{itemize}
+\end{p}
+
+
+
+
+
+
+\begin{p}{\bf (Germany Bundeswettbewerb Mathematik 2007, Round 2, Problem 2)}
+At the start of the game there are $ r$ red and $ g$ green pieces/stones on the table. Hojoo and Kestutis make moves in turn. Hojoo starts. The person due to make a move, chooses a colour and removes $ k$ pieces of this colour. The number $ k$ has to be a divisor of the current number of stones of the other colour. The person removing the last piece wins. Who can force the victory?
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (Germany Bundeswettbewerb Mathematik 2008, Round 1, Problem 1)}
+Fedja used matches to put down the equally long sides of a parallelogram whose vertices are not on a common line. He figures out that exactly 7 or 9 matches, respectively, fit into the diagonals. How many matches compose the parallelogram's perimeter?
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (Tuymaada 2008, Senior League, First Day, Problem 1)}
+Several irrational numbers are written on a blackboard. It is known that for every two numbers $ a$ and $ b$ on the blackboard, at least one of the numbers $ a\over b\plus{}1$ and $ b\over a\plus{}1$ is rational. What maximum number of irrational numbers can be on the blackboard? 
+\end{p}
+
+
+
+
+\begin{p}{\bf (Tuymaada 2008, Senior League, Second Day, Problem 5)}
+Every street in the city of Hamiltonville connects two squares, and every square may be reached by streets from every other. The governor discovered that if he closed all squares of any route not passing any square more than once, every remained square would be reachable from each other. Prove that there exists a circular route passing every square of the city exactly once. 
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (Tuymaada 2008, Junior League, First Day, Problem 3)}
+100 unit squares of an infinite squared plane form a $ 10\times 10$ square.  Unit segments forming these squares are coloured in several colours.  It is known that the border of every square with sides on grid lines contains segments of at most two colours. (Such square is not necessarily contained in the original $ 10\times 10$ square.) What maximum number of colours may appear in this colouring? 
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (Iran PPCE 1997, Exam 2, Problem 1)}
+Let $ k,m,n$ be integers such that $ 1 < n \leq m \minus{} 1 \leq k.$ Determine the maximum size of a subset $ S$ of the set $ \{1,2,3, \ldots, k\minus{}1,k\}$ such that no $ n$ distinct elements of $ S$ add up to $ m.$
+\end{p}
+
+
+\end{document}

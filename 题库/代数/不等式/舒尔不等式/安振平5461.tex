@@ -1,0 +1,121 @@
+\documentclass[]{article}
+
+
+%导入宏包
+\usepackage{ctex}
+\usepackage{graphics}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{pst-blur}
+\usepackage{pstricks-add}
+\usepackage{pstricks}
+\usepackage{pstricks-pdf}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+%\usepackage{background}
+\usepackage{xeCJK}
+    \xeCJKsetup{CJKmath=true}
+%\usepackage{wallpaper}
+
+
+%opening
+\title{}
+\author{}
+\date{}
+\setlength\parindent{0em}
+
+\begin{document}
+%\maketitle
+\section{安振平5461}{
+已知,$a,b,c>0,(a+b)(b+c)(c+a)=1$,求证:$ab+bc+ca+2abc \leq 1\leq a^2+b^2+c^2+2abc$.
+
+\begin{proof}
+条件$\Longleftrightarrow \sum\limits_{sym}a^2b+2abc=1$
+\begin{enumerate}
+    \item 左边
+    \begin{equation}\nonumber
+        \Longleftrightarrow \sum_{sym}a^2b \geq ab+bc+ac
+    \end{equation}
+    由均值不等式
+    \begin{equation}\nonumber
+    \begin{split}\nonumber
+        a^2b+b^2a\geq 2\sqrt{a^3b^3}\\
+        b^2c+c^2b\geq 2\sqrt{b^3c^3}\\
+        c^2a+a^2c\geq 2\sqrt{c^3a^3}
+    \end{split}
+    \end{equation}
+    由均值不等式
+    \begin{equation}\nonumber
+        ab+bc+ca+2abc=1\leq ab+bc+ca+2\frac{(ab+bc+ca)^{\frac{3}{2}}}{3}
+    \end{equation}
+    解得$ab+bc+ca\geq \frac{3}{2}$.
+    由幂平均不等式
+    \begin{equation}\nonumber
+        2\sqrt{a^3b^3}+2\sqrt{b^3c^3}+2\sqrt{c^3a^3}\geq 6(\frac{(ab+bc+ca)}{3})^{\frac{3}{2}}\geq ab+bc+ca
+    \end{equation}
+    \item 右边
+    \begin{equation}\nonumber
+        \Longleftrightarrow a^2+b^2+c^2\geq \sum_{sym}a^2b
+    \end{equation}
+    而
+    \begin{equation}\nonumber
+        a^2+b^2+c^2=\frac{\sum a^3+\sum\limits_{sym}a^2b}{\sum a}
+    \end{equation}
+    待证式
+    \begin{equation}\nonumber
+        \Longleftrightarrow (\sum\limits_{sym}a^2b+2abc)(\frac{\sum a^3+\sum\limits_{sym}a^2b}{\sum a})^3-(\sum\limits_{sym}a^2b)^3\geq 0 
+    \end{equation}
+    展开
+    \begin{equation}\nonumber
+    \begin{split}
+        \Longleftrightarrow (\sum a^3)^3(\sum_{sym}a^2b)+2abc(\sum a^3)^3+3(\sum a^3)^2(\sum_{sym}a^2b)^2+\\6abc(\sum a^3)(\sum_{sym}a^2b)+2(\sum a^3)(\sum_{sym}a^2b)^3+6abc(\sum a^3)(\sum_{sym}a^2b)^2\\-2(\sum_{sym}a^2b)^4-4abc(\sum_{sym}a^2b)^3\geq 0
+    \end{split}
+    \end{equation}
+    由舒尔不等式知
+    \begin{equation}\nonumber
+        \sum a^3+3abc\geq \sum\limits_{sym}a^2b
+    \end{equation}
+     \begin{equation}\nonumber
+    \begin{split}
+        \Longleftrightarrow (\sum a^3)^3(\sum_{sym}a^2b)+2abc(\sum a^3)^3+3(\sum a^3)^2(\sum_{sym}a^2b)^2+\\6abc(\sum a^3)(\sum_{sym}a^2b)+6abc(\sum a^3)(\sum_{sym}a^2b)^2\\-10abc(\sum_{sym}a^2b)^3+2(\sum_{sym}a^2b)^3(\sum a^3-\sum_{sym}a^2b+3abc)\geq 0
+    \end{split}
+    \end{equation}   
+    \begin{equation}\nonumber
+    \begin{split}
+         \Longleftrightarrow (\sum a^3)^3(\sum_{sym}a^2b)+2abc(\sum a^3)^3+3(\sum a^3)^2(\sum_{sym}a^2b)^2+\\6abc(\sum a^3)(\sum_{sym}a^2b)+6abc(\sum a^3)(\sum_{sym}a^2b)^2-10abc(\sum_{sym}a^2b)^3\geq 0
+    \end{split}
+    \end{equation}
+    由均值不等式知
+    \begin{equation}\nonumber
+        \sum a^3\geq 3abc
+    \end{equation}
+    \begin{equation}\nonumber
+        \sum a^3 \geq \frac{1}{2}\sum_{sym}a^2b
+    \end{equation}
+    \begin{equation}\nonumber
+        (\sum a^3)^3(\sum_{sym}a^2b)\geq \frac{3}{4}abc(\sum_{sym}a^2b)^3
+    \end{equation}
+    \begin{equation}\nonumber
+        2abc(\sum a^3)^3\geq \frac{1}{4}abc(\sum_{sym}a^2b)^3
+    \end{equation}
+    \begin{equation}\nonumber
+        3(\sum a^3)^2(\sum_{sym}a^2b)\geq \frac{9}{2}abc(\sum_{sym}a^2b)^3
+    \end{equation}
+    \begin{equation}\nonumber
+        6abc(\sum a^3)^2(\sum_{sym}a^2b)\geq \frac{3}{2}abc(\sum_{sym}a^2b)^3
+    \end{equation}
+    \begin{equation}\nonumber
+        6abc(\sum a^3)(\sum_{sym}a^2b)^2\geq 3abc(\sum_{sym}a^2b)^3
+    \end{equation}
+    \begin{equation}\nonumber
+        \begin{split}
+            \Longrightarrow (\sum a^3)^3(\sum_{sym}a^2b)+2abc(\sum a^3)^3+3(\sum a^3)^2(\sum_{sym}a^2b)^2+\\6abc(\sum a^3)(\sum_{sym}a^2b)+6abc(\sum a^3)(\sum_{sym}a^2b)^2-10abc(\sum_{sym}a^2b)^3\geq 0
+        \end{split}
+    \end{equation}
+    成立.
+\end{enumerate}
+\end{proof}
+}
+\end{document}

@@ -1,0 +1,69 @@
+\documentclass[]{article}
+
+
+%导入宏包
+\usepackage{ctex}
+\usepackage{graphics}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{pst-blur}
+\usepackage{pstricks-add}
+\usepackage{pstricks}
+\usepackage{pstricks-pdf}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+%\usepackage{background}
+\usepackage{xeCJK}
+    \xeCJKsetup{CJKmath=true}
+%\usepackage{wallpaper}
+
+
+%opening
+\title{}
+\author{}
+\date{}
+\setlength\parindent{0em}
+
+\begin{document}
+\maketitle
+\section{安振平5454}{
+实数$\displaystyle a,b,c>0$,且$\displaystyle a+b+c+2=abc$证明:$ \displaystyle \sum \frac{bc}{a+1}\geq 4$.
+
+\begin{proof}{}
+展开$\displaystyle \Longleftrightarrow \sum a^2b^2+\sum ab+\sum\limit_{sym}a^2b\geq 4(abc+\sum ab+\sum a+1) $\\
+\begin{equation}
+\Longleftrightarrow \sum a^2b^2+\sum ab+\sum\limit_{sym}a^2b\geq 4(2abc+\sum ab-1)
+\end{equation}
+\begin{equation}\nonumber
+\Longleftrightarrow \sum a^2b^2+\sum\limit_{sym}a^2b+4\geq 8abc+3\sum ab
+\end{equation}
+
+由均值不等式知\begin{equation}
+\sum\limit_{sym}a^2b\geq 6abc
+\end{equation}
+\begin{equation}
+\frac{3}{8}\sum a^2b^2+18\geq 3\sum ab
+\end{equation}
+\begin{equation}
+\frac{7}{24}\sum a^2b^2\geq \frac{7}{8}\sqrt[3]{a^4b^4c^4}\geq 14
+\end{equation}
+\begin{equation}\nonumber
+a+b+c+2=abc\geq\frac{\sqrt[3]{abc}}{2}+2
+\end{equation}
+解得$abc\geq 8$\\
+有
+\begin{equation}
+\frac{\sum a^2b^2}{3}\geq \sqrt[3]{a^4b^4c^4}\geq 2abc
+\end{equation}
+\begin{equation}
+\frac{7}{24}\sum a^2b^2\geq \frac{7}{8}\sqrt[3]{a^4b^4c^4}\geq 14
+\end{equation}
+结合(1)(2)(3)(4)(5),知
+\begin{equation}\nonumber
+\sum a^2b^2+\sum\limit_{sym}a^2b+4\geq 8abc+3\sum ab
+\end{equation}
+\end{proof}
+}
+\end{document}

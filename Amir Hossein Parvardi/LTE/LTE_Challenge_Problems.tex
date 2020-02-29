@@ -1,0 +1,435 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{systeme}
+\usepackage{verbatim}
+\usepackage{fancyhdr}
+%\usepackage{esvect}
+\usepackage{amssymb, amsmath}
+\usepackage{subcaption}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\usepackage{hyperref}
+\usepackage{enumerate}
+\usepackage{amssymb}
+\usepackage{enumitem}
+\usepackage{mathdots}
+\usepackage{tikz}
+
+\usepackage{systeme}
+\usepackage{geometry}
+\geometry{ margin=1in}
+\def\C{\mathbb{C}}
+\def\N{\mathbb{N}}
+\def\Z{\mathbb{Z}}
+\def\Q{\mathbb{Q}}
+\def\R{\mathbb{R}}
+\def\K{\mathbb{K}}
+\def\F{\mathbb{F}}
+\def\U{\mathcal{U}}
+\def\P{\mathcal{P}}
+
+\theoremstyle{definition}
+\newtheorem{problem}{Problem}
+\newtheorem*{solution}{Solution}
+\newtheorem{answer}{Answer}
+\newtheorem{lemma}{Lemma}
+\newtheorem*{claim}{Claim}
+
+\newcommand{\red}{\textcolor{red}}
+\newcommand{\abs}[1]{\lvert#1\rvert}
+\newcommand{\norm}[1]{\left\lVert#1\right\rVert}
+\title{LTE Challenge Problems}
+\author{Amir Hossein Parvardi}
+\date{December 2017}
+
+\usepackage{natbib}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+    These problems were solved by  \href{http://users.math.msu.edu/users/fedja/}{Fedja Nezarov}, who helped me a lot during writing the Lifting The Exponent Lemma article.
+\end{abstract}
+\begin{problem}
+Let $k$ be a positive integer. Find all positive integers $n$ such that $3^n |2^n-1$.
+
+\end{problem}
+
+\begin{solution}
+$2|n$ otherwise $2^n-1\equiv 1\mod 3$. If $n=2m$, we should have $$v_3(4^m-1)=v_3(m)+1\ge k,$$ i.e., $m=3^{k-1}s$ for some $s\in\mathbb N$.
+\end{solution}
+
+\begin{problem}
+Let $a,n$ be two positive integers and let $p$ be an odd prime number such that
+$$a^p \equiv 1 \pmod{p^n}.$$ Prove that
+$$a \equiv 1 \pmod{p^{n-1}}.$$
+\end{problem}
+
+\begin{solution}
+By Fermat, $a\equiv a^p\equiv 1\mod p$, so $$v_p(a-1)=v_p(a^p-1)-1\ge n-1.$$
+\end{solution}
+
+
+\begin{problem}
+Show that the only positive integer value of $a$ for which $4(a^n+1)$ is a perfect cube for all positive integers $n,$ is $1.$
+\end{problem}
+
+
+\begin{solution}
+If $a>1$, $a^2+1$ is not a power of $2$ (because it is $>2$ and either $1$ or $2$ modulo $4$).
+Choose some odd prime $p|a^2+1$. Now, take some $n=2m$ with odd $m$ and notice that $v_p(4(a^n+1))=v_p(a^2+1)+v_p(m)$ but $v_p(m)$ can be anything we want modulo $3$.
+\end{solution}
+
+\begin{problem}
+Let $k>1$ be an integer. Show that there exists infinitely many positive integers $n$ such that
+\[n | 1^n + 2^n +3^n +\cdots+k^n.\]
+\end{problem}
+
+\begin{solution}
+If $1+k$ is not a power of $2$, choose an odd prime $p|1+k$ and take $n=p^m$. Then, for each $j$ not divisible by $p$, we have $$v_p(j^n+(k+1-j)^n)=v_p(k+1)+v_p(n)\ge m+1.$$ Also, if $p|j$ (and, thereby, $p|k+1-j$), then $n|p^m|p^n|j^n$ so the sum in question is divisible by $p^m=n$.
+If $1+k$ is a power of $2$, then take an odd prime divisor $p$ of $k$ and repeat the above argument with $k-1$ instead of $k$ (the last term $k^n$ is, obviously, not a problem)
+\end{solution}
+
+%\begin{problem}
+%Show that $a^n - b^n$ has a prime divisor which isn't a divisor of $a-b.$
+%\end{problem}
+
+%Solution. False as stated. $3^2-1^2=8$, $3-1=2$.
+
+\begin{problem}
+Let $p$ be a prime number, and $a$ and $n$ positive integers. Prove that if
+$$2^p+3^p=a^n.$$
+then $n=1.$
+\end{problem}
+
+\begin{solution}
+$2^2+3^2=13$, so assume that $p$ is odd. Then $2^p+3^p\equiv 2\mod 3$, so it cannot be a square. But $v_5(2^p+3^p)=1+v_5(p)\le 2$.
+\end{solution}
+
+
+\begin{problem}
+Find all positive integers $n$ for which there exist positive integers $x ,y$ and $k$ such that $\gcd(x,y)=1, k>1$ and $3^n = x^k + y^k.$
+\end{problem}
+
+\begin{solution}
+$k$ must be odd since the sum of 2 squares is divisible by $3$ only if both squares are. If $p|x+y$, then $p$ is odd and $v_p(3^n)=v_p(x^k+y^k)=v_p(k)+v_p(x+y)$, which means that $p=3$, so $x+y=3^m$ and $n=v_3(k)+m$. Now it is just cases.
+a) $m>1$. Then $v_3(k)\le k-2$ for all $k>1$, and $M=\max(x,y)\ge 5$ so
+$$x^k+y^k\ge M^k> \frac 12 3^m 5^{k-1}> 3^m5^{k-2}\ge 3^{m+k-2}\ge 3^{m+v_3(k)}=3^n,$$
+which gives an immediate contradiction.
+b) $m=1$. Then $x=1,y=2$ (or vice versa) and we get $3^{1+v_3(k)}=1+2^k$, meaning $k\le 2(1+v_3(k))$ whence $v_3(k)=1$, so $n=2$ giving the only solution $3^2=1^3+2^3$.
+\end{solution}
+
+\begin{problem}
+Let $x,y,p,n,k$ be positive integers such that $n$ is odd and $p$ is a prime. Prove that if $x^n+y^n=p^k,$ then $n$ is a power of $p.$
+\end{problem}
+
+\begin{solution}
+$x+y|x^n+y^n=p^k$, so $x+y=p^m$. Now divide $x$ and $y$ by the highest power of $p$ they contain (it has to be the same). This may change $k$ and $m$ but not $n$ in our condition. Then use the LTE to get $m+v_p(n)=k$, so $x^n+y^n=(x+y)p^{v_p(n)}$. If $n\ne p^{v_p(n)}$, we get $n\ge 2p^{v_p(n)}\ge 2$, so $$M^n < x^n+y^n\le \frac n2(x+y)\le nM$$ and $M < n^{\frac 1{n-1}}$, which is less than $2$ for odd $n\ge 3$ but the case $M=1$ is impossible.
+\end{solution}
+
+
+\begin{problem}
+Let $p$ be a prime number. Solve the equation $a^p-1 = p^k$ in the set of positive integers.
+\end{problem}
+
+\begin{solution}
+By Fermat, $a-1\equiv a^p-1\equiv 0 mod p$.
+a) $p$ is odd. Then $v_p(a-1)=k-1$, so $a> p^{k-1}$ and, if $k>1$, then $a^p>p^{p(k-1)}>p^{3(k-1)}>p^k$. Thus, in this case $k=1$ and $a=(p+1)^{1/p}$, which is never an integer (because it is strictly between $1$ and $2$).
+b) $p=2$. Then $a^2-1=2^k$ but, unless $a=3$, either $a-1$ or $a+1$ is not a power of $2$.
+So, the only solution is $3^2-1=2^3$.
+\end{solution}
+
+\begin{problem}
+Find all solutions of the equation
+$$(n-1)! + 1 = n^m$$ in positive integers.
+\end{problem}
+
+\begin{solution}
+$n$ must be $1$ or prime (otherwise any nontrivial divisor $d$ of $n$ will divide both $(n-1)!$ and $n^m$. Now, $n=2$, $m=1$ is a solution, $n=1$ is not, so it suffices to consider the case when $n$ is an odd prime.
+If $m$ is odd, then $v_2(n^m-1)=v_2(n-1) < v_2((n-1)!)$ if $n > 3$. $n=3$ is not a solution, so we can consider only even $m$.
+Then $$v_2((n-1)!)=v_2(m)-1+v_2(n+1)+v_2(n-1)$$ or $$v_2((n-2)!)=v_2(n+1)+v_2(m)-1.$$ But the left hand side is at least $\frac{n-3}{2}$ (just count evens up to $n-2$), so $m\ge 2^{(n-1)/2}/(n+1)$, which is at least $n$ for $n\ge 18$. It remains to note that $n^n > (n-1)!+1$ for $n>1$.
+Now comes the remaining finite trial and error part:
+$4!+1=5^2$ is good
+$6!+1=721$ is bad
+$n=11$ gives $v_2(m)=9$ which is far too large.
+$n=13$ gives $v_2(m)=10$, which is too large too
+$n=17$ gives some big $v_2(m)$ as well.
+\end{solution}
+
+\begin{problem}
+For some positive integer $n,$ the number $3^n-2^n$ is a perfect power of a prime. Prove that $n$ is a prime.
+\end{problem}
+
+\begin{solution}
+Assume $n=ab$, $a,b>1$. Then $3^a-2^a=p^m$ with $m\ge 1$. Thus, by LTE, $v_p(3^n-2^n)=m+v_p(b)$ and $$p^{m+v_p(b)}=3^{ab}-2^{ab}>(3^a-2^a)^b=p^{mb}$$ but for $b>1$, one has $mb\ge m+b-1\ge m+v_p(b)$, which gives a contradiction.
+\end{solution}
+
+\begin{problem}
+Let $m,n,b$ be three positive integers with $m \neq n$ and $b>1.$ Show that if prime divisors of the numbers $b^n-1$ and $b^m-1$ be the same, then $b+1$ is a perfect power of $2.$
+\end{problem}
+
+\begin{solution}
+I failed to find a way to use the LTE here. The way I solved it is as follows. Let $u=\text{gcd}(m,n)$. Then $b^u-1$ and $b^{2u}-1$ have the same prime divisors (this uses the proof of the principle I mentioned rather than the statement itself: when you repeat going from $m,n$ to $m-n,n$, you stop when you get two equal numbers).
+But then each prime dividing $b^u+1$ has to divide $b^u-1$ whence $b^u+1$ is a power of $2$. If $u$ were even, the remainder of the LHS modulo $4$ would be $2$, so $u$ is odd. Then $b+1|b^u+1$ and must be a power of 2 too.
+\end{solution}
+
+\begin{problem}
+Find the highest degree $ k$ of $ 1991$ for which $ 1991^k$ divides the number $$1990^{1991^{1992}} + 1992^{1991^{1990}}.$$
+\end{problem}
+
+\begin{solution}
+Using $p=11$ and $p=181$, we get $$v_p(1990^{1991^{1992}}+1)=1+1992=1993$$ and $$v_p(1992^{1991^{1990}}-1)=1+1990=1991.$$ Since $v_p(a+b)=\min(v_p(a),v_p(b))$ when $v_p(a)\ne v_p(b)$, the answer is $1991$.
+\end{solution}
+
+\begin{problem}
+Let $p$ be a prime number and $m>1$ be a positive integer. Show that if for some positive integers $x>1, y>1$ we have
+$$\frac{x^p+y^p}{2}= \left( \frac{x+y}{2} \right)^m,$$
+then $m=p.$
+\end{problem}
+
+\begin{solution}
+Since $\frac{x^p+y^p}2\ge \left(\frac{x+y}2\right)^p$, we must have $m\ge p$. Now, factoring out $d=\text{gcd}(x,y)$ and writing $x=dx_1$, $y=dy_1$, we get $$2^{m-1}(x_1^p+y_1^p)=d^{m-p}(x_1+y_1)^m.$$
+Assume that $p$ is odd. Take any prime divisor $q|x_1+y_1$ and let $v=v_q(x_1+y_1)$. If $q$ is odd, we get $v+1\ge v+v_q(p)\ge mv$ whence $m\le 2$ and $p\le 2$, giving an immediate contradiction. If $q=2$, we get $m-1+v\ge mv$, so $v\le 1$ and $x_1+y_1=2$, i.e., $x=y$, which immediately implies $m=p$.
+If $p=2$, we just notice that $$\frac{x^2+y^2}2< 2\left(\frac{x+y}2\right)^2\le \left(\frac{x+y}2\right)^3$$ if $x+y\ge 4$, so $m=2$ is the only possibility unless $\{x,y\}=\{1,2\}$, which is easy to outrule.
+\end{solution}
+
+\begin{problem}
+Find all positive integers $x,y$ such that $p^x - y^p=1,$ where $p$ is a prime.
+\end{problem}
+
+
+\begin{solution}
+The case $p=2$ is easily done $\mod 4$ ($y^2+1$ has remainder $2$, so $2^1-1^2=1$ is the only possibility), so assume that $p$ is odd. Then $y+1=p^m$ and, by LTE, $y^p+1=p^{m+1}$. But $(p^m-1)^p+1>p^{m+1}$ unless $p=3$, $m=1$, which gives the second solution.
+\end{solution}
+
+
+\begin{problem}
+Let $x$ and $y$ be two positive real numbers such that for each positive integer $n,$ the number $x^n-y^n$ is a positive integer. Show that $x$ and $y$ are both positive integers.
+\end{problem}
+
+\begin{problem}
+Let $x$ and $y$ be two positive rational numbers such that for infinitely many positive integers $n,$ the number $x^n-y^n$ is a positive integer. Show that $x$ and $y$ are both positive integers.
+\end{problem}
+
+\begin{solution}
+They are very much alike, so I'll combine the solutions.
+In 17, start with the observation that $x-y$ and $x+y=\frac{x^2-y^2}{x-y}$ are rational, so $x,y\in\mathbb Q$.
+Now we are in the conditions of 18. Write $x=\frac ac,y=\frac bc$ where $c$ is the least common denominator of $x,y$. If $c>1$, take any prime divisor $p$ of $c$. Then $p^n|a^n-b_n$ for infinitely many $n$ and $p$ cannot divide $a$ or $b$ (otherwise it would divide them both and we could reduce the fractions). Led $u$ be the least power such that $p|a^u-b^u$. Then all those $n$'s are $mu$ for some integer $m$ and we get $n\le v_p(a^n-b^n)\le v_p(m)+v_p(a^u-b^u)+v_p(a^u+b^u)$ (just not to consider $2$ separately). But $v_p(m)$ grows only logarithmically in $n$, so we get a contradiction.
+\end{solution}
+
+\begin{problem}
+Does there exist a positive integer $n$ such that $n$ has exactly $2000$ prime divisors and $n$ divides $2^n + 1?$
+\end{problem}
+
+\begin{problem}
+Note that $3^m|2^{3^m}+1$ by LTE. Thus, if $2^{3^m}+1$ has 1999 distinct prime divisors $q_1,\dots, q_{1999}>3$, $n=3^mq_1\dots q_{1999}$ will work. Note that each divisor of $2^{3^m}+1$ is also a divisor of $2^{3^{m+1}}+1$, so the set of prime divisors either grows without bound or saturates to some finite set $P$. In the latter case, we have $v_p(2^{3^m}+1)\le (m-m_p)+v_p(2^{3^{m_p}}+1)\le m+C_p$ where $m_p$ is the least integer such that $p|2^{3^{m_p}}+1$. Thus, $2^{3^m}+1\le CA^m$ where $A$ is the product of all primes in $P$, which is absurd.
+\end{problem}
+
+\begin{problem}
+Suppose that $m$ and $k$ are non-negative integers, and $p = 2^{2^m}+1$ is a prime number. Prove that
+$2^{2^{m+1}p^k} \equiv 1$ $(\text{mod } p^{k+1})$;
+$2^{m+1}p^k$ is the smallest positive integer $n$ satisfying the congruence equation $2^n \equiv 1$ $(\text{mod } p^{k+1})$.
+\end{problem}
+
+\begin{solution}
+$v_p(2^{2^mp^k}+1)=k+v_p(2^{2^m}+1)=k+1$ by LTE and $2^{2^mp^k}+1|2^{2^{m+1}p^k}-1$.
+Furthermore, $p|2^{2^{m+1}}-1$ but not $2^{2^m}-1$, so if $p|2^n-1$, we have $2^{m+1}|n$ (powers of $2$ have only divisors that are powers of 2 themselves). If $n=Q2^{m+1}$, then $$v_p(2^n-1)=v_p(Q)+v_p(2^{2^{m+1}}-1)=v_p(Q)+1,$$ so $v_p(Q)\ge k$.
+\end{solution}
+
+\begin{problem}
+Let $p \geq 5$ be a prime. Find the maximum value of positive integer $k$ such that
+$$p^{k}|(p-2)^{2(p-1)}-(p-4)^{p-1}.$$
+\end{problem}
+
+\begin{solution}
+Let $p-1=2^sm$. Then, since $v_p((p-2)^2+(p-4))=v_p(p^2-3p)=1$, $v_p((p-2)^2-(p-4))=v_p(p^2-5p+8)=0$, and $v_p(2^{s-1}m)=0$, we get
+\begin{align*}
+    v_p((p-2)^{2(p-1)}-(p-4)^{p-1}) &=v_p((p-2)^{2}-(p-4)^{2})\\
+    &=v_p((p-2)^2+(p-4))+v_p((p-2)^2-(p-4))=1.
+\end{align*}
+\end{solution}
+
+\begin{problem}
+Find all positive integers $a,b$ which are greater than $1$ and
+$$b^a | a^b-1.$$
+\end{problem}
+
+\begin{solution}
+Let $p$ be the least prime divisor of $b$. Let $m$ be the least positive integer for which $p|a^m-1$. Then $m|b$ and $m|p-1$, so any prime divisor of $m$ divides $b$ and is less than $p$. Thus, not to run into a contradiction, we must have $m=1$. Now, if $p$ is odd, we have $av_p(b)\le v_p(a-1)+v_p(b)$, so $$a-1\le (a-1)v_p(b)\le v_p(a-1),$$ which is impossible. Thus $p=2$, $b$ is even, $a$ is odd and $av_2(b)\le v_2(a-1)+v_2(a+1)+v_2(b)-1$ whence $a\le (a-1)v_2(b)+1\le v_2(a-1)+v_2(a+1)$, which is possible only if $a=3$, $v_2(b)=1$. Put $b=2B$ with odd $B$ and rewrite the condition as $2{}^3B{}^3|3^{2B}-1$. Let $q$ be the least prime divisor of $B$ (now, surely, odd). Let $n$ be the least positive integer such that $q|3^n-1$. Then $n|2B$ and $n|q-1$ whence $n$ must be $2$ (or $B$ has a smaller prime divisor), so $q|3^2-1=8$, which is impossible. Thus $B=1$. 
+\end{solution}
+
+\begin{problem}
+Let $a,b$ be distinct real numbers such that the numbers
+$$a-b, \ a^2-b^2 , \ a^3-b^3 , \ldots$$
+Are all integers. Prove that $a,b$ are both integers.
+\end{problem}
+
+\begin{solution}
+If $a^2=b^2$, then $a=-b$ is either an integer or a half-integer, the latter case being impossible because then $a^3-b^3=2a^3$ is not an integer. Otherwise, $a^2$ and $b^2$ are integers by problem 17, so $a+b={a^2-b^2}{a-b}$ is rational, so $a,b$ are rational but all rational square roots of integers are integer.
+\end{solution}
+
+\begin{problem}
+Find all quadruples of positive integers $(x,r,p,n)$ such that $p$ is a prime number, $n,r>1$ and $x^{r} - 1 = p^{n} .$
+\end{problem}
+
+\begin{solution}
+Assume $p$ is odd. Let $x-1=p^m$. Then $n=m+v_p(r)$, so $p^{m+v_p(r)}=(p^m+1)^r-1\ge p^{mr}$, implying $m+v_p(r)\ge mr\ge m+r-1$ and $v_p(r)\ge r-1$, which is impossible for $r>1$.
+Thus $p=2$. If $r$ is odd, we get $n=v_2(x^r-1)=v_2(x-1)$ so $r=1$, which is outruled. Thus, $r$ is even and $n=v_2(x-1)+v_2(x+1)+v_2(r)-1$. If $m=1$, we get the usual $3^2-1=2^3$. Otherwise $v_2(x+1)=1$, so $n=m+v_2(r)$ and we can finish just as we started.
+\end{solution}
+
+\begin{problem}
+Let $ a > b > 1$ be positive integers and $b$ be an odd number, let $ n$ be a positive integer. If $ b^n \mid a^n-1,$ then show that $ a^b > \frac {3^n}{n}.$
+\end{problem}
+
+\begin{solution}
+Let $P$ be the set of all prime divisors of $b$. For $p\in P$, let $s_p$ be the least integer such that $p|a^{s_p}-1$. We have $s_p|n$, $s_p|p-1$ and $n\le v_p(a^{s_p}-1)+v_p(n/s_p)$. Now note that
+$b\ge\prod_{p\in P} p>\prod_{p\in P} s_p=S$ and that $a^{s_p}-1|a^S-1$ for all $p\in P$. Thus,
+$$a^b>a^S-1\ge \prod_{p\in P}p^n \prod_{p\in P}p^{-v_p(n)}\ge 3^n/n.$$
+\end{solution}
+
+\begin{problem}
+Let $ p$ be a prime number, $ p\neq 3$, and integers $ a,b$ such that $ p\mid a + b$ and $ p^2 \mid a^3 + b^3$. Prove that $ p^2 \mid a + b$ or $ p^3 \mid a^3 + b^3$.
+\end{problem}
+
+\begin{solution}
+If $p|a,b$, then $p^3|a^3+b^3$. Otherwise LTE applies and $v_p(a+b)=v_p(a^3+b^3)\ge 2$.
+\end{solution}
+
+\begin{problem}
+Let $m$ and $n$ be positive integers. Prove that for each odd positive integer $b$ there are infinitely many primes $p$ such that $p^n \equiv 1 \pmod{b^m}$ implies $b^{m-1} \mid n.$
+\end{problem}
+
+\begin{solution}
+Let $q$ be any prime divisor of $b$. If $v_q(p^{q-1}-1)=1$, we get $mv_q(b)\le v_q(n)+1$ (using, as before, that the minimal $s$ satisfying $q|p^s-1$ divides both $n$ and $q-1$) and $v_q(n)\ge mv_q(b)-1\ge (m-1)v_q(b)$. Thus we just need to show that there are infinitely many primes $p$ satisfying the condition $v_q(p^{q-1}-1)=1$ for all prime divisors of $b$. If one knows Dirichlet, it is simple: just consider $p\equiv 1+q\mod q^2$ for all primes $q$ dividing $p$. If not, I'm stuck for now.
+\end{solution}
+
+\begin{problem}
+Determine all integers $ n > 1$ such that $$\frac {2^n + 1}{n^2}$$ is an integer.
+\end{problem}
+
+\begin{solution}
+Let $p$ be a prime divisor on $n$, $v=v_p(n)$, $Q=p^{-v}n$. We have $p^{2v}|2{}^{p{}^v}Q+1$. We also know that $2{}^{p{}^v}\equiv 2\mod p$ by Fermat. Thus $p|2^Q+1$ and, by LTE $p^v|2^Q+1$. Let $m$ be the least positive integer such that $p^v|2^m+1$. Then $m|Q,p^{v-1}(p-1)$. If $p$ is the least prime divisor of $n$, we conclude that $m=1$ (because $Q$ consists of primes larger than $p$) and $p=3$, $v=1$. Now, if $p$ is the second smallest prime divisor in $n$, then $m$ can be only $3$ (the only factor in $Q$ that can occur in $p-1$). But $2^3+1=9$ has no prime divisors greater than $3$ and we are stuck in our attempt to acsend. Thus, the answer is $n=1$ or $n=3$.
+\end{solution}
+
+\begin{problem}
+Find all positive integers $n$ such that $$\frac{2^{n-1}+1}{n}$$ is an integer.
+\end{problem}
+
+\begin{solution}
+Let $n=p_1^{v_1}\dots p_m{}^{v{}^m}$. As before, put $Q_j=p_j^{-v_j}n$. Since $p_j|2^{p_j^{v_j}Q_j-1}+1$ and $2^{p_j^{v_j}}\equiv 2\pmod{p_j}$ by Fermat, we get $p_j|2^{Q_j-1}+1$. Let $m_j$ be the least positive integer such that $p_j|2^{m_j}+1$. Then $m_j$ divides both $Q_j-1$ and $\frac{p_j-1}2$ and $Q_j-1$ is an odd multiple of $m_j$. But the power of $2$ in $Q_j-1=\prod_{k\ne j}(1+(p_k-1))-1$ is at least $\min_{k\ne j}v_2(p_k-1)$ while $v_2(m_j)\le v_2(p_j-1)-1$, so choosing $p_j$ so that $v_2(p_j-1)$ is minimal, we'll get a contradiction.
+\end{solution}
+
+
+\begin{problem}
+Find all primes $p,q$ such that $\dfrac{(5^p-2^p)(5^q-2^q)}{pq}$ is an integer.
+\end{problem}
+
+\begin{solution}
+Assume $p\le q$. If $5^p-2^p\equiv 5-2=3\mod p$ by Fermat, so if $p|5^p-2^p$, then $p=3$. In particular, if $p=q$, then $p=q=3$. If $p< q$ and $p|5^q-2^q$, then $p|5^{p-1}-2^{p-1}$ by Fermat, so the least $m> 0$ such that $p|5^m-2^m$ must divide both $p-1$ and $q$, i.e., $m=1$, so $p=3$ again. Now, either $q=3$, or $q|5^3-2^3=117=9\cdot 13$, so $(3,13)$ is the only other solution.
+\end{solution}
+
+\begin{problem}
+For some natural number $n$ let $a$ be the greatest natural nubmer for which $5^{n}-3^{n}$ is divisible by $2^{a}$. Also let $b$ be the greatest natural number such that $2^{b} \leq n$. Prove that $a \leq b+3$.
+\end{problem}
+
+\begin{solution}
+If $n$ is odd, $a=1$ and there is nothing to prove. If $n$ is even, $a=v_2(5^n-3^n)=v_2(5-3)+v_2(5+3)+v_2(n)-1=3+v_2(n)$. But, clearly, $b\ge v_2(n)$.
+\end{solution}
+
+\begin{problem}
+Find all surjective functions $ f: \mathbb{N} \to \mathbb{N}$ such that for every $ m,n \in \mathbb{N}$ and every prime $ p,$ the number $ f(m + n)$ is divisible by $ p$ if and only if $ f(m)+ f(n)$ is divisible by $ p.$
+\end{problem}
+
+\begin{solution}
+We start with the (well-known?) observation that every subset $S$ of positive integers that is closed under addition is an eventual arithmetic progression. More precisely, there exists $d\ge 1$ (which actually is just the greatest common divisor of the elements of $S$) and $N$ such that for $n\ge N$ we have $n\in S\Longleftrightarrow d|n$.
+Now, for prime $p$, let ${S_p=\{n:p|f(n)}$. Let $d_p$ be the corresponding difference. Thus $p|f(n)\Longleftrightarrow d_p|n$ if $n$ is large. Now take any $n$ and take a huge $m$ divisible by $d_p$ (so $p|f(m)$). Then $d_p|m \Longleftrightarrow d_p|n+m\Longleftrightarrow p|f(n+m)\Longleftrightarrow p|f(n)$, so the equivalence holds without the requirement that $n$ is large too.
+The next step is to show that the remainder of $n$ modulo $d_p$ determines the remainder of $f(n)$ modulo $p$ and vice versa. Let's take ${A=\{1,2,\dots d_p-1}$. For every $n$ there exists the unique $a\in A$ such that $d_p|n+a$ determined by $n\mod d_p$. But then $p|f(n)+f(a)$ determining $f(n)\mod p$ uniquely. Conversely, let $B=\{b_1,\dots,b_p\}$ so that $f(b_j)=j$ (here is where we use surjectivity). Then once we know $f(n)\mod p$, we know $j$ such that $p|f(n)+j\equiv f(n+b_j)\mod p$ whence we know that $d_p|n+b_j$. This one-to one correspondence between remainders implies that $p=d_p$ and that $$p|n-m\Longleftrightarrow p|f(n)-f(m).$$
+In particular, $f(1)=1$ and if $f(n+1)-f(n)=\pm 1$ for all $n$.
+Now take a huge odd prime $P$ and note that we can have $P|f(P)$ only if all $\pm 1$ up to $P$ are actually $1$. Since $P$ is arbitrarily large, $f(n)=n$ for all $n$.
+\end{solution}
+
+\begin{problem}
+Determine all sets of non-negative integers $ x, y$ and $ z$ which satisfy the equation $$2^{x}+3^{y}=z^{2}.$$
+\end{problem}
+
+\begin{solution}
+This is just a casework:
+If $x=0$, we get $3^y=(z-1)(z+1)$, but $1$ and $3$ are the only two powers of $3$ differing by $2$, so $y=1$, $z=2$.
+If $y=0$, then $2^x=(z-1)(z+1)$ giving $z=3$, $x=3$ in the same way.
+If $x,y>0$, then $x$ is even ($z^2$ cannot be $2\mod 3$) whence $y$ is even ($z^2$ cannot be $3\mod 4$), so, letting $x=2X,y=2Y$, we get $3^{2Y}=(z-2^X)(z+2^X)$. Thus, we must have $z=2^X+1$ and $3^{2Y}-1=2^{X+1}$. But then $X+1=v_2(Y)+3$ by the LTE, so $2Y\ge 2^{X-1}>X+1$ if $X\ge 4$. $X=1$ gives nothing, $X=2$ gives $Y=1$, and $X=3$ gives nothing.
+\end{solution}
+
+\begin{problem}
+Find all positive integer solutions of equation $ x^{2009} + y^{2009} = 7^z$.
+\end{problem}
+
+
+\begin{solution}
+$7|2009$ so $7|x+y$ by Fermat. Removing the highest possible power of $7$ from $x,y$, we get $$v_7(x^{2009}+y^{2009})=v_7(x+y)+v_7(2009)=v_7(x+y)+2,$$ so $x^{2009}+y^{2009}=49(x+y)$ but the left hand side is much larger than the right hand one if $\max(x,y)>1$.
+\end{solution}
+
+\begin{problem}
+Let $ n$ be an odd positive integer. Prove that $((n-1)^n+1)^2$ divides $ n(n-1)^{(n-1)^n+1}+n$.
+\end{problem}
+
+\begin{solution}
+$n|(n-1)^n+1$, so for every $p|(n-1)^n+1$, we have
+\begin{align*}v_p((n-1)^{(n-1)^n+1}+1) \\ & =v_p((n-1)^n+1)+v_p\left(\frac{{(n-1)^n+1}+1}{n}\right) \\ & =2v_p((n-1)^n+1)-v_p(n), \end{align*}
+which is just what we need in terms of prime divisors.
+\end{solution}
+
+\begin{problem}
+Find all positive integers $n$ such that $3^{n}-1$ is divisible by $2^n$.
+\end{problem}
+
+\begin{solution}
+$n\le v_2(3^n-1)\le 3+v_2(n)$, so $n\le 4$. $1,2,4$ work, $3$ doesn't.
+\end{solution}
+
+\begin{problem}
+Let $p$ be a prime and $a,b$ be positive integers such that $a \equiv b \pmod p.$ Prove that if $p^x \| a-b$ and $p^y \| n,$ then $ p^{x+y} \| a^n - b^n.$
+\end{problem}
+
+
+\begin{solution}
+LTE, odd prime case.
+\end{solution}
+
+\begin{problem}
+Let $ a,n\geq 2$ be two integers, which have the following property: there exists an integer $ k\geq 2,$ such that $ n$ divides $ (a-1)^k.$ Prove that $ n$ also divides $ a^{n-1}+a^{n-2}+\cdots + a + 1.$
+\end{problem}
+
+\begin{solution}
+If some prime $p|n$, then $p|a-1$ and $v_p(a^n-1)\ge v_p(a-1)+v_p(n)$, which is a restatement of what we need in terms of prime divisors.
+\end{solution}
+
+\begin{problem}
+Find all positive integers $a$ such that $\frac{5^a + 1}{3^a}$ is a positive integer.
+\end{problem}
+
+\begin{solution}
+$a$ must be odd (otherwise the numerator is $2\mod 3$). Then $a\le v_3(5^a+1)=1+v_3(a)$ giving $a=1$ as the only solution.
+\end{solution}
+
+\begin{problem}
+Let $ a, b, n $ be positive integers such that $ 2^{\alpha}\|\frac{a^{2}-b^{2}}{2}$ and $ 2^{\beta}\|n$ (with $\beta \geq 1$). Prove that $ 2^{\alpha+\beta}\|a^{n}-b^{n}$.
+\end{problem}
+
+\begin{solution}
+LTE, even prime case.
+\end{solution}
+
+\end{document}

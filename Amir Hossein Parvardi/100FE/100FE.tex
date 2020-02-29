@@ -1,0 +1,1355 @@
+%
+% Abstract: Lifting The Exponent Lemma
+% Author: Amir Hossein Parvardi
+% Source: http://math-olympiad.blogsky.com
+%
+\documentclass{article}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{newlfont}
+\usepackage{setspace}
+\usepackage{hyperref}
+\newcommand{\co}{\mathrm{const}}
+\newcommand{\e}{\epsilon}
+\newcommand{\la}{\lambda}
+%\newcommand{\G}{\Gamma}
+\newcommand{\plus}{+}
+\newcommand{\minus}{-}
+\newcommand{\equal}{=}
+
+\theoremstyle{definition}
+\newtheorem{p}{}
+\newtheorem{s}{}
+
+
+\begin{document}
+\title{Functional Equations Problems}\author{Amir Hossein Parvardi \thanks{email: \texttt{a.parvardi@gmail.com}, blog: \texttt{parvardi.com}.}} \maketitle
+
+\[ \]
+
+\[ \]
+
+\[ \]
+
+\[ \huge{\text{Dedicated to } \texttt{pco}.}\]
+
+\newpage
+
+\section{Definitions}
+
+\begin{itemize}
+
+\item $\mathbb N$ is the set of positive integers.
+
+\item $\mathbb N \cup \{ 0 \} = \mathbb N^*$ is the set of non-negative integers.
+
+\item $\mathbb Z $ is the set of integers.
+
+\item $\mathbb Q $ is the set of rational numbers.
+
+\item $\mathbb R^+ $ is the set of positive real numbers.
+
+\item $\mathbb R $ is the set of real numbers.
+
+\item If a function $f$ is defined on the set $A$ to the set $B$, we write $f: A \to B$ and read ``$f$ is a function from the set $A$ to the set $B$."
+
+\end{itemize}
+
+\newpage
+
+\section{Problems}
+
+\begin{p}
+Find all surjective functions $ f:\mathbb{N}\to\mathbb{N} $ such that $ f (n) \ge n+(-1)^n, \forall n \in \mathbb{N} $.
+\end{p}
+
+
+\begin{p}
+Find all functions $g:\mathbb R \to \mathbb R$ such that for any real numbers $x$ and $y$
+\[g(x+y)+g(x)g(y)=g(xy)+g(x)+g(y).\]
+\end{p}
+
+\begin{p}
+Find all real valued functions defined on the reals such that for every real $x,y$ 
+\[f(x^2-y^2)=xf(x)-yf(y).\]
+\end{p}
+
+
+
+\begin{p}
+Find all real valued functions defined on the reals such that for every real $x,y$:
+\[f(xf(x)+f(y))=f(x)^2+y.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $f\colon \mathbb{N}\to\mathbb{N}$ such that $f(f(n))+(f(n))^2 =n^2 +3n+3$ for all positive integers $n$.
+\end{p}
+
+
+
+\begin{p}
+Let $ n$ be a positive integer. Find all strictly increasing functions $ f: \mathbb{N}^* \to \mathbb{N}^*$ such that the equation
+\[ \frac {f(x)}{k^n} = k - x\]
+has an integral solution $ x$ for all $ k \in \mathbb{N}$.
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R^+ \to \mathbb R^+$ such that
+\[ f (\frac{x+y}{2})=  \frac{2f(x)f(y)}{f(x)+f(y)} \qquad \forall x,y \in \mathbb R^+.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[ f(1 - x) = 1 - f(f(x)) \qquad \forall x \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R^+ \to \mathbb R^+$ such that
+\[ f(1+xf(y))=yf(x+y)  \qquad \forall x,y \in \mathbb R^+.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R^+ \to \mathbb R^+$ such that
+\[f(xf(y))=f(x+y)  \qquad \forall x,y \in \mathbb R^+.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that 
+\[f(f(x)+y)=f(x^{2}-y)+4yf(x) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $f,g,h: \mathbb R \to \mathbb R$ such that
+\[f(x+y)+g(x-y)=2h(x)+2h(y) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[ f(x+y+z) = f(x)\cdot f(1-y)+f(y)\cdot f(1-z)+f(z)\cdot f(1-x) \qquad \forall x,y,z \in \mathbb R.\]
+\end{p}
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f(f(x)-f(y)) = (x-y)^{2}f(x+y) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f,g: \mathbb R \to \mathbb R$ such that
+\begin{itemize}
+\item If $ x < y$, then $ f(x) < f(y)$;
+\item for all $ x,y \in \mathbb R$, we have $ f(xy) = g(y)f(x) + f(y)$.
+\end{itemize}
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f((x+z)(y+z))=(f(x)+f(z))(f(y)+f(z))\qquad \forall x,y,z \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f : \mathbb{R}\to\mathbb{R}$ that satisfy
+\[ f (x^{3} + y^{3}) = x^{2}f (x) + yf (y^{2})\]
+for all $ x, y \in\mathbb R.$
+\end{p}
+
+
+
+\begin{p}
+Find all functions $f: \mathbb{R} \to  \mathbb{R}$ that satisfy 
+\[ f(m+nf(m))=f(m)+mf(n)\]
+ for all $ m$ and $ n$.
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R\to \mathbb R$ such that $ f(x)f(y)=f(x+y)+xy$ for all $ x,y\in \mathbb R$.
+\end{p}
+
+
+\begin{p}
+Find all functions $ f: \mathbb N \cup \{0\}\to \mathbb N \cup \{0\}$ .Such that $x \cdot 3^{f(y)}$ divides $ f(x)\cdot 3^{y}$ for all $ x,y \mathbb N \cup \{0\}$.
+\end{p}
+
+
+
+\begin{p}
+Find all continuous functions $ f: \mathbb{R} \to \mathbb{R}$ such that
+\[f(x+y)f(x-y)=(f(x)f(y))^2 \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[(x+y)(f(x)-f(y))=(x-y)f(x+y) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f((f(x)+y)=f(x^{2}-y)+4f(x)y \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+\begin{p}
+Find all the functions $ f: \mathbb{Z}\to \mathbb{R}$ such that
+\[ f(m+n-mn)=f(m)+f(n)-f(mn) \qquad \forall m,n\in \mathbb{Z}\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: (0,1)\rightarrow(0,1)$ such that $ f(\frac{1}{2})=\frac{1}{2}$ and
+\[\left(f(ab)\right)^{2}=\left(af(b)+f(a)\right)\left(bf(a)+f(b)\right) \qquad \forall a,b \in (0,1).\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb Q \to \mathbb Q$ such that
+\[f\left(x+y+f\left(x\right)\right) = x+f\left(x\right)+f\left(y\right) \qquad \forall x,y \in \mathbb Q.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that 
+\[f(x^2\plus{}f(y))\equal{}(x\minus{}y)^2f(x\plus{}y) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\begin{itemize}
+\item $ f(x\plus{}y)\equal{}f(x)\plus{}f(y) \qquad \forall x,y \in \mathbb R$,
+\item $ f(x)\equal{}x^2f(\frac{1}{x}) \qquad \forall x \in \mathbb R \setminus \{ 0 \} $.
+\end{itemize}
+\end{p}
+
+
+
+\begin{p}
+Let $ a>\frac{3}{4}$ be a real number. Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f(f(x))\plus{}a\equal{}x^2 \qquad \forall x \in \mathbb R.\]
+\end{p}
+
+
+
+
+
+
+\begin{p}
+Find all injective functions $ f : \mathbb{N}\to\mathbb{N}$  which satisfy
+\[ f(f(n))\leq \frac{n\plus{}f(n)}{2}\qquad \forall n\in\mathbb{N}.\]
+\end{p}
+
+\begin{p}
+Find all continuous functions $f(x), g(x), q(x) : \mathbb R \to \mathbb R$ such that
+\[f(x^2) + f(y^2) = [q(x) - q(y) ]g(x + y) \qquad  \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+
+
+
+
+\begin{p}
+Find all functions $f: \mathbb R\to\mathbb R$ so that 
+\[f(x+y)+f(x-y)=2f(x)\cos y \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f(x-f(y))=f(x)+x \cdot f(y)+f(f(y)) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R^+ \to \mathbb R^+$ such that
+\[f(f(x))=6x-f(x) \qquad \forall x \in \mathbb R^+.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f(x + y) + f(xy) + 1 = f(x) + f(y) + f(xy + 1) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f(x)f(y\cdot f(x)-1)=x^2f(y)-f(x) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f(x^3+y^3)=x \cdot f(x^2)+y\cdot f(y^2) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb Q \to \mathbb R$ such that
+\[ |f(x)\minus{}f(y)|\leq(x\minus{}y)^2 \qquad \forall x,y \in \mathbb Q.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R^+$ such that
+\[f(x+y)=f(x^2+y^2) \qquad \qquad \forall x \in \mathbb R^+.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f : \mathbb R\to \mathbb R$ such that
+\[ x^2y^2 \left( f(x+y)-f(x)-f(y) \right)=3(x+y)f(x)f(y) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f(f(x) \plus{} f(y) \plus{} f(z)) \equal{} f(f(x) \minus{} f(y)) \plus{} f(2xy \plus{} f(z)) \plus{} 2f(xz \minus{} yz)\]
+for all reals $x,y$.
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb N\to \mathbb N$ such that $m^2\plus{}f(n)|(f(m))^2\plus{}n$ for all positive integers $m,n$.
+\end{p}
+
+
+
+\begin{p}
+Let $n$ be a positive integer. Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f(x+f(y))=f(x)+y^n \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all the functions $ f: \mathbb{N}\to \mathbb{N}$ such that
+\[ 3f(f(f(n))) \plus{} 2f(f(n)) \plus{} f(n) \equal{} 6n \qquad \forall n\in \mathbb{N}.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb{N^{*}}\to \mathbb{N^{*}}$ satisfying
+\[ \left(f^{2}\left(m\right)+f\left(n\right)\right) \mid \left(m^{2}+n\right)^{2}\]
+for any two positive integers $ m$ and $ n$.
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R^+ \to \mathbb R^+$ such that
+\[ f(\frac{2xy}{x\plus{}y})\equal{} \frac{2f(x)f(y)}{f(x)\plus{}f(y)} \qquad \forall x,y \in \mathbb R^+.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f(xy) \equal{} \max\{f(x),y\} \plus{} \min\{f(y),x\} \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\begin{itemize}
+\item $ f(x \plus{} f(y)) \equal{} y \plus{} f(x) \qquad \forall x,y \in \mathbb R$, and 
+\item The set $ A \equal{} {\frac {f(x)}{x}}$ is finite.
+\end{itemize}
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f(f(x)+f(y))+f(f(x))=2f(x)+y \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f(x^2(z^2 + 1) + f(y)(z + 1)) = 1 - f(z)(x^2 + f(y)) - z((1 + z)x^2 + 2f(y)) \qquad \forall x,y,z \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Prove that there is no bijective function $f : \left\{1,2,3,...\right\}\rightarrow \left\{0,1,2,3, ...\right\}$ such that
+\[f(mn)=f(m)+f(n)+3f(m)f(n).\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f(x-f(y)) = f(f(y)) + xf(y) + f(x) - 1 \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f(xf(x+y))=f(yf(x))+x^2 \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[ f(x)=f\left(x^{2}+\frac{x}{3}+\frac{1}{9}\right) \qquad \forall x \in \mathbb R.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Given $0<p<2$, find all continuous functions $ f: \mathbb R \to \mathbb R$ such that
+\[f\big(f(x)\big) = f(x)+px \qquad \forall x \in \mathbb R.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f(x+xy+f(y)) = \left(f(x)+\frac{1}{2}\right) \left(f(y)+\frac{1}{2}\right) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f(f(x) + y) = f(x + y) + xf(y) - xy - x + 1 \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all functions $f:\mathbb{R}\rightarrow \mathbb{R}$ such that:
+\[x(f(x)+f(-x)+2)+2f(-x)=0 \qquad \forall x\in \mathbb{R}.\]
+\end{p}
+
+
+
+\begin{p}
+Find all non-decreasing functions $f:\mathbb R^+\cup\{0\}\rightarrow\mathbb R^+\cup\{0\}$ such that for each $x,y\in \mathbb R^+\cup\{0\}$
+\[f\left(\frac{x+f(x)}2+y\right)=2x-f(x)+f(f(y)).\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $f:\mathbb{R}\rightarrow \mathbb{R}$ such that:
+\[(1+f(x)f(y))f(x+y)=f(x)+f(y) \qquad \forall x,y \in \mathbb R.\] 
+\end{p}
+
+
+
+\begin{p}
+For function $ f: \mathbb{R} \to \mathbb{R}$ given that $ f(x^2 \plus{} x \plus{} 3) \plus{} 2 \cdot f(x^2 \minus{} 3x \plus{} 5) \equal{} 6x^2 \minus{} 10x \plus{} 17$. Calculate $ f(2009)$.
+\end{p}
+
+
+
+\begin{p}
+Find all the functions $f: \mathbb{R} \mapsto \mathbb{R}$ such that
+\[f(x-f(y))=f(f(y))+xf(y)+f(x)-1\]
+for all $x,y \in \mathbb{R} $.
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all functions $f:\mathbb{R}\to\mathbb{R}$ such that $f(1)=1$ and
+\[f\left(f(x)y+\frac{x}{y}\right)=xyf\left(x^2+y^2\right)\]
+for all real numbers $x$ and $y$ with $y\neq0$.
+\end{p}
+
+
+
+\begin{p}
+Find all functions $f,$ defined on the positive real numbers and taking real numbers such that 
+\[f(x)+f(y)\leq \frac{f(x+y)}{2},\ \ \frac{f(x)}{x}+\frac{f(y)}{y}\geq \frac{f(x+y)}{x+y}\] for all $x,\ y>0.$
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb R \to \mathbb R$ such that
+\[f\left(xf(y-x)\right)=f\left(yf(x)\right)-x^2 \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $f: \mathbb{R}\to \mathbb{R}$ such that :
+\[f(x+f(y+f(z))) = f(x)+ f(f(y)) + f(f(f(z))) \qquad \forall x,y,z \in \mathbb R.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all functions $f : \mathbb R^+ \to \mathbb R$ satisfying the identity
+\[f(x)f(y)=y^{\alpha}f\left(\frac x2 \right) + x^{\beta} f\left(\frac y2 \right) \qquad \forall x,y \in \mathbb R^+\]
+Where $\alpha,\beta$ are given real numbers.
+\end{p}
+
+
+
+\begin{p}
+Find all functions $f:\mathbb{R}\to\mathbb{R}$ such that for all $x\mbox{, }y\in\mathbb{R}$, we have
+\[f(x+y)+f(x)f(y)=f(xy)+(y+1)f(x)+(x+1)f(y).\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $f:\mathbb{R}\to\mathbb{R}$ such that
+\[f(x+y)=2f(x)f(y)+3f(x)+3f(y)+3 \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all the continuous bounded functions $f: \mathbb R \to \mathbb R$ such that 
+\[(f(x))^2 -(f(y))^2  = f(x + y)f(x - y) \text{  for all } x, y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb{R}\to\mathbb{R}$ such that $f\left(x+y\right)+f\left(x\right)f\left(y\right)=f\left(xy \right)+2xy+1$ for all real numbers $ x$ and $ y$.
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb{R}\to\mathbb{R}$ such that 
+\[ f(x^2+y^2)=f(f(x))+f(xy)+f(f(y))\qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb{R^+}\to\mathbb{R^+}$ such that
+\[(x+y)f(f(x)y)=x^2f(f(x)+f(y)) \qquad \forall x,y \in \mathbb R^+.\]
+\end{p}
+
+
+\begin{p}
+Find all functions $ f: \mathbb{R}\to\mathbb{R}$ such that 
+\[ f(x+y^2) \geq (y+1)f(x) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb{R}\to\mathbb{R}$ such that 
+\[ f(x)f(y)\le f(xy) \text{  and  } f(x)+f(y)\le f(x+y) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $f : \mathbb Q \to \mathbb R^+$ such that
+\begin{itemize}
+
+\item $f(x) \geq 0 \quad \forall x \in \mathbb Q, \qquad f(x)=0 \iff x=0,$
+
+\item $f(xy)= f(x)\cdot f(y),$
+
+\item $f(x+y) \leq \max \{ f(x), f(y) \}$
+\end{itemize}
+\end{p}
+
+
+\begin{p}
+Determine all function $f: \mathbb{R} \to \mathbb{R}$ satisfying
+\[xf(y)-yf(x)=f(\frac{y}{x})\]
+for all $x,y \in \mathbb{R}$ with $x \neq 0$.
+\end{p}
+
+
+
+\begin{p}
+Determine all functions $f:\mathbb{N}\to\mathbb{N}$ such that
+\[ \sum_{k=1}^{n}{\frac{1}{f(k)\cdot f(k+1)}}=\frac{f(f(n))}{f(n+1)} \forall n \in \mathbb{N}. \]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $f:\mathbb{N}\to \mathbb{N}$ such that for all $m,n\in\mathbb{N}$,
+\[ (2^{m}+1)f(n)f(2^{m}n)=2^{m}f(n)^{2}+f(2^{m}n)^{2}+(2^{m}-1)^{2}n. \]
+\end{p}
+
+
+\begin{p}
+Find all functions $ f: \mathbb{R}\to\mathbb{R}$ such that 
+\[ f(x-f(y))=f(f(y))-2xf(y)+f(x) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb{R}\to\mathbb{R}$ such that 
+\[f(f(x)-y^{2})=f(x)^{2}-2f(x)y^{2}+f(f(y)) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all functions $f: [0, +\infty) \to [0, +\infty)$ such that:
+\[f(x+f(x)+2y)=2x+f(2f(y)) \qquad \forall x,y \in [0, +\infty).\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $f:\mathbb{R}\to\mathbb{R}$ such that
+\[f(x^2)+f(xy)=f(x)f(y)+yf(x)+xf(x+y)\]
+for all $x,y\in\mathbb{R}$.
+\end{p}
+
+
+\begin{p}
+Find all functions $ f: \mathbb{Q}\to\mathbb{Q}$ such that 
+\[f(x+f(x)+2y)=2x+2f(f(y)) \qquad \forall x,y \in \mathbb Q.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb{R}\to\mathbb{R}$ such that 
+\begin{itemize}
+\item $f(\frac{x+f(x)}{2}+y+f(2z))=2x-f(x)+f(f(f(y)))+2f(f(z)) \qquad \forall x,y,z \in \mathbb R$,
+
+\item $f(f(0))=f(0)$.
+
+\end{itemize}
+\end{p}
+
+
+
+\begin{p}
+Find all functions $f:\mathbb{R}^+ \to \mathbb{R}^+$ which satisfy the following conditions:
+\begin{itemize}
+\item $f(x+f(y))=f(x)f(y)$ for all $x,y>0;$
+\item  there are at most finitely many $x$ with $f(x)=1$.
+\end{itemize}
+\end{p}
+
+
+
+\begin{p}
+Find all functions $f: \mathbb{N} \cup \{0 \} \to \mathbb{N} \cup \{0 \}$ such that for all $m,n\in \mathbb{N} \cup \{0 \}$, \[mf(n)+nf(m)=(m+n)f(m^{2}+n^{2}).\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $f: (0,1) \to \mathbb{R}$ such that
+\[f(xyz)=xf(x)+yf(y)+zf(z)\]
+for all real numbers $x,y,z \in (0,1)$.
+\end{p}
+
+
+
+
+
+
+
+\begin{p}
+Find all functions $f: \mathbb{Z} \mapsto \mathbb{Z}$ satisfying the condition: $f(x^3 +y^3 +z^3 )=f(x)^3+f(y)^3+f(z)^3.$
+\end{p}
+
+
+
+\begin{p}
+Determine all real functions $f(x)$ that are defined and continuous on the interval $(-1, 1)$ and that satisfy the functional equation
+\[f(x+y)=\frac{f(x)+f(y)}{1-f(x) f(y)} \qquad (x, y, x + y \in (-1, 1)).\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all functions $f: \mathbb R\to \mathbb R$ such that
+\[f(x^n+2f(y))=(f(x))^n +y+f(y) \qquad \forall x, y \in \mathbb R,\quad n \in \mathbb Z_{\geq 2}.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb{R}\to\mathbb{R}$ such that 
+\[ f(x^2+y^2)=f(x^2)+f(y^2)+2f(x)f(y) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb{R}\to\mathbb{R}$ such that 
+\[ f(x+y)f(x-y)=\left(f(x)+f(y)\right)^2-4x^2f(y) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all injective functions $ f: \mathbb{N}\to\mathbb{R}$ such that
+\[f(1)=2,f(2)=4, \text{ and } f(f(m)+f(n))=f(f(m))+f(n) \qquad \forall m,n \in \mathbb N.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $f:\mathbb{R}^+\to\mathbb{R}^+$ such that for any real numbers $a, b, c, d >0$ satisfying $abcd=1$, we have \[(f(a)+f(b))(f(c)+f(d))=(a+b)(c+d).\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all functions $f : \mathbb R \to \mathbb R$ such that
+\[f(x^2) \biggl( f(x)^2 + f\left( \frac{1}{y^2} \right) \biggr) = 1+f\left( \frac{1}{xy} \right) \quad \forall x,y \in \mathbb R \setminus\{0\} .\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb{R}\to\mathbb{R}$ such that 
+\[ f(f(x)-f(y))=f(f(x))-2x^2f(y)+f(y^2) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all functions $ f: \mathbb{R^+}\to\mathbb{R^+}$ such that 
+\[ f(x+1)=f(x)+1 \text{ and } f\left(\frac{1}{f(x)}\right)=\frac{1}{x} \qquad \forall x,y \in \mathbb R^+.\]
+\end{p}
+
+
+\begin{p}
+Find all functions $ f: \mathbb{R}\to\mathbb{R}$ such that 
+\[ f(x+f(x)f(y))=f(x)+xf(y) \qquad \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all continuous functions $f: \mathbb{R}\to\mathbb{R}$ such that 
+\[f(x)+f(y)-f(x+y)=xy \qquad \forall x,y \in\mathbb{R}.\]
+\end{p}
+
+\newpage
+
+\section{Link to Solutions}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=410614}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=320016}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=320299}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=320331}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=319947}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=321004}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=321965}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=321967}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=323174}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=323169}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=328125}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=324002}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=324666}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=325068}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=325439}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=325471}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=150112}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=326890}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=329072}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=328849}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=329548}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=329724}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=329761}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=331073}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=331738}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=271589}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=334067}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=334070}
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=334624}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=334842}
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=334873}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=335486}
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=335522}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=336063}
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=336764}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=336781}
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=336995}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=337046}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=339865}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=337211}
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=337225}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=337264}
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=337794}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=337982}
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=27188}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=339196}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=339995}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=339999}
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=340552}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=341674}
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=145400}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=346403}
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=346514}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=346648}
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=346743}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=347727}
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=348529}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=349402}
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=352088}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=350104}
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=272967}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=19782}
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=411400}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=136045}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=411407}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?p=1964078}
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=364853}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=366340}
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=366346}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=367461}
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=78909}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=367724}
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=367952}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=367972}
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=371349}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=372842}
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=355078}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=375580}
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=378857}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=378718}
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=378717}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=378715}
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=378553}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=378365}
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=378164}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=376745}
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=150754}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=380683}
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=14908}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=386060}
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=385331}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=384406}
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=390192}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=390689}
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=398074}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=391584}
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=391060}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=102430}
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=132331}
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=139788}
+\end{s}
+
+\end{document}

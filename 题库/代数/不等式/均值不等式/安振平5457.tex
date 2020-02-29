@@ -1,0 +1,67 @@
+\documentclass[]{article}
+
+
+%导入宏包
+\usepackage{ctex}
+\usepackage{graphics}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{pst-blur}
+\usepackage{pstricks-add}
+\usepackage{pstricks}
+\usepackage{pstricks-pdf}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+%\usepackage{background}
+\usepackage{xeCJK}
+    \xeCJKsetup{CJKmath=true}
+%\usepackage{wallpaper}
+
+
+%opening
+\title{}
+\author{}
+\date{}
+\setlength\parindent{0em}
+
+\begin{document}
+\maketitle
+\section{安振平5457}{
+已知$a,b,c \in \mathbf{R},a+b+c=3,a^2+b^2+c^2=5$,求证:$|(a-b)(b-c)(c-a)|\leq 2$.
+
+\begin{proof}
+不妨令$a\geq b\geq c$.\\
+\begin{equation}\nonumber
+    \Longleftrightarrow (a-b)(b-c)(a-c)\leq 2
+\end{equation}
+由均值不等式知:
+\begin{equation}\nonumber
+    (a-b)(b-c)(a-c)\leq \frac{(a-c)^3}{4}
+\end{equation}
+只需证
+\begin{equation}\label{daizheng}
+    \frac{(a-c)^3}{4}\leq 2
+\end{equation}
+转换条件,得到
+\begin{equation}\label{tiaojian}
+    a^2+c^2+(3-a-c)^2=5
+\end{equation}
+用$a_1=a+1,c_1=c+1$替换\eqref{tiaojian}的字母,得到
+\begin{equation}\label{tiaojianbianxing}
+    (a_0+1)^2+(c_0+1)^2+(1-x-y)^2=5
+\end{equation}
+再用$\displaystyle a_2=\frac{\sqrt{2}}{2}(a_1-c_1),c_2=\frac{\sqrt{2}}{2}(a_1+c_1)$替换\eqref{tiaojianbianxing}中字母,整理后得到
+\begin{equation}
+    \frac{a^2}{2}+\frac{3y^2}{2}=1
+\end{equation}
+这是一个椭圆.\\
+逆向过程知,条件所描述的椭圆长轴顶点$(2,0)(0,2)$,长轴为$a+c=2$,则易知$a-c\leq 2$
+代入即得
+\begin{equation}\nonumber
+    \frac{(a-c)^3}{4}\leq 2
+\end{equation}
+\end{proof}
+}
+\end{document}

@@ -1,0 +1,807 @@
+
+\documentclass{article}
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{newlfont}
+\usepackage{setspace}
+\usepackage{hyperref}
+\newcommand{\co}{\mathrm{const}}
+\newcommand{\e}{\epsilon}
+\newcommand{\la}{\lambda}
+%\newcommand{\G}{\Gamma}
+\newcommand{\plus}{+}
+\newcommand{\minus}{-}
+\newcommand{\equal}{=}
+
+\theoremstyle{definition}
+\newtheorem{p}{}
+\newtheorem{s}{}
+
+
+\begin{document}
+\title{Number Theory Problems}\author{Amir Hossein Parvardi \thanks {email: \texttt{a.parvardi@gmail.com}, website: \texttt{parvardi.com}.}} \maketitle 
+I've written the source of the problems beside their numbers. If you need solutions, visit AoPS Resources Page, select the competition, select the year and go to the link of the problem. All (except very few) of these problems have been posted by Orlando Doehring (orl).
+
+\tableofcontents
+
+\section{Problems}
+
+\subsection{IMO Problems}
+
+
+
+
+\begin{p}{\bf (IMO 1974, Day 1, Problem 3)}
+Prove that for any n natural, the number \[ \sum \limits_{k=0}^{n} \binom{2n+1}{2k+1} 2^{3k}  \]
+cannot be divided by $5$.
+\end{p}
+
+
+\begin{p}{\bf (IMO 1974, Day 2, Problem 3)}
+Let $P(x)$ be a polynomial with integer coefficients. We denote $\deg(P)$ its degree which is $\geq 1.$ Let $n(P)$ be the number of all the integers $k$ for which we have $(P(k))^{2}=1.$ Prove that $n(P)- \deg(P) \leq 2.$
+\end{p}
+
+
+
+\begin{p}{\bf (IMO 1975, Day 1, Problem 2)}
+Let $a_{1}, \ldots, a_{n}$ be an infinite sequence of strictly positive integers, so that $a_{k} < a_{k+1}$ for any $k.$ Prove that there exists an infinity of terms $a_{m},$ which can be written like $a_m = x \cdot a_p + y \cdot a_q$ with $x,y$ strictly positive integers and $p \neq q.$
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO 1976, Day 2, Problem 4)}
+Determine the greatest number, who is the product of some positive integers, and the sum of these numbers is $1976.$
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO 1977, Day 1, Problem 3)}
+Let $n$ be a given number greater than 2. We consider the set $V_n$ of all the integers of the form $1 + kn$ with $k = 1, 2, \ldots$ A number $m$ from $V_n$ is called indecomposable in $V_n$ if there are not two numbers $p$ and $q$ from $V_n$ so that $m = pq.$ Prove that there exist a number $r \in V_n$ that can be expressed as the product of elements indecomposable in $V_n$ in more than one way. (Expressions which differ only in order of the elements of $V_n$ will be considered the same.)
+\end{p}
+
+
+
+\begin{p}{\bf (IMO 1977, Day 2, Problem 5)}
+Let $a,b$ be two natural numbers. When we divide $a^2+b^2$ by $a+b$, we the the remainder $r$ and the quotient $q.$ Determine all pairs $(a, b)$ for which $q^2 + r = 1977.$
+\end{p}
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{p}{\bf (IMO 1978, Day 1, Problem 1)}
+Let $ m$ and $ n$ be positive integers such that $ 1 \le m < n$.  In their decimal representations, the last three digits of $ 1978^m$ are equal, respectively, so the last three digits of $ 1978^n$.  Find $ m$ and $ n$ such that $ m \plus{} n$ has its least value.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO 1979, Day 1, Problem 1)}
+If $p$ and $q$ are natural numbers so that \[ \frac{p}{q}=1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}+ \ldots -\frac{1}{1318}+\frac{1}{1319}, \] prove that $p$ is divisible with $1979$.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO 1980 Finland, Problem 3)}
+Prove that the equation \[ x^n + 1 = y^{n+1}, \] where $n$ is a positive integer not smaller then 2, has no positive integer solutions in $x$ and $y$ for which $x$ and $n+1$ are relatively prime.
+\end{p}
+
+
+
+\begin{p}{\bf (IMO 1980 Luxembourg, Problem 3)}
+Let $p$ be a prime number. Prove that there is no number divisible by $p$ in the $n-th$ row of Pascal's triangle if and only if $n$ can be represented in the form $n = p^sq - 1$, where $s$ and $q$ are integers with $s \geq 0, 0 < q < p$.
+\end{p}
+
+
+
+
+
+
+
+\begin{p}{\bf (IMO 1981, Day 1, Problem 3)}
+Determine the maximum value of $m^2+n^2$, where $m$ and $n$ are integers in the range $1,2,\ldots,1981$ satisfying $(n^2-mn-m^2)^2=1$.
+\end{p}
+
+
+
+\begin{p}{\bf (IMO 1982, Day 2, Problem 4)}
+Prove that if $n$ is a positive integer such that the equation \[ x^3-3xy^2+y^3=n \] has a solution in integers $x,y$, then it has at least three such solutions. Show that the equation has no solutions in integers for $n=2891$.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO 1984, Day 1, Problem 2)}
+Find one pair of positive integers $a,b$ such that $ab(a+b)$ is not divisible by $7$, but $(a+b)^7-a^7-b^7$ is divisible by $7^7$.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO 1985, Day 1, Problem 2)}
+Let $n$ and $k$ be relatively prime positive integers with $k<n$. Each number in the set $M=\{1,2,3,\ldots,n-1\}$ is colored either blue or white. For each $i$ in $M$, both $i$ and $n-i$ have the same color. For each $i\ne k$ in $M$ both $i$ and $|i-k|$ have the same color. Prove that all numbers in $M$ must have the same color.
+\end{p}
+
+
+
+
+
+
+
+\begin{p}{\bf (IMO 1986, Day 1, Problem 1)}
+Let $d$ be any positive integer not equal to $2, 5$ or $13$. Show that one can find distinct $a,b$ in the set $\{2,5,13,d\}$ such that $ab-1$ is not a perfect square.
+\end{p}
+
+
+
+\begin{p}{\bf (IMO 1988, Day 2, Problem 6)}
+Let $ a$ and $ b$ be two positive integers such that $ a \cdot b \plus{} 1$ divides $ a^{2} \plus{} b^{2}$. Show that $ \frac {a^{2} \plus{} b^{2}}{a \cdot b \plus{} 1}$ is a perfect square.
+\end{p}
+
+
+
+
+
+
+\begin{p}{\bf (IMO 1990, Day 1, Problem 3)}
+Determine all integers $ n > 1$ such that
+\[ \frac {2^n \plus{} 1}{n^2}\]
+is an integer.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO 1991, Day 1, Problem 2)}
+Let $ \,n > 6\,$ be an integer and $ \,a_{1},a_{2},\cdots ,a_{k}\,$  be all the natural numbers less than $ n$ and relatively prime to $ n$. If
+\[ a_{2} \minus{} a_{1} \equal{} a_{3} \minus{} a_{2} \equal{} \cdots \equal{} a_{k} \minus{} a_{k \minus{} 1} > 0,\]
+prove that $ \,n\,$ must be either a prime number or a power of $ \,2$.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO 1992, Day 2, Problem 6)}
+For each positive integer $\,n,\;S(n)\,$ is defined to be the greatest integer such that, for every positive integer $\,k\leq S(n),\;n^{2}\,$ can be written as the sum of $\,k\,$ positive squares. 
+\begin{itemize}
+\item a) Prove that $\,S(n)\leq n^{2}-14\,$ for each $\,n\geq 4$. 
+\item b) Find an integer $\,n\,$ such that $\,S(n)=n^{2}-14$. 
+\item c) Prove that there are infintely many integers $\,n\,$ such that $S(n)=n^{2}-14.$
+\end{itemize}
+\end{p}
+
+
+
+\begin{p}{\bf (IMO 1996, Problem 4, Day 2)}
+The positive integers $ a$ and $ b$ are such that the numbers  $ 15a \plus{} 16b$ and $ 16a \minus{} 15b$ are both squares of positive integers. What is the least possible value that can be taken on by the smaller of these two squares?
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO 1996, Problem 6, Day 2)}
+Let $p,q,n$ be three positive integers with $p+q<n$. Let $(x_{0},x_{1},\cdots ,x_{n})$ be an $(n+1)$-tuple of integers satisfying the following conditions :
+\begin{itemize}
+\item(a) $x_{0}=x_{n}=0$, and 
+\item (b) For each $i$ with $1\leq i\leq n$, either $x_{i}-x_{i-1}=p$ or $x_{i}-x_{i-1}=-q$. 
+\end{itemize}
+Show that there exist indices $i<j$ with $(i,j)\neq (0,n)$, such that $x_{i}=x_{j}$.
+\end{p}
+
+
+
+
+
+
+
+\begin{p}{\bf (IMO 2007, Day 2, Problem 5)}
+Let $ a$ and $ b$ be positive integers. Show that if $ 4ab \minus{} 1$ divides $ (4a^{2} \minus{} 1)^{2}$, then $ a \equal{} b$.
+\end{p}
+
+
+\subsection{ISL and ILL Problems}
+
+
+
+
+\begin{p}{\bf (IMO LongList 1959-1966 Problem 34)}
+Find all pairs of positive integers $\left( x,y\right) $ satisfying the equation $2^{x}=3^{y}+5.$
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO LongList 1967, Great Britain Problem 1)}
+Let $k,m,n$ be natural numbers such that $m+k+1$ is a prime greater than $n+1$. Let $c_s=s(s+1)$. Prove that 
+\[(c_{m+1}-c_k)(c_{m+2}-c_k)\ldots(c_{m+n}-c_k)\] 
+is divisible by the product $c_1c_2\ldots c_n$.
+\end{p}
+
+
+
+
+
+
+\begin{p}{\bf (IMO Longlist 1967, Poland 4)}
+Does there exist an integer such that its cube is equal to $3n^2 + 3n + 7,$ where $n$ is an integer.
+\end{p}
+
+
+
+\begin{p}{\bf (IMO LongList 1988, South Korea 3, Problem 64 of ILL)}
+Find all positive integers $x$ such that the product of all digits of $x$ is given by $x^2 - 10 \cdot x - 22.$
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO Longlist 1989, Problem 19)}
+Let $ a_1, \ldots, a_n$ be distinct positive integers that do not contain a $ 9$ in their decimal representations. Prove that the following inequality holds
+\[ \sum^n_{i\equal{}1} \frac{1}{a_i} \leq 30.\]
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO Longlist 1989, Problem 24)}
+Let $ a, b, c, d$ be positive integers such that $ ab \equal{} cd$ and $ a\plus{}b \equal{} c \minus{} d.$ Prove that there exists a right-angled triangle the measure of whose sides (in some unit) are integers and whose area measure is $ ab$ square units.
+\end{p}
+
+
+
+\begin{p}{\bf (IMO Longlist 1989, Problem 31)}
+Let $ n$ be a positive integer. Show that \[ \left(\sqrt{2} \plus{} 1 \right)^n \equal{} \sqrt{m} \plus{} \sqrt{m\minus{}1}\] for some positive integer $ m.$
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO Shortlist 1988, Problem 7)}
+Let $ a$ be the greatest positive root of the equation $ x^3 \minus{} 3 \cdot x^2 \plus{} 1 \equal{} 0.$ Show that $ \left[a^{1788} \right]$ and $ \left[a^{1988} \right]$ are both divisible by 17. Here $ [x]$ denotes the integer part of $ x.$
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO Shortlist 1989, Problem 11)}
+Define sequence $ (a_n)$ by $ \sum_{d|n} a_d \equal{} 2^n.$ Show that $ n|a_n.$
+\end{p}
+
+
+
+\begin{p}{\bf (IMO Shortlist 1989, Problem 15)}
+Let $ a, b, c, d,m, n \in \mathbb{Z}^\plus{}$ such that \[ a^2\plus{}b^2\plus{}c^2\plus{}d^2 \equal{} 1989,\]
+\[ a\plus{}b\plus{}c\plus{}d \equal{} m^2,\] and the largest of $ a, b, c, d$ is $ n^2.$ Determine, with proof, the values  of $m$ and $ n.$
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO ShortList 1990, Problem 7)}
+Let $ f(0) \equal{} f(1) \equal{} 0$ and
+\[ f(n\plus{}2) \equal{} 4^{n\plus{}2} \cdot  f(n\plus{}1) \minus{} 16^{n\plus{}1} \cdot f(n) \plus{} n \cdot 2^{n^2}, \quad n \equal{} 0, 1, 2, \ldots\]
+Show that the numbers $ f(1989), f(1990), f(1991)$ are divisible by $ 13.$
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO ShortList 1990, Problem 13)}
+An eccentric mathematician has a ladder with $ n$ rungs that he always ascends and descends in the following way: When he ascends, each step he takes covers $ a$ rungs of the ladder, and when he descends, each step he takes covers $ b$ rungs of the ladder, where $ a$ and $ b$ are fixed positive integers. By a sequence of ascending and descending steps he can climb from ground level to the top rung of the ladder and come back down to ground level again. Find, with proof, the minimum value of $ n,$ expressed in terms of $ a$ and $ b.$
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO ShortList 1990, Problem 21)}
+Let $ n$ be a composite natural number and $ p$ a proper divisor of $ n.$ Find the binary representation of the smallest natural number $ N$ such that 
+\[ \frac{(1 \plus{} 2^p \plus{} 2^{n\minus{}p})N \minus{} 1}{2^n}\]
+is an integer.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO ShortList 1991, Problem 14)}
+Let $ a, b, c$ be integers and $ p$ an odd prime number. Prove that if $ f(x) \equal{} ax^2 \plus{} bx \plus{} c$ is a perfect square for $ 2p \minus{} 1$ consecutive integer values of $ x,$ then $ p$ divides $ b^2 \minus{} 4ac.$
+\end{p}
+
+
+
+\begin{p}{\bf (IMO ShortList 1991, Problem 18)}
+Find the highest degree $ k$ of $ 1991$ for which $ 1991^k$ divides the number \[ 1990^{1991^{1992}} \plus{} 1992^{1991^{1990}}.\]
+\end{p}
+
+
+
+
+
+
+\begin{p}{\bf (IMO Shortlist 1993, Romania 2)}
+Let $a,b,n$ be positive integers, $b > 1$ and $b^n-1|a.$ Show that the representation of the number $a$ in the base $b$ contains at least $n$ digits different from zero.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO Shortlist 1995, Number Theory Problem 2)}
+Let $ \mathbb{Z}$ denote the set of all integers. Prove that for any integers $ A$ and $ B,$ one can find an integer $ C$ for which $ M_1 \equal{} \{x^2 \plus{} Ax \plus{} B : x \in \mathbb{Z}\}$ and $ M_2 \equal{} {2x^2 \plus{} 2x \plus{} C : x \in \mathbb{Z}}$ do not intersect.
+\end{p}
+
+
+
+\begin{p}{\bf (IMO Shortlist 1995, Number Theory Problem 8)}
+Let $ p$ be an odd prime. Determine positive integers $ x$ and $ y$ for which $ x \leq y$ and $ \sqrt{2p} \minus{} \sqrt{x} \minus{} \sqrt{y}$ is non-negative and as small as possible.
+\end{p}
+
+
+
+
+
+
+\begin{p}{\bf (IMO Shortlist 1996, Number Theory Problem 1)}
+Four integers are marked on a circle. On each step we simultaneously replace each number by the difference between this number and next number on the circle, moving in a clockwise direction; that is, the numbers $ a,b,c,d$ are replaced by $ a\minus{}b,b\minus{}c,c\minus{}d,d\minus{}a.$ Is it possible after 1996 such to have numbers $ a,b,c,d$ such the numbers $ |bc\minus{}ad|, |ac \minus{} bd|, |ab \minus{} cd|$ are primes?
+\end{p}
+
+
+
+\begin{p}{\bf (IMO Shortlist 1996, Number Theory Problem 4)}
+Find all positive integers $ a$ and $ b$ for which 
+\[ \left \lfloor \frac{a^2}{b} \right \rfloor \plus{} \left \lfloor \frac{b^2}{a} \right \rfloor \equal{} \left \lfloor \frac{a^2 \plus{} b^2}{ab} \right \rfloor \plus{} ab.\]
+\end{p}
+
+
+
+\begin{p}{\bf (IMO Shortlist 1996, Number Theory Problem 5)}
+Show that there exists a bijective function $ f: \mathbb{N}_{0}\to \mathbb{N}_{0}$ such that for all $ m,n\in \mathbb{N}_{0}$:
+\[ f(3mn \plus{} m \plus{} n) \equal{} 4f(m)f(n) \plus{} f(m) \plus{} f(n).\]
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO Shortlist 1997, Number Theory Problem 6)}
+Let $a, b, c$ be positive integers such that $a$ and $b$ are relatively prime and $c$ is relatively prime either to $a$ or $b$. Prove that there exist infinitely many triples $(x, y, z)$ of distinct positive integers such that \[x^{a}+y^{b}= z^{c}.\]
+\end{p}
+
+
+
+\begin{p}{\bf (IMO ShortList 1998, Number Theory Problem 1)}
+Determine all pairs $(x,y)$ of positive integers such that $x^{2}y+x+y$ is divisible by $xy^{2}+y+7$.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO ShortList 1998, Number Theory Problem 2)}
+Determine all pairs $(a,b)$ of real numbers such that $a \lfloor bn \rfloor =b \lfloor an \rfloor $ for all positive integers $n$. (Note that $\lfloor x\rfloor $ denotes the greatest integer less than or equal to $x$.)
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO ShortList 1998, Number Theory Problem 5)}
+Determine all positive integers $n$ for which there exists an integer $m$ such that ${2^{n}-1}$ is a divisor of ${m^{2}+9}$.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO ShortList 1998, Number Theory Problem 6)}
+For any positive integer $n$, let $\tau (n)$ denote the number of its positive divisors (including 1 and itself). Determine all positive integers $m$ for which there exists a positive integer $n$ such that $\frac{\tau (n^{2})}{\tau (n)}=m$.
+\end{p}
+
+
+
+
+
+
+
+\begin{p}{\bf (IMO ShortList 1999, Number Theory Problem 1)}
+Find all the pairs of positive integers $(x,p)$ such that p is a prime, $x \leq 2p$ and $x^{p-1}$ is a divisor of $ (p-1)^{x}+1$.
+\end{p}
+
+
+
+\begin{p}{\bf (IMO ShortList 1999, Number Theory Problem 2)}
+Prove that every positive rational number can be represented in the form $\dfrac{a^{3}+b^{3}}{c^{3}+d^{3}}$ where a,b,c,d are positive integers.
+\end{p}
+
+
+\begin{p}{\bf (IMO Shortlist 2000, Number Theory Problem 2)}
+For every positive integers $ n$ let $ d(n)$ the number of all positive integers of $ n$. Determine all positive integers $ n$ with the property: $ d^3(n) \equal{} 4n$.
+\end{p}
+
+
+\begin{p}{\bf (IMO Shortlist 2000, Number Theory Problem 5)}
+Prove that there exist infinitely many positive integers $ n$ such that $ p \equal{} nr,$ where $ p$ and $ r$ are respectively the semiperimeter and the inradius of a triangle with integer side lengths.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO Shortlist 2000, Number Theory Problem 6)}
+Show that the set of positive integers that cannot be represented as a sum of distinct perfect squares is finite.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO ShortList 2001, Number Theory Problem 3)}
+Let $ a_1 \equal{} 11^{11}, \, a_2 \equal{} 12^{12}, \, a_3 \equal{} 13^{13}$, and $ a_n \equal{} |a_{n \minus{} 1} \minus{} a_{n \minus{} 2}| \plus{} |a_{n \minus{} 2} \minus{} a_{n \minus{} 3}|, n \geq 4.$ Determine $ a_{14^{14}}$.
+\end{p}
+
+
+
+\begin{p}{\bf (IMO ShortList 2001, Number Theory Problem 4)}
+Let $p \geq 5$ be a prime number. Prove that there exists an integer $a$ with $1 \leq a \leq p-2$ such that neither $a^{p-1}-1$ nor $(a+1)^{p-1}-1$ is divisible by $p^2$.
+\end{p}
+
+
+
+\begin{p}{\bf (IMO ShortList 2002, Number Theory Problem 2)}
+Let $n\geq2$ be a positive integer, with divisors $1=d_1<d_2<\,\ldots<d_k=n$.  Prove that $d_1d_2+d_2d_3+\,\ldots\,+d_{k-1}d_k$ is always less than $n^2$, and determine when it is a divisor of $n^2$.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO ShortList 2002, Number Theory Problem 3)}
+Let $p_1,p_2,\ldots,p_n$ be distinct primes greater than 3. Show that $2^{p_1p_2\ldots p_n}+1$ has at least $4^n$ divisors.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (IMO Shortlist 2004, Number Theory Problem 6)}
+Given an integer ${n>1}$, denote by $P_{n}$ the product of all positive integers $x$ less than $n$ and such that $n$ divides ${x^2-1}$. For each ${n>1}$, find the remainder of $P_{n}$ on division by $n$.
+\end{p}
+
+
+
+
+\begin{p}{\bf (IMO Shortlist 2004, Number Theory Problem 7)}
+Let $p$ be an odd prime and $n$ a positive integer. In the coordinate plane, eight distinct points with integer coordinates lie on a circle with diameter of length $p^{n}$. Prove that there exists a triangle with vertices at three of the given points such that the squares of its side lengths are integers divisible by $p^{n+1}$.
+\end{p}
+
+
+
+
+
+
+
+\begin{p}{\bf (IMO Shortlist 2007, Number Theory Problem 2)}
+Let $ b,n > 1$ be integers. Suppose that for each $ k > 1$ there exists an integer $ a_k$ such that $ b \minus{} a^n_k$ is divisible by $ k.$ Prove that $ b \equal{} A^n$ for some integer $ A.$
+\end{p}
+
+
+
+\begin{p}{\bf (IMO Shortlist 2007, Number Theory Problem 3)}
+Let $ X$ be a set of 10,000 integers, none of them is divisible by 47. Prove that there exists a 2007-element subset $ Y$ of $ X$ such that $ a \minus{} b \plus{} c \minus{} d \plus{} e$ is not divisible by 47 for any $ a,b,c,d,e \in Y.$
+\end{p}
+
+
+
+\begin{p}{\bf (IMO Shortlist 2007, Number Theory Problem 4)}
+For every integer $ k \geq 2,$ prove that $ 2^{3k}$ divides the number
+\[ \binom{2^{k \plus{} 1}}{2^{k}} \minus{} \binom{2^{k}}{2^{k \minus{} 1}}\]
+but $ 2^{3k \plus{} 1}$ does not.
+\end{p}
+
+
+
+\begin{p}{\bf (IMO Shortlist 2007, Number Theory Problem 5)}
+Find all surjective functions $ f: \mathbb{N} \mapsto \mathbb{N}$ such that for every $ m,n \in \mathbb{N}$ and every prime $ p,$ the number $ f(m \plus{} n)$ is divisible by $ p$ if and only if $ f(m) \plus{} f(n)$ is divisible by $ p.$
+\end{p}
+
+
+\subsection{Other Competitions}
+
+\subsubsection{China IMO Team Selection Test Problems}
+
+
+
+\begin{p}{\bf (China TST 1987, Problem 5)}
+Find all positive integer $n$ such that the equation $x^3+y^3+z^3=n \cdot x^2 \cdot y^2 \cdot z^2$ has positive integer solutions.
+\end{p}
+
+
+
+\begin{p}{\bf (China TST 1988, Problem 5)}
+Let $f(x) = 3x + 2.$ Prove that there exists $m \in \mathbb{N}$ such that $f^{100}(m)$ is divisible by $1988$.
+\end{p}
+
+
+
+
+\begin{p}{\bf (China TST 1993, Problem 4)}
+Find all integer solutions to $2 \cdot x^4 + 1 = y^2.$
+\end{p}
+
+
+\begin{p}{\bf (China TST 1995, Problem 1)}
+Find the smallest prime number $p$ that cannot be represented in the form $|3^{a} - 2^{b}|$, where $a$ and $b$ are non-negative integers.
+\end{p}
+
+
+
+\begin{p}{\bf (China TST 1998, Problem 6)}
+For any $h = 2^{r}$ ($r$ is a non-negative integer), find all $k \in \mathbb{N}$ which satisfy the following condition: There exists an odd natural number $m > 1$ and $n \in \mathbb{N}$, such that $k \mid m^{h} - 1, m \mid n^{\frac{m^{h}-1}{k}} + 1$.
+\end{p}
+
+
+
+\begin{p}{\bf (China TST 1999, Problem 2)}
+Find all prime numbers $p$ which satisfy the following condition: For any prime $q < p$, if $p = kq + r, 0 \leq r < q$, there does not exist an integer $q > 1$ such that $a^{2} \mid r$.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (China TST 2004, Day 1, Problem 2)}
+Let u be a fixed positive integer. Prove that the equation $n! = u^{\alpha} - u^{\beta}$ has a finite number of solutions $(n, \alpha, \beta).$
+\end{p}
+
+
+
+\subsubsection{Other Problems}
+
+
+\begin{p}{\bf (Germany Bundeswettbewerb 2003, Day 1, Problem 2)}
+Find all triples $\left(x,\ y,\ z\right)$ of integers satisfying the following system of equations:
+\[x^3-4x^2-16x+60=y;\]\[y^3-4y^2-16y+60=z;\]\[z^3-4z^2-16z+60=x.\]
+\end{p}
+
+
+\begin{p}{\bf (Germany Bundeswettbewerb 2003, Day 1, Problem 4)}
+Determine all positive integers which cannot be represented as $\frac{a}{b}+\frac{a+1}{b+1}$ with $a,b$ being positive integers.
+\end{p}
+
+
+\begin{p}{\bf (Germany Bundeswettbewerb 2003, Day 2, Problem 2)}
+The sequence $\{a_1,a_2,\ldots\}$ is recursively defined by  $a_1 = 1$, $a_2 = 1$, $a_3 = 2$, and \[ a_{n+3} = \frac 1{a_n}\cdot (a_{n+1}a_{n+2}+7), \ \forall \ n > 0. \] Prove that all elements of the sequence are integers.
+\end{p}
+
+
+
+\begin{p}{\bf (Germany Bundeswettbewerb Mathematik 2007, Round 2, Problem 1)}
+For which numbers $ n$ is there a positive integer $ k$ with the following property: The sum of digits for $ k$ is $ n$ and the number $ k^2$ has sum of digits $ n^2.$
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (Germany Bundeswettbewerb Mathematik 2008, Round 2, Problem 2)}
+Let the positive integers $ a,b,c$ chosen such that the quotients $ \frac{bc}{b\plus{}c},$ $ \frac{ca}{c\plus{}a}$ and $ \frac{ab}{a\plus{}b}$ are integers. Prove that $ a,b,c$ have a common divisor greater than 1.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (German TST 2009, Exam 3, Problem 2)}
+Let $ \left(a_n \right)_{n \in \mathbb{N}}$ defined by $ a_1 \equal{} 1,$ and $ a_{n \plus{} 1} \equal{} a^4_n \minus{} a^3_n \plus{} 2a^2_n \plus{} 1$ for $ n \geq 1.$ Show that there is an infinite number of primes $ p$ such that none of the $ a_n$ is divisible by $ p.$
+\end{p}
+
+
+
+\begin{p}{\bf (France 1999, Problem 2)}
+Find all positive integers n such that $(n+3)^n = \sum^{n+2}_{k=3} k^n$.
+\end{p}
+
+
+
+\begin{p}{\bf (All Russian Olympiads 2004, Problem 9.5)}
+Are there such pairwise distinct natural numbers $ m, n, p, q$ satisfying $ m \plus{} n \equal{} p \plus{} q$ and $ \sqrt{m} \plus{} \sqrt[3]{n} \equal{} \sqrt{p} \plus{} \sqrt[3]{q} > 2004$ ?
+\end{p}
+
+
+
+\begin{p}{\bf (All Russian Olympiads 2005, Problem 10.1)}
+Find the least positive integer, which may not be represented as ${2^a-2^b\over 2^c-2^d}$, where $a,\,b,\,c,\,d$ are positive integers.
+\end{p}
+
+
+
+\begin{p}{\bf (All Russian Olympiads 2005, Problem 10.7)}
+Positive integers $x>1$ and $y$  satisfy an equation $2x^2-1=y^{15}$. Prove that 5 divides $x$.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (Vietnam TST 1992, Problem 1)}
+Let two natural number $n > 1$ and $m$ be given. Find the least positive integer $k$ which has the following property: Among $k$ arbitrary integers $a_1, a_2, \ldots, a_k$ satisfying the condition $a_i - a_j$ ( $1 \leq i < j \leq k$) is not divided by $n$, there exist two numbers $a_p, a_s$ ($p \neq s$) such that  $m + a_p - a_s$ is divided by $n$.
+\end{p}
+
+
+
+\begin{p}{\bf (Vietnam TST 1992, Problem 5)}
+Find all pair of positive integers $(x, y)$ satisfying the equation  
+\[x^2 + y^2 - 5 \cdot x \cdot y + 5 = 0.\]
+\end{p}
+
+
+
+\begin{p}{\bf (Vietnam TST 1998, Problem 4)}
+Find all integer polynomials $P(x)$, the highest coefficent is 1 such that: there exist infinitely irrational numbers $a$ such that $p(a)$ is a positive integer.
+\end{p}
+
+
+
+\begin{p}{\bf (Vietnam TST 2003, Problem 6)}
+Let $n$ be a positive integer. Prove that the number $2^n + 1$ has no prime divisor of the form $8 \cdot k - 1$, where $k$ is a positive integer.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (VietNam TST 2005, Problem 5)}
+Let $p$ be a prime. Calcute:
+\begin{itemize}
+\item $S=\sum_{k=1}^{\frac{p-1}{2}} \left[\frac{2k^2}{p}\right]-2 \cdot \left[\frac{k^2}{p}\right]$  if $ p\equiv 1 \mod 4$,
+
+\item $T=\sum_{k=1}^{\frac{p-1}{2}} \left[\frac{k^2}{p}\right]$   if $p\equiv 1 \mod 8$.
+\end{itemize}
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (Leningrad Mathematical Olympiads Elimination Round 2004)}
+Let $a,b,c,d > 1$ natural numbers which satisfy $a^{b^{c^d}}=d^{c^{b^a}}$ . Prove that $a = d$ and $b=c$.
+\end{p}
+
+
+
+\begin{p}{\bf (China Mathematical Olympiad 2005 Final Round, Problem 6)}
+Find all nonnegative integer solutions $(x,y,z,w)$ of the equation\[2^x\cdot3^y-5^z\cdot7^w=1.\]
+\end{p}
+
+
+
+\begin{p}{\bf (China Girls Math Olympiad 2008, Problem 8)}
+For positive integers $ n$, $ f_n \equal{} \lfloor2^n\sqrt {2008}\rfloor \plus{} \lfloor2^n\sqrt {2009}\rfloor$. Prove there are infinitely many odd numbers and infinitely many even numbers in the sequence $ f_1,f_2,\ldots$.
+\end{p}
+
+
+
+
+\begin{p}{\bf (China West Mathematical Olympiad 2001, Problem 3)}
+Let $ n, m$ be positive integers of different parity, and $ n > m$.  Find all integers $ x$ such that $ \frac {x^{2^n} \minus{} 1}{x^{2^m} \minus{} 1}$ is a perfect square.
+\end{p}
+
+
+
+
+\begin{p}{\bf (Austria-Poland 2004, Problem 4)}
+Determine all $n \in \mathbb{N}$ for which $n^{10} + n^5 + 1$ is prime.
+\end{p}
+
+
+
+
+
+
+\begin{p}{\bf (APMO 2006, Problem 1)}
+Let $n$ be a positive integer. Find the largest nonnegative real number $f(n)$ (depending on $n$) with the following property: whenever $a_1,a_2,...,a_n$ are real numbers such that $a_1+a_2+\cdots +a_n$ is an integer, there exists some $i$ such that  $\left|a_i-\frac{1}{2}\right|\ge f(n)$.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (USAMO 2006, Problem 1)}
+Let $p$ be a prime number and let $s$ be an integer with $0 < s < p.$ Prove that there exist integers $m$ and $n$ with $0 < m < n < p$ and
+\[ \left \{\frac{sm}{p} \right\} < \left \{\frac{sn}{p} \right \} < \frac{s}{p}  \]
+if and only if $s$ is not a divisor of $p-1$.
+\newline
+Note: For $x$ a real number, let $\lfloor x \rfloor$ denote the greatest integer less than or equal to $x$, and let $\{x\} = x - \lfloor x \rfloor$ denote the fractional part of x.
+\end{p}
+
+
+
+
+\begin{p}{\bf (USAMO 2006, Problem 5)}
+A mathematical frog jumps along the number line. The frog starts at $1$, and jumps according to the following rule: if the frog is at integer $n$, then it can jump either to $n+1$ or to $n + 2^{m_n+1}$ where $2^{m_n}$ is the largest power of $2$ that is a factor of $n.$ Show that if $k \geq 2$ is a positive integer and $i$ is a nonnegative integer, then the minimum number of jumps needed to reach $2^ik$ is greater than the minimum number of jumps needed to reach $2^i.$
+\end{p}
+
+
+
+
+\begin{p}{\bf (USA TST 2008, Day 2, Problem 4)}
+Prove that for no integer $ n$ is $ n^7 \plus{} 7$ a perfect square.
+\end{p}
+
+
+
+
+\begin{p}{\bf (Tuymaada 2008, Junior League, Second Day, Problem 8)}
+250 numbers are chosen among positive integers not exceeding 501. Prove that for every integer $ t$ there are four chosen numbers $ a_1$, $ a_2$, $ a_3$, $ a_4$, such that $ a_1 \plus{} a_2 \plus{} a_3 \plus{} a_4 \minus{} t$ is divisible by 23.
+\end{p}
+
+
+
+
+
+
+
+
+
+
+
+
+
+\begin{p}{\bf (Vietnam Mathematical Olympiad 2008, Problem 3)}
+Let $ m \equal{} 2007^{2008}$, how many natural numbers n are there such that $ n < m$ and $ n(2n \plus{} 1)(5n \plus{} 2)$ is divisible by $ m$ (which means that $ m \mid n(2n \plus{} 1)(5n \plus{} 2)$) ?
+\end{p}
+
+
+
+
+
+
+
+\begin{p}{\bf (MEMO 2008, Problem 4)}
+Determine that all $ k \in \mathbb{Z}$ such that $ \forall n$ the numbers $ 4n\plus{}1$ and $ kn\plus{}1$ have no common divisor.
+\end{p}
+
+
+
+
+
+\begin{p}{\bf (Zhautykov Olympiad 2005, Problem 6)}
+Find all prime numbers $ p,q < 2005$ such that $ q | p^{2} \plus{} 8$  and $ p|q^{2} \plus{} 8.$
+\end{p}
+
+
+
+
+
+
+\begin{p}{\bf (Tournament of Towns Spring 2003, Junior O-Level, Problem 4)}
+Each term of a sequence of positive integers is obtained from the previous term by adding to it its largest digit. What is the maximal number of successive odd terms in such a sequence?
+\end{p}
+
+
+
+
+\begin{p}
+\begin{itemize}
+\item (a) Let $ n$ be a positive integer. Prove that there exist distinct positive integers $ x, y, z$ such that
+\[ x^{n\minus{}1} \plus{} y^n \equal{} z^{n\plus{}1}.\]
+
+\item (b) Let $ a, b, c$ be positive integers such that $ a$ and $ b$ are relatively prime and $ c$ is relatively prime either to $ a$ or to $ b.$ Prove that there exist infinitely many triples $ (x, y, z)$ of distinct positive integers $ x, y, z$ such that
+\[ x^a \plus{} y^b \equal{} z^c.\]
+\end{itemize}
+\end{p}
+
+
+\end{document}

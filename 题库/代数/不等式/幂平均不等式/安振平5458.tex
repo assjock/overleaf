@@ -1,0 +1,58 @@
+\documentclass[]{article}
+
+
+%导入宏包
+\usepackage{ctex}
+\usepackage{graphics}
+\usepackage{amsmath,amssymb}
+\usepackage{amsthm}
+\usepackage{pst-blur}
+\usepackage{pstricks-add}
+\usepackage{pstricks}
+\usepackage{pstricks-pdf}
+\usepackage{pgf,tikz,pgfplots}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{eso-pic}
+%\usepackage{background}
+\usepackage{xeCJK}
+    \xeCJKsetup{CJKmath=true}
+%\usepackage{wallpaper}
+
+
+%opening
+\title{}
+\author{}
+\date{}
+\setlength\parindent{0em}
+
+\begin{document}
+\maketitle
+\section{安振平5458}{
+已知$a,b,c \in \mathbf{R},a+b+c=0,a^4+b^4+c^4=18$求证:$a^5+b^5+c^5\leq 30$
+
+\begin{proof}
+不妨令$a\geq b\geq c$.\\
+\begin{enumerate}
+    \item 若$b=0$,此时$\displaystyle a=\sqrt{3},c=\sqrt{3}$,易知成立.
+    \item 若$b\neq 0$\\
+    由幂平均不等式
+    \begin{equation}\nonumber
+        a^4+b^4+c^4=18\geq \frac{(a+b)^4}{8}+c^4=\frac{9}{8}c^4
+    \end{equation}
+    解得$c\geq -2$,同理知$a\leq 2$.
+    \begin{enumerate}
+        \item[i] 若$a>b>0>c$,此时$a^5+b^5<-c^5,a^5+b^5+c^5<0$,成立.
+        \item[ii] 若$a>0>b>c$,此时$a^5+b^5>c^5,a^5+b^5+c^>0$.\\
+        由幂平均不等式
+        \begin{equation}\nonumber
+            b^5+c^5\leq \frac{(b+c)^5}{16}=-\frac{a^5}{16}
+        \end{equation}
+        \begin{equation}\nonumber
+            LHS\leq \frac{15}{16}a^5\leq 30
+        \end{equation}
+    \end{enumerate}
+\end{enumerate}
+\end{proof}
+}
+\end{document}

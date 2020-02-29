@@ -1,0 +1,1475 @@
+
+\documentclass{article}
+\makeatletter
+\@ifundefined{Umathcode}{\let\Umathcode\XeTeXmathcode}{}
+\@ifundefined{Umathchardef}{\let\Umathchardef\XeTeXmathchardef}{}
+\makeatother 
+\usepackage[centertags]{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{newlfont}
+\usepackage{setspace}
+\usepackage{hyperref}
+\newcommand{\co}{\mathrm{const}}
+\newcommand{\e}{\epsilon}
+\newcommand{\la}{\lambda}
+%\newcommand{\G}{\Gamma}
+
+\theoremstyle{definition}
+\newtheorem{p}{}
+\newtheorem{s}{}
+
+\begin{document}
+\title{Polynomials Problems}\author{Amir Hossein Parvardi  \thanks{email: \texttt{a.parvardi@gmail.com}, website: \texttt{parvardi.com}}} \maketitle
+
+\begin{p}
+Find all polynomials $P(x)$ with real coefficient such that:
+\[P(0)=0 , \quad \text{and} \quad \lfloor P \lfloor P(n)\rfloor \rfloor +n=4\lfloor P(n) \rfloor \quad \forall n \in \mathbb N.\]
+\end{p}
+
+\begin{p}
+Find all functions $f: \mathbb R\to R$ such that
+\[f(x^n+2f(y))=(f(x))^n +y+f(y) \quad  \forall x, y \in \mathbb R, \quad  n \in \mathbb Z_{\geq 2}.\]
+\end{p}
+
+\begin{p}
+Find all functions $ f : \mathbb R\to \mathbb R$ such that
+\[ x^2y^2 \left( f(x+y)-f(x)-f(y) \right)=3(x+y)f(x)f(y)\]
+\end{p}
+
+\begin{p}
+Find all polynomials $P(x)$ with real coefficients such that
+\[P(x)P(x + 1) = P(x^2) \quad \forall x \in \mathbb R.\]
+\end{p}
+
+\begin{p}
+Find all polynomials $P(x)$ with real coefficient such that
+\[P(x)Q(x)=P(Q(x)) \quad \forall x \in \mathbb R.\]
+\end{p}
+
+
+\begin{p}
+Find all polynomials $P(x)$ with real coefficients such that if $P(a)$ is an integer, then so is $a$, where $a$ is any real number.
+\end{p}
+
+
+\begin{p}
+Find all the polynomials $f\in \mathbb{R}[X]$ such that
+\[\sin f(x)=f(\sin x),\ (\forall)x\in \mathbb{R}.\]
+\end{p}
+
+
+\begin{p}
+Find all polynomial $f(x) \in \mathbb{R}[x] $ such that 
+\[f(x)f(2x^2)=f(2x^3+x^2) \quad \forall  x\in \mathbb{R}.\]
+\end{p}
+
+
+\begin{p}
+Find all real polynomials $f$ and $g$, such that:
+\[(x^2+x+1)\cdot f(x^2-x+1)=(x^2-x+1)\cdot g(x^2+x+1), \]
+for all $x\in\mathbb{R}$.
+\end{p}
+
+
+\begin{p}
+Find all polynomials $P(x)$ with integral coefficients such that $P(P'(x))=P'(P(x))$ for all real numbers $x$.
+\end{p}
+
+
+\begin{p}
+Find all polynomials with integer coefficients f such that for all $n>2005$ the number $ f(n)$ is a divisor of $ n^{n-1}-1$.
+\end{p}
+
+
+\begin{p}
+Find all polynomials with complec coefficients f such that we have the equivalence: for all complex numbers z, $ z\in[-1,1]$ if and only if $ f(z)\in [-1,1]$.
+\end{p}
+
+
+\begin{p}
+Suppose $f$ is a polynomial in $\mathbb{Z}[X]$ and m is integer .Consider the sequence $a_i$ like this $a_1=m$ and $a_{i+1}=f(a_i)$ find all polynomials $f$ and alll integers $m$ that for each $i$:
+\[ a_i | a_{i+1}\]
+\end{p}
+
+
+\begin{p}
+$P(x),Q(x) \in \mathbb{R}[x]$ and we know that for real $r$ we have $p(r) \in \mathbb{Q}$ if and only if $Q(r) \in \mathbb{Q}$
+I want some conditions between $P$ and $Q$.My conjecture is that there exist ratinal $a,b,c$ that $aP(x)+bQ(x)+c=0$
+\end{p}
+
+
+\begin{p}
+Find the $\gcd$ of the polynomials $X^n+a^n$ and $X^m+a^m$, where $a$ is a real number.
+\end{p}
+
+
+\begin{p}
+Find all polynomials $p$ with real coefficients that if for a real $a$,$p(a)$ is integer then $a$ is integer.
+\end{p}
+
+
+
+\begin{p}
+$\mathfrak {P}$ is a real polynomail such that if $\alpha$ is irrational then $\mathfrak {P} (\alpha)$ is irrational. Prove that $\deg [\mathfrak{P}]\leq 1$
+\end{p}
+
+
+
+\begin{p}
+Show that the odd number $n$ is a prime number if and only if the polynomial $ T_n(x)/x$ is irreducible over the integers.
+\end{p}
+
+
+
+\begin{p}
+$P,Q,R$ are non-zero polynomials that for each $z\in\mathbb C$, $P(z)Q(\bar z)=R(z)$.
+a) If $P,Q,R\in\mathbb R[x]$, prove that $Q$ is constant polynomial.
+b) Is the above statement correct for $P,Q,R\in\mathbb C[x]$?
+\end{p}
+
+
+
+\begin{p}
+Let $P$ be a polynomial such that $P(x)$ is rational if and only if $x$ is rational. Prove that $P(x)=ax+b$ for some rational $a$ and $b$.
+\end{p}
+
+
+
+\begin{p}
+Prove that any polynomial $\in \mathbb{R} [X]$ can be written as a difference of two strictly increasing polynomials.
+\end{p}
+
+
+
+\begin{p}
+Consider the polynomial $W(x) = (x - a)^kQ(x)$, where $a \neq 0$, $Q$ is a nonzero polynomial, and $k$ a natural number. Prove that $W$ has at least $k + 1$ nonzero coefficients.
+\end{p}
+
+
+
+\begin{p}
+Find all polynomials $p(x) \in \mathbb{R}[x]$ such that the equation \[f(x) = n\] has at least one rational solution, for each positive integer $n$.
+\end{p}
+
+
+
+\begin{p}
+Let $f\in\mathbb{Z}[X]$ be an irreducible polynomial over the ring  of integer polynomials, such that $|f(0)|$ is not a perfect square. Prove that if the leading coefficient of $f$ is 1 (the coefficient of the term having the highest degree in $f$) then $f(X^2)$ is also irreducible in the ring of integer polynomials.
+\end{p}
+
+
+
+\begin{p}
+Let $ p$ be a prime number and $ f$ an integer polynomial of degree $ d$ such that $ f(0) = 0,f(1) = 1$ and $ f(n)$ is congruent to $ 0$ or $ 1$ modulo $ p$ for every integer $ n$. Prove that $ d\geq p - 1$.
+\end{p}
+
+
+
+\begin{p}
+Let $P(x): =x^{n}+\sum\limits_{k=1}^{n}a_kx^{n-k}$  with $0\le a_n\le a_{n-1}\le\ldots a_2\le a_1\le 1$. Suppose that there exists $r\ge 1 ,\; \varphi \in {\mathbb R}$  such that  $P(re^{i\varphi})=0$. Find $r$.
+\end{p}
+
+
+
+\begin{p}
+Let $\mathcal P$ be a polynomail with rational coefficients such that
+\[\mathcal P^{-1}(\mathbb{Q}) \subseteq \mathbb{Q}.\]
+Prove that $\deg\mathcal P \leq 1$.
+\end{p}
+
+
+\begin{p}
+Let $f$ be a polynomial with integer coefficients such that $|f(x)|<1$ on an interval of length at least 4. Prove that  $f=0$.
+\end{p}
+
+
+\begin{p}
+prove that $x^n-x-1$ is irreducible over $\mathbb{Q}$ for all $n \geq 2$.
+\end{p}
+
+
+
+\begin{p}
+Find all real polynomials $p(x)$ such that 
+\[p^{2}(x)+2p(x)p\left(\frac{1}{x}\right)+p^{2}\left(\frac{1}{x}\right) = p(x^{2})p\left(\frac{1}{x^{2}}\right)\]
+For all non-zero real $x$.
+\end{p}
+
+
+
+\begin{p}
+Find all polynomials $P(x)$ with odd degree such that 
+\[P(x^{2}-2)=P^{2}(x)-2.\]
+\end{p}
+
+
+
+\begin{p}
+Find all real polynomials that \[p(x+p(x))=p(x)+p(p(x))\]
+\end{p}
+
+
+
+\begin{p}
+Find all polynomials $P\in \mathbb C[X]$ such that \[P(X^{2})=P(X)^{2}+2P(X).\]
+\end{p}
+
+
+
+\begin{p}
+Find all polynomials of two variables $P(x,y)$ which satisfy
+\[P(a,b) P(c,d) = P (ac+bd, ad+bc), \forall a,b,c,d \in \mathbb{R}.\]
+\end{p}
+
+
+
+\begin{p}
+Find all real polynomials $f(x)$ satisfying
+\[f(x^{2})=f(x)f(x-1) \forall x \in \mathbb R.\]
+\end{p}
+
+
+
+\begin{p}
+Find all polynomials of degree $3$, such that for each $x,y\geq 0$: \[p(x+y)\geq p(x)+p(y).\]
+\end{p}
+
+
+
+\begin{p}
+Find all polynomials $P(x)\in \mathbb Z[x]$ such that for any $n\in \mathbb N$, the equation $P(x)=2^{n}$ has an integer root.
+\end{p}
+
+
+
+\begin{p}
+Let $f$ and $g$ be polynomials such that $f(Q)=g(Q)$ for all rationals $Q$. Prove that there exist reals $a$ and $b$ such that $f(X)=g(aX+b)$, for all real numbers $X$.
+\end{p}
+
+
+
+\begin{p}
+Find all positive integers $ n\geq 3 $ such that there exists an arithmetic progression $ a_0 , a_1, \ldots, a_n $ such that the equation $ a_nx^n + a_{n-1}x^{n-1} + \cdots+ a_1x+a_0 = 0 $ has $n$ roots setting an arithmetic progression.
+\end{p}
+
+
+
+\begin{p}
+Given non-constant linear functions $p_1(x), p_2(x), \dots p_n(x)$. Prove that at least $n-2$ of polynomials $p_1p_2\dots p_{n-1}+p_n,  p_1p_2\dots p_{n-2} p_n + p_{n-1},\dots p_2p_3\dots p_n+p_1$ have a real root.
+\end{p}
+
+
+
+\begin{p}
+Find all positive real numbers $a_1,a_2,\ldots,a_k$ such that the number $ a_1^{\frac{1}{n}}+\cdots+a_k^{\frac{1}{n}}$ is rational for all positive integers $n$, where $k$ is a fixed positive integer.
+\end{p}
+
+
+
+\begin{p}
+Let $f,g$ be real non-constant polynomials such that $ f(\mathbb Z)=g(\mathbb Z) $. Show that there exists an integer $A$ such that $ f(X)=g(A+x) $ or $ f(x)=g(A-x) $. 
+\end{p}
+
+
+\begin{p}
+Does there exist a polynomial $f \in \mathbb{Q}[x]$ with rational coefficients such that $f(1) \neq -1$, and $x^nf(x) + 1$ is a reducible polynomial for every $n \in \mathbb{N}$?
+\end{p}
+
+
+
+\begin{p}
+Suppose that  $ f $ is a polynomial of exact degree  $ p.$ Find a rigurous proof that $ S(n) $,  where  $ S(n)= \sum\limits_{k=0}^{n}f(k) , $  is a polynomial function  of (exact) degree  $ p+1 $ in varable $n $ .
+\end{p}
+
+
+
+
+
+
+\begin{p}
+The polynomials $P,Q$ are such that $\deg P=n$,$\deg Q=m$, have the same leading coefficient, and $P^2(x)=(x^2-1)Q^2(x)+1$. Prove that $P'(x)=nQ(x)$
+\end{p}
+
+
+
+
+
+\begin{p}
+Given distinct prime numbers $p$ and $q$ and a natural number $n \geq 3$, find all $a \in \mathbb{Z}$ such that the polynomial $f(x) = x^n + ax^{n-1} + pq$ can be factored into 2 integral polynomials of degree at least 1.
+\end{p}
+
+
+
+
+
+\begin{p}
+Let $F$ be the set of all polynomials $\Gamma$ such that all the coefficients of $\Gamma (x)$ are integers and $\Gamma (x) = 1$ has integer roots. Given a positive intger $k$, find the smallest integer $m(k) > 1$ such that there exist $\Gamma \in F$ for which $\Gamma (x) = m(k)$ has exactly $k$ distinct integer roots.
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $P(x)$ with integer coefficients such that the polynomial \[ Q(x)=(x^2+6x+10) \cdot P^2(x)-1 \] is the square of a polynomial with integer coefficients.
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $p$ with real coefficients such that for all reals $a, b ,c$ such that $ab+bc+ca =1$ we have the relation \[p(a)^{2}+p(b)^{2}+p(c)^{2}=p(a+b+c)^{2}.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all real polynomials $ f$ with $ x,y \in \mathbb{R}$ such that
+\[ 2 y f(x + y) + (x - y)(f(x) + f(y)) \geq 0.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials such that $P(x^3+1) = P((x+1)^3)$.
+\end{p}
+
+
+
+
+
+
+
+
+\begin{p}
+Find all polynomials $P(x) \in \mathbb{R}[x]$ such that $P(x^2+1)=P(x)^2+1$ holds for all $x \in \mathbb{R}$.
+\end{p}
+
+
+
+
+
+\begin{p}
+Problem: Find all polynomials $p(x)$ with real coefficients such that
+\[ (x+1)p(x-1) + (x-1)p(x+1) = 2x p(x)  \]
+for all real $x$.
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $P(x)$ that have only real roots, such that \[ P(x^2-1)=P(x)P(-x). \]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $P(x) \in \mathbb R[x]$such that:
+\[P(x^2)+x \cdot (3P(x)+P(-x))=(P(x))^2+2x^2 \quad  \forall x\in  \mathbb R\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $f,g$ which are both monic and have the same degree and
+\[f(x)^2-f(x^2)=g(x).\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $P(x)$ with real coefficients such that there exists a polynomial $Q(x)$ with real coefficients that satisfy 
+\[P(x^2)=Q(P(x)).\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $p(x,y)\in\mathbb R[x,y]$ such that for each $x,y\in\mathbb R$ we have
+\[ p(x+y,x-y)=2p(x,y). \]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all couples of polynomials $(P,Q)$ with real coefficients, such that for infinitely many $x\in\mathbb R$ the condition \[ \frac{P(x)}{Q(x)}-\frac{P(x+1)}{Q(x+1)}=\frac{1}{x(x+2)}\]
+Holds.
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $P(x)$ with real coefficients, such that $P(P(x))=P(x)^k$ ($k$ is a given positive integer)
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials 
+\[P_{n}(x)=n!x^n + a_{n-1}x^{n-1}+...+ a_{1}x +(-1)^n(n+1)n\]
+with integers coefficients and with $n$ real roots $x_1, x_2, ..., x_n$, such that $k\leq x_k\leq k+1$, for $k=1,2...,n$.
+\end{p}
+
+
+
+
+
+\begin{p}
+The function $f(n)$ satisfies $f(0)=0$ and $f(n)=n-f \left( f(n-1) \right)$, $n=1,2,3 \cdots$. Find all polynomials $g(x)$ with real coefficient such that
+\[ f(n)= [ g(n) ], \qquad n=0,1,2 \cdots \]
+Where $[ g(n) ]$ denote the greatest integer that does not exceed $g(n)$.
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all pairs of integers $a,b$ for which there exists a polynomial $P(x) \in \mathbb{Z}[X]$ such that product $(x^2+ax+b)\cdot P(x)$ is a polynomial of a form \[ x^n+c_{n-1}x^{n-1}+...+c_1x+c_0  \] where each of $c_0,c_1,...,c_{n-1}$ is equal to $1$ or $-1$.
+\end{p}
+
+
+
+
+
+\begin{p}
+There exists a polynomial $P$ of degree $5$ with the following property: if $z$ is a complex number such that $z^{5}+2004z=1$, then $P(z^{2})=0$. Find all such polynomials $P$
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $P(x)$ with real coefficients satisfying the equation \[(x+1)^{3}P(x-1)-(x-1)^{3}P(x+1)=4(x^{2}-1) P(x)\] for all real numbers $x$.
+\end{p}
+
+
+\begin{p}
+Find all polynomials $P(x,y)$ with real coefficients such that:
+\[P(x,y)=P(x+1,y)=P(x,y+1)=P(x+1,y+1)\]
+\end{p}
+
+
+
+
+\begin{p}
+Find all polynomials $ P(x)$ with reals coefficients such that
+\[(x-8)P(2x)=8(x-1)P(x).\]
+\end{p}
+
+
+\begin{p}
+Find all reals $ \alpha$ for which there is a nonzero polynomial $P$ with real coefficients such that 
+\[\frac{P(1)+P(3)+P(5)+\cdots+P(2n-1)}{n}=\alpha P(n) \quad \forall n \in \mathbb N,\]
+and find all such polynomials for $ \alpha=2$.
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $ P(x) \in \mathbb{R}[X]$ satisfying 
+\[ (P(x))^2-(P(y))^2=P(x+y)\cdot P(x-y) ,\quad  \forall x,y \in \mathbb R.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all $ n\in\mathbb{N}$ such that polynomial
+\[ P(x) = (x - 1)(x - 2) \cdots (x -n)\]
+can be represented as $Q(R(x))$, for some polynomials $ Q(x),R(x)$ with degree greater than $1$.
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $ P(x) \in R[x]$ such that $ P(x^2-2x)=\left( P(x)-2 \right)^2.$
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all non-constant real polynomials $ f(x)$ such that for any real $ x$ the following equality holds
+\[ f(\sin x +\cos x) = f(\sin x) + f(\cos x).\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $ W(x)\in \mathbb R[x]$ such that
+\[W(x^2)W(x^3)=W(x)^5 \quad \forall x \in \mathbb R.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all the polynomials $f(x)$ with integer coefficients such that $f(p)$ is prime for every prime $p.$
+\end{p}
+
+
+
+
+
+\begin{p}
+Let $ n \geq 2$ be a positive integer. Find all polynomials $ P(x)=a_0 +a_1 x +\cdots + a_{n} x^n$ having exactly $ n$ roots not greater than $-1$ and satisfying
+\[ a^2_0+ a_1 a_n = a^2_n +a_0 a_{n-1}.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials  $ P(x),Q(x)$ such that
+\[P(Q(X))=Q(P(x))  \forall x \in \mathbb R.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all integers $ k$ such that for infinitely many integers $ n \ge 3$ the polynomial
+\[ P(x) =x^{n+ 1}+ kx^n - 870x^2 + 1945x + 1995\]
+can be reduced into two polynomials with integer coefficients.
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $ P(x),Q(x),R(x)$ with real coefficients such that
+\[\sqrt{P(x)}-\sqrt{Q(x)}=R(x) \quad \forall x \in \mathbb R.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Let $k = \sqrt[3]{3}$. Find a polynomial $p(x)$ with rational coefficients and degree as small as possible such that $p(k+k^{2}) = 3+k$. Does there exist a polynomial $q(x)$ with integer coefficients such that $q(k+k^{2}) = 3+k$?
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all values of the positive integer $ m$ such that there exists polynomials $ P(x),Q(x),R(x,y)$ with real coefficient satisfying the condition: For every real numbers $ a,b$ which satisfying $ a^m-b^2=0$, we always have that $ P(R(a,b))=a$ and $ Q(R(a,b))=b$.
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $ p(x)\in \mathbb{R}[x]$ such that $ p(x^{2008} + y^{2008}) = (p(x))^{2008}+(p(y))^{2008}$, for all real numbers $ x, y$.
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all Polynomials $ P(x)$ satisfying $ P(x)^2-P(x^2) =2x^4$.
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $ p$ of one variable with integer coefficients such that if $ a$ and $ b$ are natural numbers such that $ a +b$ is a perfect square, then $ p\left(a\right)+ p\left(b\right)$ is also a perfect square.
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $P(x)\in \mathbb Q[x]$ such that
+\[P(x)=P\left(\frac{-x+\sqrt{3 -3x^2}}{2}\right) \quad \text{ for all } \quad |x| \le 1.\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $f$ with real coefficients such that for all reals $a,b,c$ such that $ab+bc+ca = 0$ we have the following relations
+\[ f(a-b) + f(b-c) + f(c-a) = 2f(a+b+c). \]
+\end{p}
+
+
+
+
+
+\begin{p}
+Find All Polynomials $ P(x,y)$ such that for all reals $ x,y$ we have
+\[P(x^{2},y^{2}) =P\left(\frac {(x + y)^{2}}{2},\frac {(x - y)^{2}}{2}\right).\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Let $ n$ and $ k$ be two positive integers. Determine all monic polynomials $ f\in\mathbb{Z}[X],$ of degree $ n,$ having the property that $ f(n)$ divides $ f\left (2^{k}\cdot a\right ),$ forall $ a\in\mathbb{Z},$ with $ f(a)\neq 0.$
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all polynomials $ P(x)$ such that
+\[P(x^2-y^2)=P(x+y)P(x-y).\]
+\end{p}
+
+
+
+
+
+\begin{p}
+Let $ f(x)=x^4-x^3+8ax^2-ax+a^2$. Find all real number $ a$ such that $f(x)=0$ has four different positive solutions.
+\end{p}
+
+
+
+
+\begin{p}
+Find all polynomial $ P\in \mathbb {R}[x]$ such that: $ P(x^2+2x+1)=(P(x))^2+1$.
+\end{p}
+
+
+
+
+
+\begin{p}
+Let $ n\ge 3$ be a natural number. Find all nonconstant polynomials with real coefficients $ f_{1}\left(x\right),f_{2}\left(x\right),\ldots,f_{n}\left(x\right)$, for which
+\[ f_{k}\left(x\right)f_{k+ 1}\left(x\right) = f_{k +1}\left(f_{k + 2}\left(x\right)\right), \quad  1\le k\le n,\]
+for every real $ x$ (with $ f_{n +1}\left(x\right)\equiv f_{1}\left(x\right)$ and $ f_{n + 2}\left(x\right)\equiv f_{2}\left(x\right)$).
+\end{p}
+
+
+
+
+
+\begin{p}
+Find all integers $n$ such that the polynomial $p(x)=x^5-nx-n-2$ can be written as product  of two non-constant polynomials with integral coefficients.
+\end{p}
+
+
+
+
+\begin{p}
+Find all polynomials $p(x)$ that satisfy 
+\[(p(x))^2-2=2p(2x^2-1) \quad \forall x \in \mathbb R.\]
+\end{p}
+
+
+
+
+\begin{p}
+Find all polynomials $p(x)$ that satisfy
+\[(p(x))^2-1=4p(x^2-4X+1) \quad \forall x \in \mathbb R.\]
+\end{p}
+
+
+\begin{p}
+Determine the polynomials $P$ of two variables so that:
+
+{\bf a.)} for any real numbers $t,x,y$ we have $P(tx,ty) = t^n P(x,y)$ where $n$ is a positive integer, the same for all $t,x,y;$
+
+{\bf b.)} for any real numbers $a,b,c$ we have $P(a + b,c) + P(b + c,a) + P(c + a,b) = 0;$
+
+{\bf c.)} $P(1,0) =1.$
+\end{p}
+
+
+
+\begin{p}
+Find all polynomials $ P(x)$ satisfying the equation
+\[(x+1)P(x)=(x-2010)P(x+1).\]
+\end{p}
+
+
+
+
+\begin{p}
+Find all polynomials of degree $3$ such that for all non-negative reals $x$ and $y$ we have
+\[p(x+y) \leq p(x)+p(y).\]
+\end{p}
+
+
+
+\begin{p}
+Find all polynomials $p(x)$ with real coefficients such that
+\[p(a + b - 2c) + p(b + c - 2a) + p(c + a - 2b) = 3p(a - b) + 3p(b - c) + 3p(c - a)\]
+for all $a, b, c\in\mathbb{R}$.
+\end{p}
+
+
+
+\begin{p}
+Find all  polynomials $P(x)$ with real coefficients such that
+\[P(x^2-2x)=\left(P(x-2)\right)^2\]
+\end{p}
+
+
+
+\begin{p}
+Find all two-variable polynomials $p(x,y)$ such that for each $a,b,c\in\mathbb R$:
+\[p(ab,c^2+1)+p(bc,a^2+1)+p(ca,b^2+1)=0.\]
+\end{p}
+
+\newpage
+
+\section*{Solutions}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=392562}.
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=385331}.
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=337211}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=395325}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=396236}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=392444}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=392115}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=391333}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=381485}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=22091}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=21897}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=19734}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=16684}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=18474}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=398232}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=6122}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=78454}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=35047}.
+\end{s}
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=111404}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=85409}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=66713}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=54236}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=53450}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=53271}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=49788}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=49530}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=47243}.
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=48110}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=68010}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=131296}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=397716}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=111400}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=136814}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=145370}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=151076}.
+\end{s}
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=151408}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=26076}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=1890}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=24565}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=20664}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=18799}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=16783}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=28770}.
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=35998}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=37142}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=37593}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=38449}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=42409}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=46754}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=249173}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=57623}.
+\end{s}
+
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=39570}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=24199}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=75952}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=77031}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=82472}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=83258}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=84486}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=89767}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=91070}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=91220}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=97498}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=82906}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=100806}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=107523}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=112983}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=175482}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=175946}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=180123}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=183353}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=184735}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=185522}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=188335}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=190324}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=195386}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=216393}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=217162}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=223538}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=138975}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=224615}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=227892}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=245977}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=206652}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=397760}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=14021}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=277105}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=278012}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=277424}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=282819}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=282534}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=283701}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=285719}.
+\end{s}
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=316463}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=316463}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=61046}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=335804}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=341605}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=347702}.
+\end{s}
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=350921}.
+\end{s}
+
+
+
+
+
+\begin{s}
+\texttt{http://www.artofproblemsolving.com/Forum/viewtopic.php?t=352087}.
+\end{s}
+
+
+
+
+\end{document}
+
+
+
+
